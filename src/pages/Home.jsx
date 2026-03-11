@@ -6,6 +6,8 @@ import Hero from '../components/Hero';
 import { useContent, useT } from '../context/LanguageContext';
 import './Home.css';
 
+const base = import.meta.env.BASE_URL;
+
 export default function Home() {
   const { content } = useContent();
   const t = useT();
@@ -35,7 +37,7 @@ export default function Home() {
       <Hero
         title={hero.home.title}
         subtitle={hero.home.subtitle}
-        backgroundImage="/images/bg-bubbles.png"
+        backgroundImage={`${base}images/bg-bubbles.png`}
         ctaPrimary={t('nav.contact')}
         ctaPrimaryLink="/contact"
         ctaPrimaryIcon="mail"
@@ -54,7 +56,7 @@ export default function Home() {
           >
             <h2>{home.gateway.title}</h2>
             <p className="gateway-subtitle">{home.gateway.subtitle}</p>
-            <img src="/images/crestron-logo.png" alt="Crestron Services Provider" className="gateway-logo" />
+            <img src={`${base}images/crestron-logo.png`} alt="Crestron Services Provider" className="gateway-logo" />
           </motion.div>
         </div>
       </section>
@@ -79,7 +81,7 @@ export default function Home() {
           >
             {home.tech_partners.map((partner, index) => (
               <motion.div key={index} className="partner-logo-light" variants={itemVariants}>
-                <img src={partner.logo} alt={partner.name} className="partner-logo-img-dark" />
+                <img src={`${base}${partner.logo.replace(/^\//, '')}`} alt={partner.name} className="partner-logo-img-dark" />
               </motion.div>
             ))}
           </motion.div>
@@ -87,7 +89,7 @@ export default function Home() {
       </section>
 
       {/* 4. GLOBAL SERVICES */}
-      <section className="section services-home-section" style={{ backgroundImage: 'url(/images/hero-bg.png)' }}>
+      <section className="section services-home-section" style={{ backgroundImage: `url(${base}images/hero-bg.png)` }}>
         <div className="services-overlay"></div>
         <div className="container services-home-content">
           <motion.h2
@@ -163,7 +165,7 @@ export default function Home() {
               <p className="aiav-subtitle">{t('home.here_we_are')}</p>
             </div>
             <div className="aiav-image">
-              <img src="/images/icon-connection.png" alt="AI AV Connection" />
+              <img src={`${base}images/icon-connection.png`} alt="AI AV Connection" />
             </div>
           </motion.div>
         </div>
@@ -275,7 +277,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="sectors-photo">
-              <img src="/images/office-photo.jpg" alt="Office" />
+              <img src={`${base}images/office-photo.jpg`} alt="Office" />
             </div>
             <div className="sectors-content">
               <h2>{t('home.sectors_title')}</h2>
@@ -297,7 +299,7 @@ export default function Home() {
         <div className="container">
           <motion.div
             className="discover-card glass-card"
-            style={{ backgroundImage: 'url(/images/bg-variante.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+            style={{ backgroundImage: `url(${base}images/bg-variante.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -5,6 +5,8 @@ import ServiceCard from '../components/ServiceCard';
 import { useContent } from '../context/LanguageContext';
 import './Services.css';
 
+const base = import.meta.env.BASE_URL;
+
 export default function Services() {
   const { content } = useContent();
   const { hero, services } = content;
@@ -35,7 +37,7 @@ export default function Services() {
       <Hero
         title={hero.services.title}
         subtitle={hero.services.subtitle}
-        backgroundImage="/images/bg-ai-generated.png"
+        backgroundImage={`${base}images/bg-ai-generated.png`}
         centered={true}
       />
 

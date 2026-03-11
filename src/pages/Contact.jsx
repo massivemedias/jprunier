@@ -5,6 +5,8 @@ import Hero from '../components/Hero';
 import { useContent, useT } from '../context/LanguageContext';
 import './Contact.css';
 
+const base = import.meta.env.BASE_URL;
+
 export default function Contact() {
   const { content } = useContent();
   const t = useT();
@@ -64,7 +66,7 @@ export default function Contact() {
       <Hero
         title={hero.contact.title}
         subtitle={hero.contact.subtitle}
-        backgroundImage="/images/bg-variante.png"
+        backgroundImage={`${base}images/bg-variante.png`}
         centered={true}
       />
 

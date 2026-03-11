@@ -4,6 +4,8 @@ import TestimonialCard from '../components/TestimonialCard';
 import { useContent, useT } from '../context/LanguageContext';
 import './About.css';
 
+const base = import.meta.env.BASE_URL;
+
 export default function About() {
   const { content, testimonials } = useContent();
   const t = useT();
@@ -34,7 +36,7 @@ export default function About() {
       <Hero
         title={hero.about.title}
         subtitle={hero.about.subtitle}
-        backgroundImage="/images/bg-abstract.png"
+        backgroundImage={`${base}images/bg-abstract.png`}
         centered={true}
       />
 

@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import { useContent, useT, useLanguage } from '../context/LanguageContext';
 import './News.css';
 
+const base = import.meta.env.BASE_URL;
+
 export default function News() {
   const { content, news } = useContent();
   const t = useT();
@@ -44,7 +46,7 @@ export default function News() {
       <Hero
         title={hero.news.title}
         subtitle={hero.news.subtitle}
-        backgroundImage="/images/bg-bubbles.png"
+        backgroundImage={`${base}images/bg-bubbles.png`}
         centered={true}
       />
 
