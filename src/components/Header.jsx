@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
 import { useContent, useLanguage, useT } from '../context/LanguageContext';
 import './Header.css';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('jprunier-theme');
     return saved ? saved === 'dark' : true;
@@ -15,8 +16,9 @@ export default function Header() {
   const { language, setLanguage } = useLanguage();
   const t = useT();
   const location = useLocation();
+  const servicesRef = useRef(null);
 
-  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const closeMobileMenu = () => { setMobileMenuOpen(false); setServicesOpen(false); };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -26,6 +28,7 @@ export default function Header() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setServicesOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -33,7 +36,19 @@ export default function Header() {
     localStorage.setItem('jprunier-theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (servicesRef.current && !servicesRef.current.contains(e.target)) {
+        setServicesOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const isActive = (path) => location.pathname === path;
+  const isServicesActive = location.pathname.startsWith('/services');
 
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -53,13 +68,41 @@ export default function Header() {
               {t('nav.about')}
             </Link>
 
-            <Link
-              to="/services"
-              className={`nav-link ${isActive('/services') ? 'nav-active' : ''}`}
-              onClick={closeMobileMenu}
+            {/* Services dropdown */}
+            <div
+              className={`nav-dropdown ${isServicesActive ? 'nav-active' : ''}`}
+              ref={servicesRef}
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
             >
-              {t('nav.services')}
-            </Link>
+              <Link
+                to="/services"
+                className={`nav-link nav-dropdown-trigger ${isServicesActive ? 'nav-active' : ''}`}
+                onClick={(e) => {
+                  // On mobile, toggle dropdown instead of navigating
+                  if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    setServicesOpen(!servicesOpen);
+                  } else {
+                    closeMobileMenu();
+                  }
+                }}
+              >
+                {t('nav.services')} <ChevronDown size={14} className={`dropdown-chevron ${servicesOpen ? 'dropdown-chevron-open' : ''}`} />
+              </Link>
+              <div className={`dropdown-menu ${servicesOpen ? 'dropdown-menu-open' : ''}`}>
+                {content.services.main_services.map((service) => (
+                  <Link
+                    key={service.id}
+                    to={`/services/${service.id}`}
+                    className="dropdown-item"
+                    onClick={closeMobileMenu}
+                  >
+                    {service.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             <Link
               to="/news"
