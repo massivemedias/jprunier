@@ -65,6 +65,49 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* ─── Light theme overrides ─── */
+[data-theme="light"] {
+  --background: #f7f5f0;
+  --surface: #fdfcfa;
+  --surface-light: #f0ede6;
+  --primary-dark: #ebe7df;
+  --primary-dark-light: #e2ddd4;
+  --off-white: #f5f2eb;
+  --gray-light: #2c2418;
+  --gray-medium: #5a4e3e;
+  --gray-dark: #9a8e7e;
+  --text-dark: #2c2418;
+  --text-dark-secondary: #5a4e3e;
+  --glass-bg: rgba(80, 60, 20, 0.03);
+  --glass-border: rgba(80, 60, 20, 0.08);
+}
+
+[data-theme="light"] body {
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] p {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: var(--surface);
+  border-color: rgba(0, 0, 0, 0.12);
+  color: var(--text-dark);
+}
+
 /* Reset & Base Styles */
 * {
   margin: 0;
@@ -140,6 +183,7 @@ button {
 .grid {
   display: grid;
   gap: var(--spacing-xl);
+  align-items: stretch;
 }
 
 .grid-2 {

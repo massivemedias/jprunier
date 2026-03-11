@@ -1,35 +1,29 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Code, Lightbulb, Settings, Zap, ArrowRight } from 'lucide-react';
 import Hero from '../components/Hero';
-import ServiceCard from '../components/ServiceCard';
-import { useContent } from '../context/LanguageContext';
+import { useContent, useT } from '../context/LanguageContext';
 import './Services.css';
 
 const base = import.meta.env.BASE_URL;
+const iconMap = { Code, Lightbulb, Settings, Zap };
 
 export default function Services() {
   const { content } = useContent();
+  const t = useT();
   const { hero, services } = content;
-  const [hoveredService, setHoveredService] = useState(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
   return (
@@ -53,39 +47,29 @@ export default function Services() {
       <section className="section main-services-section">
         <div className="container">
           <motion.div
-            className="grid grid-2"
+            className="services-cards-grid"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
           >
-            {services.main_services.map((service) => (
-              <motion.div
-                key={service.id}
-                variants={itemVariants}
-                className="service-detail"
-              >
-                <ServiceCard
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                  expanded={hoveredService === service.id}
-                  onMouseEnter={() => setHoveredService(service.id)}
-                  onMouseLeave={() => setHoveredService(null)}
-                />
-                <motion.p
-                  className="service-detail-text"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{
-                    opacity: hoveredService === service.id ? 1 : 0,
-                    height: hoveredService === service.id ? 'auto' : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {service.details}
-                </motion.p>
-              </motion.div>
-            ))}
+            {services.main_services.map((service) => {
+              const IconComp = iconMap[service.icon];
+              return (
+                <motion.div key={service.id} variants={itemVariants}>
+                  <Link to={`/services/${service.id}`} className="service-link-card">
+                    <div className="service-link-icon">
+                      {IconComp && <IconComp size={32} />}
+                    </div>
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                    <span className="service-link-cta">
+                      {t('services.learn_more')} <ArrowRight size={14} />
+                    </span>
+                  </Link>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
@@ -106,10 +90,7 @@ export default function Services() {
               {services.crestron_section.description}
             </motion.p>
 
-            <motion.div
-              className="capabilities-grid"
-              variants={containerVariants}
-            >
+            <motion.div className="capabilities-grid" variants={containerVariants}>
               {services.crestron_section.capabilities.map((capability, index) => (
                 <motion.div
                   key={index}
@@ -117,7 +98,7 @@ export default function Services() {
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
                 >
-                  <span className="capability-check">✓</span>
+                  <span className="capability-check">&#10003;</span>
                   <span>{capability}</span>
                 </motion.div>
               ))}
@@ -150,7 +131,7 @@ export default function Services() {
                   <ul>
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex}>
-                        <span className="expertise-dot">•</span>
+                        <span className="expertise-dot">&bull;</span>
                         {item}
                       </li>
                     ))}

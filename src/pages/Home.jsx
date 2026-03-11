@@ -139,10 +139,12 @@ export default function Home() {
             {services.main_services.slice(1).map((service) => {
               const IconComp = iconMap[service.icon];
               return (
-                <motion.div key={service.id} className="service-card-small glass-card" variants={itemVariants}>
-                  <div className="service-small-icon">{IconComp && <IconComp size={24} />}</div>
-                  <h4>{service.title}</h4>
-                  <p>{service.description}</p>
+                <motion.div key={service.id} variants={itemVariants}>
+                  <Link to={`/services/${service.id}`} className="service-card-small glass-card">
+                    <div className="service-small-icon">{IconComp && <IconComp size={24} />}</div>
+                    <h4>{service.title}</h4>
+                    <p>{service.description}</p>
+                  </Link>
                 </motion.div>
               );
             })}

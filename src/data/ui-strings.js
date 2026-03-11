@@ -58,6 +58,17 @@ export const uiStrings = {
     'news.follow_linkedin': 'Follow JPrunier',
     'news.by': 'By',
 
+    // Services Detail
+    'services.back': 'Back to Services',
+    'services.what_we_offer': 'What we offer',
+    'services.key_capabilities': 'Key Capabilities',
+    'services.technologies': 'Technologies',
+    'services.need_help': 'Need this service?',
+    'services.cta_text': 'Contact us to discuss your project and discover how we can help.',
+    'services.other_services': 'Explore our other services',
+    'services.not_found': 'Service not found',
+    'services.learn_more': 'Learn more',
+
     // Footer
     'footer.rights': 'All rights reserved.',
   },
@@ -119,6 +130,17 @@ export const uiStrings = {
     'news.follow_text': 'Restez informé de nos derniers projets, événements et tendances de l\'industrie IA-AV.',
     'news.follow_linkedin': 'Suivre JPrunier',
     'news.by': 'Par',
+
+    // Services Detail
+    'services.back': 'Retour aux services',
+    'services.what_we_offer': 'Ce que nous offrons',
+    'services.key_capabilities': 'Capacités clés',
+    'services.technologies': 'Technologies',
+    'services.need_help': 'Besoin de ce service ?',
+    'services.cta_text': 'Contactez-nous pour discuter de votre projet et découvrir comment nous pouvons vous aider.',
+    'services.other_services': 'Explorez nos autres services',
+    'services.not_found': 'Service introuvable',
+    'services.learn_more': 'En savoir plus',
 
     // Footer
     'footer.rights': 'Tous droits réservés.',

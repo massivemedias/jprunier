@@ -4,6 +4,7 @@
     "title": "ISE 2026",
     "excerpt": "A busy start to the week at ISE 2026. Strategic exchanges with our Canadian and European clients, exciting discussions about AI-AV challenges with our partners.",
     "date": "2026-02-04",
+    "image": "images/bg-ia-av-spheres.jpg",
     "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   },
   {
@@ -11,6 +12,7 @@
     "title": "See you in Barcelona!",
     "excerpt": "JPrunier Inc. will be present at ISE 2026 in Barcelona, from February 3 to 6.",
     "date": "2026-01-26",
+    "image": "images/bg-bubbles.png",
     "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   },
   {
@@ -18,6 +20,7 @@
     "title": "JPrunier Inc. — Your AV-IT-AI technology gateway",
     "excerpt": "Software development, integration solutions. Canada - Europe - Middle East.",
     "date": "2025-10-28",
+    "image": "images/bg-neural-network.png",
     "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   },
   {
@@ -25,6 +28,7 @@
     "title": "Beautiful integration by Naoli and Alive Technology",
     "excerpt": "A stunning integration project showcasing the best of AV and AI working together.",
     "date": "2025-10-19",
+    "image": "images/bg-ai-generated.png",
     "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   }
 ]

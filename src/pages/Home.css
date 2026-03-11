@@ -154,6 +154,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .service-card-small:hover {
@@ -498,6 +500,68 @@
 /* ====== ACHIEVEMENTS (white) ====== */
 .achievements-section {
   padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+/* ====== LIGHT THEME OVERRIDES ====== */
+[data-theme="light"] .services-overlay {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+[data-theme="light"] .services-home-title {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .service-featured-desc {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] .detail-column p {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] .service-card-small p {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] .accordion-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface) 100%);
+}
+
+[data-theme="light"] .accordion-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(116, 86, 241, 0.12);
+}
+
+[data-theme="light"] .accordion-header h3 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .sectors-home-section::before {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] .sectors-content h2 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .sector-dot-item {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .discover-overlay {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] .discover-content h2 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .discover-content p {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] .partner-logo-img-dark {
+  filter: grayscale(100%);
 }
 
 /* ====== RESPONSIVE ====== */

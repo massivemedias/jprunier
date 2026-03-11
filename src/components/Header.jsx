@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Globe } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useContent, useLanguage, useT } from '../context/LanguageContext';
 import './Header.css';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('jprunier-theme');
+    return saved ? saved === 'dark' : true;
+  });
   const { content } = useContent();
   const { language, setLanguage } = useLanguage();
   const t = useT();
   const location = useLocation();
-  const { services } = content;
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
@@ -21,14 +24,16 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
-  const isActive = (path) => location.pathname === path;
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    localStorage.setItem('jprunier-theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
 
-  const toggleLang = () => setLanguage(language === 'fr' ? 'en' : 'fr');
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -48,27 +53,13 @@ export default function Header() {
               {t('nav.about')}
             </Link>
 
-            <div className="nav-dropdown">
-              <Link
-                to="/services"
-                className={`nav-link nav-link-dropdown ${isActive('/services') ? 'nav-active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                {t('nav.services')} <ChevronDown size={14} className="dropdown-chevron" />
-              </Link>
-              <div className="dropdown-menu">
-                {services.main_services.map((service) => (
-                  <Link
-                    key={service.id}
-                    to={`/services#${service.id}`}
-                    className="dropdown-item"
-                    onClick={closeMobileMenu}
-                  >
-                    {service.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link
+              to="/services"
+              className={`nav-link ${isActive('/services') ? 'nav-active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              {t('nav.services')}
+            </Link>
 
             <Link
               to="/news"
@@ -83,17 +74,46 @@ export default function Header() {
               <Link to="/contact" className="nav-link" onClick={closeMobileMenu}>
                 {t('nav.contact')}
               </Link>
-              <button className="mobile-lang-btn" onClick={toggleLang}>
-                <Globe size={16} />
-                {language === 'fr' ? 'English' : 'Français'}
-              </button>
+              <div className="mobile-controls">
+                <div className="lang-pill">
+                  <button
+                    className={`lang-option ${language === 'fr' ? 'lang-active' : ''}`}
+                    onClick={() => setLanguage('fr')}
+                  >
+                    FR
+                  </button>
+                  <button
+                    className={`lang-option ${language === 'en' ? 'lang-active' : ''}`}
+                    onClick={() => setLanguage('en')}
+                  >
+                    EN
+                  </button>
+                </div>
+                <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} aria-label="Toggle theme">
+                  {darkMode ? <Sun size={16} /> : <Moon size={16} />}
+                </button>
+              </div>
             </div>
           </nav>
 
           <div className="header-right">
-            <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
-              <Globe size={15} />
-              <span>{language === 'fr' ? 'EN' : 'FR'}</span>
+            <div className="lang-pill">
+              <button
+                className={`lang-option ${language === 'fr' ? 'lang-active' : ''}`}
+                onClick={() => setLanguage('fr')}
+              >
+                FR
+              </button>
+              <button
+                className={`lang-option ${language === 'en' ? 'lang-active' : ''}`}
+                onClick={() => setLanguage('en')}
+              >
+                EN
+              </button>
+            </div>
+
+            <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} aria-label="Toggle theme">
+              {darkMode ? <Sun size={16} /> : <Moon size={16} />}
             </button>
 
             <Link to="/contact" className="header-cta" onClick={closeMobileMenu}>

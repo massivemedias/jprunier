@@ -78,7 +78,7 @@ export default function About() {
           </div>
 
           <motion.div
-            className="grid grid-2"
+            className="values-grid"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

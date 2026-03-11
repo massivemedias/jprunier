@@ -132,6 +132,35 @@
   pointer-events: none;
 }
 
+/* Light theme */
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(245, 246, 248, 0.6) 50%,
+    rgba(116, 86, 241, 0.08) 100%
+  );
+}
+
+[data-theme="light"] .hero-title {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .hero-subtitle {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] .hero-cta-secondary {
+  border-color: var(--text-dark) !important;
+  color: var(--text-dark) !important;
+  background: transparent !important;
+}
+
+[data-theme="light"] .hero-cta-secondary:hover {
+  border-color: var(--accent-violet) !important;
+  color: var(--accent-violet) !important;
+}
+
 @media (max-width: 1024px) {
   .hero {
     min-height: 80vh;

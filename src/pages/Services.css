@@ -15,22 +15,74 @@
   background-color: var(--background);
 }
 
-.service-detail {
+/* Service Link Cards — equal height grid */
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.service-link-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
+  border: 1px solid rgba(116, 86, 241, 0.2);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
 }
 
-.service-detail-text {
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-xl);
-  background: rgba(116, 86, 241, 0.05);
-  border-left: 3px solid var(--accent-violet);
+.service-link-card:hover {
+  border-color: var(--accent-violet);
+  box-shadow: 0 20px 40px rgba(116, 86, 241, 0.2);
+  transform: translateY(-6px);
+}
+
+.service-link-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--radius-lg);
-  color: var(--gray-light);
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-relaxed);
+  background: rgba(116, 86, 241, 0.15);
+  color: var(--accent-violet);
+  margin-bottom: var(--spacing-lg);
 }
 
+.service-link-card h3 {
+  font-size: var(--font-size-xl);
+  color: var(--gray-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-link-card p {
+  font-size: var(--font-size-sm);
+  color: var(--gray-medium);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  flex: 1;
+}
+
+.service-link-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  color: var(--accent-violet);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: gap var(--transition-base);
+}
+
+.service-link-card:hover .service-link-cta {
+  gap: var(--spacing-md);
+}
+
+/* Crestron Section */
 .crestron-section {
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface) 100%);
 }
@@ -81,6 +133,7 @@
   font-size: var(--font-size-sm);
 }
 
+/* Expertise Section */
 .expertise-section {
   background-color: var(--background);
 }
@@ -134,6 +187,10 @@
 @media (max-width: 768px) {
   .intro-text {
     font-size: var(--font-size-base);
+  }
+
+  .services-cards-grid {
+    grid-template-columns: 1fr;
   }
 
   .capabilities-grid {

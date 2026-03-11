@@ -1,29 +1,29 @@
 {
   "company": {
     "name": "JPrunier Inc.",
-    "tagline": "Excellence en intégration IA-AV",
+    "tagline": "Passerelle technologique AV - IA",
     "description": "Fournisseur de premier plan de solutions intelligentes d'intégration audiovisuelle et d'intelligence artificielle pour les environnements d'entreprise",
-    "founded": 2010,
+    "founded": 2020,
     "offices": {
       "montreal": {
         "city": "Montréal",
         "country": "Canada",
-        "address": "1234 Tech Avenue",
-        "phone": "+1 (514) 555-0123",
-        "email": "contact@jprunier.com"
+        "address": "1055 Rue Lucien-L'Allier, QC H3G 0E7",
+        "phone": "+1 438 823-2048",
+        "email": "info@jprunier.com"
       },
       "paris": {
         "city": "Paris",
         "country": "France",
-        "address": "567 Rue de l'Innovation",
-        "phone": "+33 1 42 55 00 99",
-        "email": "contact@jprunier.fr"
+        "address": "10 Rue de Penthièvre, 75008",
+        "phone": "+1 438 823-2048",
+        "email": "info@jprunier.com"
       }
     },
     "social": {
-      "linkedin": "https://linkedin.com/company/jprunier",
+      "linkedin": "https://www.linkedin.com/company/jprunier-inc/",
       "github": "https://github.com/jprunier",
-      "email": "contact@jprunier.com"
+      "email": "info@jprunier.com"
     }
   },
   "hero": {
@@ -81,7 +81,7 @@
     "expertise_items": [
       {
         "title": "Expérience",
-        "description": "Plus d'une décennie de projets d'intégration AV réussis en Amérique du Nord et en Europe."
+        "description": "Des projets d'intégration AV réussis en Amérique du Nord et en Europe depuis 2020."
       },
       {
         "title": "Expertise",
@@ -108,8 +108,8 @@
     }
   },
   "about": {
-    "intro": "Depuis 2010, JPrunier est un partenaire de confiance pour les entreprises qui souhaitent rehausser leurs environnements grâce à l'intégration intelligente de technologies de pointe.",
-    "mission": "Offrir des solutions audiovisuelles innovantes, fiables et intelligentes qui améliorent l'expérience humaine et favorisent le succès des entreprises.",
+    "intro": "Fondée en 2020, JPrunier Inc. est une passerelle technologique dans les domaines audiovisuel, informatique et intelligence artificielle. Elle met à disposition de ses clients une expertise reconnue en développement logiciel, contrôle de systèmes, conception d'interfaces, intégration multiplateforme, configuration et administration de solutions audiovisuelles complexes.",
+    "mission": "Offrir des services technologiques de qualité, optimiser l'expérience utilisateur et assurer la fiabilité et la sécurité des systèmes intégrés, selon les standards les plus exigeants de l'industrie.",
     "vision": "Un monde où la technologie s'adapte naturellement aux besoins humains, créant des espaces qui inspirent, collaborent et innovent.",
     "values": [
       { "title": "Excellence", "description": "Nous visons les plus hauts standards dans tout ce que nous faisons" },
@@ -126,6 +126,8 @@
         "title": "Programmation",
         "description": "Langages modernes pour les industries IA et AV, JPrunier agit en tant que CSP avec la certification Crestron Certified Programmer \u2013 Master Platinium.",
         "icon": "Code",
+        "page_title": "Programmation AV & IA",
+        "long_description": "JPrunier développe des micrologiciels personnalisés, des applications de systèmes de contrôle et des logiciels propulsés par l'IA pour l'industrie audiovisuelle. En tant que fournisseur de services Crestron (CSP) avec certification Master Platinum, nous livrons des solutions robustes allant des interfaces de contrôle de salle aux plateformes de gestion AV connectées au cloud. Notre équipe de programmation travaille avec Crestron SIMPL+, C#, Python et les technologies web modernes pour créer des intégrations transparentes entre le matériel AV et les couches logicielles intelligentes.",
         "bullets_left": [
           "Fournisseur de services Crestron (CSP)",
           "Expertise de base",
@@ -136,6 +138,13 @@
           "Interface utilisateur",
           "Module, pilote, plugin pour les industries IA \u2013 AV"
         ],
+        "features": [
+          { "title": "Programmation Crestron", "description": "Programmation SIMPL+, SIMPL# et C# pour processeurs 3-Series et 4-Series, panneaux tactiles et endpoints NVX." },
+          { "title": "Interfaces utilisateur personnalisées", "description": "Conception et développement d'interfaces tactiles intuitives, tableaux de bord web et applications de contrôle mobile." },
+          { "title": "Modules d'intégration IA", "description": "Développement de plugins et pilotes connectant les systèmes AV aux plateformes IA comme OpenAI, Azure Cognitive Services et modèles ML personnalisés." },
+          { "title": "Cloud & DevOps", "description": "Pipelines de déploiement Azure, gestion de bases de données et applications de surveillance AV hébergées dans le cloud." }
+        ],
+        "technologies": ["Crestron SIMPL+", "C#", "Python", "Azure", "OpenAI", "Dante", "Q-SYS", "React", "Node.js"],
         "details": "Nous développons des micrologiciels et des applications personnalisés pour Crestron, AMX et d'autres systèmes de contrôle. Notre expertise couvre les langages SIMPL+, NetLinx et C# pour créer des solutions robustes et évolutives."
       },
       {
@@ -143,6 +152,15 @@
         "title": "Conseil",
         "description": "Nos services de conseil sont conçus pour accompagner les firmes d'ingénierie, les architectes technologiques, les consultants audiovisuels et les intégrateurs de systèmes dans la conception et l'optimisation de leurs projets.",
         "icon": "Lightbulb",
+        "page_title": "Conseil AV-TI-IA",
+        "long_description": "La pratique de conseil de JPrunier fait le pont entre l'ingénierie audiovisuelle, l'infrastructure TI et l'intelligence artificielle. Nous travaillons aux côtés des firmes d'architecture, des cabinets d'ingénierie et des équipes TI d'entreprise pour concevoir des écosystèmes technologiques prêts pour l'avenir. Que vous planifiiez un nouveau siège social, modernisiez un campus ou exploriez des espaces de collaboration améliorés par l'IA, nos consultants apportent une connaissance technique approfondie et une expérience sectorielle à chaque mandat.",
+        "features": [
+          { "title": "Évaluation technologique", "description": "Évaluation complète de l'infrastructure AV et TI existante avec recommandations de modernisation et d'optimisation." },
+          { "title": "Conception et architecture", "description": "Conceptions techniques détaillées pour salles de conférence, auditoriums, centres de commandement et environnements de bâtiments intelligents." },
+          { "title": "Sélection de fournisseurs", "description": "Accompagnement impartial dans le choix des technologies, vous aidant à sélectionner les plateformes et équipements adaptés à vos besoins." },
+          { "title": "Gestion de projet", "description": "Supervision de bout en bout garantissant le respect des échéanciers, budgets et standards de qualité tout au long du processus d'intégration." }
+        ],
+        "technologies": ["Crestron", "QSC", "Biamp", "Dante", "Microsoft Teams", "Zoom", "Cisco Webex"],
         "details": "Nos consultants travaillent avec vous pour comprendre vos besoins et concevoir des solutions qui maximisent le retour sur investissement."
       },
       {
@@ -150,6 +168,15 @@
         "title": "Administration",
         "description": "Nos services d'administration assurent la fiabilité, la supervision et la performance des systèmes audiovisuels, informatiques et réseau.",
         "icon": "Settings",
+        "page_title": "Administration système",
+        "long_description": "Maintenir les systèmes AV et TI à leur performance optimale exige une vigilance et une expertise constantes. JPrunier offre des services d'administration complets incluant la surveillance à distance, la maintenance proactive, la gestion des micrologiciels et la réponse aux incidents. Notre équipe agit comme une extension de votre département TI, assurant la disponibilité et la fiabilité de l'ensemble de votre infrastructure audiovisuelle et réseau.",
+        "features": [
+          { "title": "Surveillance et support à distance", "description": "Surveillance 24/7 des systèmes AV avec alertes proactives et dépannage à distance rapide pour minimiser les temps d'arrêt." },
+          { "title": "Mises à jour logicielles", "description": "Cycles de maintenance planifiés pour processeurs de contrôle, DSP, commutateurs réseau et plateformes de collaboration." },
+          { "title": "Administration réseau", "description": "Configuration VLAN, optimisation QoS et gestion de la sécurité pour les réseaux AV-sur-IP et Dante." },
+          { "title": "Rapports de performance", "description": "Rapports réguliers sur la santé des systèmes, analytiques d'utilisation et recommandations de planification de capacité." }
+        ],
+        "technologies": ["Crestron XiO Cloud", "QSC Reflect", "Dante Director", "SNMP", "Syslog", "Azure Monitor"],
         "details": "Nous offrons une administration système continue, une surveillance et une maintenance pour garantir que votre infrastructure AV fonctionne à son plein potentiel."
       },
       {
@@ -157,6 +184,15 @@
         "title": "Intégration",
         "description": "JPrunier Inc. fournit l'implémentation et la configuration logicielle pour tous les équipements audiovisuels, IA et informatiques.",
         "icon": "Zap",
+        "page_title": "Intégration AV-IA",
+        "long_description": "JPrunier livre des services d'intégration clé en main qui rassemblent matériel audiovisuel, systèmes de contrôle, réseautage et capacités IA dans des environnements cohérents et fiables. Des salles de conseil aux classes en passant par les centres de commandement à grande échelle, nous gérons le cycle de déploiement complet. Notre méthodologie d'intégration assure que chaque composant fonctionne ensemble harmonieusement, avec une mise en service et une documentation rigoureuses.",
+        "features": [
+          { "title": "Déploiement matériel", "description": "Installation et configuration professionnelles d'écrans, projecteurs, caméras, microphones, haut-parleurs et systèmes de contrôle." },
+          { "title": "Réseaux AV-sur-IP", "description": "Conception et déploiement de réseaux Dante, AES67 et vidéo-sur-IP NVX pour une distribution flexible et évolutive." },
+          { "title": "Salles de collaboration", "description": "Déploiement complet de Microsoft Teams Rooms, Zoom Rooms et appareils Cisco Webex avec audio et vidéo optimisés." },
+          { "title": "Mise en service et formation", "description": "Tests rigoureux, documentation et formation des utilisateurs pour assurer une transition fluide et une satisfaction durable." }
+        ],
+        "technologies": ["Crestron NVX", "Dante", "AES67", "HDBaseT", "Microsoft Teams", "Zoom", "Cisco", "Shure"],
         "details": "De la conception au déploiement, nous gérons l'ensemble du processus d'intégration."
       }
     ],
