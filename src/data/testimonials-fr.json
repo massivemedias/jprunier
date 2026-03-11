@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "author": "Marie Dupont",
+    "title": "Directrice TI",
+    "company": "Banque Nationale",
+    "text": "JPrunier a transformé l'expérience de notre salle de conseil. Leur expertise en intégration Crestron est inégalée, et le soutien a été exceptionnel.",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+  },
+  {
+    "id": 2,
+    "author": "David Chen",
+    "title": "Gestionnaire des installations",
+    "company": "Tech Innovation Hub",
+    "text": "L'automatisation alimentée par l'IA qu'ils ont mise en place nous a fait gagner un temps considérable. Leur équipe est professionnelle, réactive et comprend véritablement nos besoins.",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+  },
+  {
+    "id": 3,
+    "author": "Sophie Martin",
+    "title": "Directrice de campus",
+    "company": "École Polytechnique",
+    "text": "Les services de conseil de JPrunier nous ont aidés à concevoir une infrastructure AV évolutive pour notre campus. Leur vision s'est avérée inestimable.",
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+  }
+]

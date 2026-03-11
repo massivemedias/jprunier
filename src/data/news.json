@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "JPrunier Launches AI-Powered Room Booking Integration",
+    "excerpt": "We're excited to announce our new intelligent room booking system that seamlessly integrates with Crestron control systems.",
+    "date": "2024-03-08",
+    "category": "Product Launch",
+    "author": "Innovation Team",
+    "content": "Our latest solution combines AI scheduling with real-time room availability, allowing organizations to optimize their meeting spaces and improve user experience."
+  },
+  {
+    "id": 2,
+    "title": "JPrunier Earns Crestron Specialist Certification",
+    "excerpt": "We're proud to announce our renewed certification as a premier Crestron integration partner.",
+    "date": "2024-02-15",
+    "category": "Certification",
+    "author": "Leadership",
+    "content": "This certification demonstrates our commitment to excellence and our team's expertise in designing and implementing Crestron-based solutions."
+  },
+  {
+    "id": 3,
+    "title": "Expanding to New Markets: JPrunier Opens Paris Office",
+    "excerpt": "We're thrilled to open our new European hub to better serve our clients across France and beyond.",
+    "date": "2024-01-20",
+    "category": "Company News",
+    "author": "CEO",
+    "content": "Our Paris office will provide localized support, consulting services, and integration capabilities across Europe."
+  },
+  {
+    "id": 4,
+    "title": "Webinar: The Future of Intelligent AV Systems",
+    "excerpt": "Join our experts as we discuss trends in AI-powered automation and the evolution of modern control systems.",
+    "date": "2023-12-10",
+    "category": "Event",
+    "author": "Education Team",
+    "content": "Register now for our complimentary webinar exploring how AI is transforming the AV integration industry."
+  }
+]

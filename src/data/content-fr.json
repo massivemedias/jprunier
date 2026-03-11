@@ -1,0 +1,196 @@
+{
+  "company": {
+    "name": "JPrunier Inc.",
+    "tagline": "Excellence en intégration IA-AV",
+    "description": "Fournisseur de premier plan de solutions intelligentes d'intégration audiovisuelle et d'intelligence artificielle pour les environnements d'entreprise",
+    "founded": 2010,
+    "offices": {
+      "montreal": {
+        "city": "Montréal",
+        "country": "Canada",
+        "address": "1234 Tech Avenue",
+        "phone": "+1 (514) 555-0123",
+        "email": "contact@jprunier.com"
+      },
+      "paris": {
+        "city": "Paris",
+        "country": "France",
+        "address": "567 Rue de l'Innovation",
+        "phone": "+33 1 42 55 00 99",
+        "email": "contact@jprunier.fr"
+      }
+    },
+    "social": {
+      "linkedin": "https://linkedin.com/company/jprunier",
+      "github": "https://github.com/jprunier",
+      "email": "contact@jprunier.com"
+    }
+  },
+  "hero": {
+    "home": {
+      "title": "IA \u2013 AV Intégration et solutions logicielles",
+      "subtitle": "Programmation certifiée Crestron, réseautage AV intelligent et solutions propulsées par l'IA - de la conception au déploiement, en Amérique du Nord et en Europe."
+    },
+    "about": {
+      "title": "À propos de JPrunier",
+      "subtitle": "Façonner l'avenir des environnements intelligents"
+    },
+    "services": {
+      "title": "Nos services",
+      "subtitle": "Des solutions complètes pour les entreprises modernes"
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "subtitle": "Nous sommes prêts à vous accompagner dans votre prochain projet"
+    },
+    "news": {
+      "title": "Dernières nouvelles",
+      "subtitle": "Restez informé de nos derniers projets et perspectives"
+    }
+  },
+  "home": {
+    "services_intro": "Nous offrons des services d'intégration de classe mondiale combinant l'intelligence artificielle à des systèmes audiovisuels sophistiqués.",
+    "gateway": {
+      "title": "Votre passerelle technique",
+      "subtitle": "Ressources spécialisées sur demande, développement logiciel et intégration."
+    },
+    "tech_partners": [
+      { "name": "Microsoft", "logo": "/images/microsoft-bw.png" },
+      { "name": "Crestron", "logo": "/images/crestron-bw.png" },
+      { "name": "OpenAI", "logo": "/images/openai-bw.png" },
+      { "name": "Dante", "logo": "/images/dante-bw.png" },
+      { "name": "QSC", "logo": "/images/qsys-logo.png" }
+    ],
+    "connecting_items": [
+      {
+        "title": "Connexion des espaces",
+        "description": "Nous concevons et déployons des solutions qui connectent salles, bâtiments et campus grâce à un réseau AV intelligent.",
+        "icon": "grid"
+      },
+      {
+        "title": "Base de données liée",
+        "description": "Les données sont un élément clé de l'AV intégré à l'IA. Nous vous aidons à gérer les données entre vos plateformes AV et de contrôle.",
+        "icon": "link"
+      },
+      {
+        "title": "Chat IA",
+        "description": "Contrôler vos espaces AV, modifier la configuration de vos salles depuis votre chat sont quelques avantages de l'intégration AV et IA.",
+        "icon": "chat"
+      }
+    ],
+    "expertise_items": [
+      {
+        "title": "Expérience",
+        "description": "Plus d'une décennie de projets d'intégration AV réussis en Amérique du Nord et en Europe."
+      },
+      {
+        "title": "Expertise",
+        "description": "Connaissance technique approfondie de Crestron, Dante, Q-SYS et des plateformes de collaboration modernes."
+      },
+      {
+        "title": "Formation",
+        "description": "Équipe continuellement formée et certifiée, au rythme des technologies en évolution."
+      }
+    ],
+    "discover_cta": {
+      "title": "Découvrez comment notre expertise peut façonner votre prochain projet",
+      "subtitle": "Connectons-nous pour discuter de votre vision. Que vous conceviez ou intégriez une salle de conférence, un bâtiment intelligent, que vous optimisiez vos systèmes AV en réseau ou exploriez l'intégration IA - JPrunier relie les technologies ensemble.",
+      "button": "Contactez-nous"
+    },
+    "achievements": {
+      "title": "Réalisations",
+      "subtitle": "Demandez-nous des références liées à votre secteur d'activité."
+    },
+    "cta_section": {
+      "title": "Prêt à transformer votre environnement ?",
+      "subtitle": "Discutons de la façon dont JPrunier peut enrichir votre espace avec des solutions AV intelligentes.",
+      "button": "Planifier une consultation"
+    }
+  },
+  "about": {
+    "intro": "Depuis 2010, JPrunier est un partenaire de confiance pour les entreprises qui souhaitent rehausser leurs environnements grâce à l'intégration intelligente de technologies de pointe.",
+    "mission": "Offrir des solutions audiovisuelles innovantes, fiables et intelligentes qui améliorent l'expérience humaine et favorisent le succès des entreprises.",
+    "vision": "Un monde où la technologie s'adapte naturellement aux besoins humains, créant des espaces qui inspirent, collaborent et innovent.",
+    "values": [
+      { "title": "Excellence", "description": "Nous visons les plus hauts standards dans tout ce que nous faisons" },
+      { "title": "Innovation", "description": "Nous adoptons les technologies émergentes pour résoudre des défis complexes" },
+      { "title": "Partenariat", "description": "Nous bâtissons des relations durables avec nos clients et partenaires" },
+      { "title": "Fiabilité", "description": "Nous tenons nos engagements grâce à une expertise éprouvée" }
+    ]
+  },
+  "services": {
+    "intro": "De la programmation et du conseil à l'administration système et à l'intégration, nous offrons des solutions complètes adaptées à vos besoins spécifiques.",
+    "main_services": [
+      {
+        "id": "programming",
+        "title": "Programmation",
+        "description": "Langages modernes pour les industries IA et AV, JPrunier agit en tant que CSP avec la certification Crestron Certified Programmer \u2013 Master Platinium.",
+        "icon": "Code",
+        "bullets_left": [
+          "Fournisseur de services Crestron (CSP)",
+          "Expertise de base",
+          "Audio DSP, Dante, Vidéo sur IP"
+        ],
+        "bullets_right": [
+          "Microsoft Azure : devOps, base de données, application",
+          "Interface utilisateur",
+          "Module, pilote, plugin pour les industries IA \u2013 AV"
+        ],
+        "details": "Nous développons des micrologiciels et des applications personnalisés pour Crestron, AMX et d'autres systèmes de contrôle. Notre expertise couvre les langages SIMPL+, NetLinx et C# pour créer des solutions robustes et évolutives."
+      },
+      {
+        "id": "consulting",
+        "title": "Conseil",
+        "description": "Nos services de conseil sont conçus pour accompagner les firmes d'ingénierie, les architectes technologiques, les consultants audiovisuels et les intégrateurs de systèmes dans la conception et l'optimisation de leurs projets.",
+        "icon": "Lightbulb",
+        "details": "Nos consultants travaillent avec vous pour comprendre vos besoins et concevoir des solutions qui maximisent le retour sur investissement."
+      },
+      {
+        "id": "administration",
+        "title": "Administration",
+        "description": "Nos services d'administration assurent la fiabilité, la supervision et la performance des systèmes audiovisuels, informatiques et réseau.",
+        "icon": "Settings",
+        "details": "Nous offrons une administration système continue, une surveillance et une maintenance pour garantir que votre infrastructure AV fonctionne à son plein potentiel."
+      },
+      {
+        "id": "integration",
+        "title": "Intégration",
+        "description": "JPrunier Inc. fournit l'implémentation et la configuration logicielle pour tous les équipements audiovisuels, IA et informatiques.",
+        "icon": "Zap",
+        "details": "De la conception au déploiement, nous gérons l'ensemble du processus d'intégration."
+      }
+    ],
+    "crestron_section": {
+      "title": "Spécialiste des systèmes de contrôle Crestron",
+      "description": "Nous sommes des spécialistes certifiés Crestron avec une expertise approfondie des systèmes de contrôle Crestron.",
+      "capabilities": [
+        "Systèmes Crestron DM-MD (Commutation vidéo matricielle)",
+        "Crestron DMPS (Systèmes de présentation média numérique)",
+        "Technologie fibre optique Crestron DigitalMedia",
+        "Présentation sans fil Crestron AirMedia",
+        "Programmation de systèmes de contrôle Crestron (SIMPL+)",
+        "Certification Crestron AirMedia & DXLink",
+        "Intégration de réservation de salles",
+        "Intégration de contrôle vocal"
+      ]
+    },
+    "expertise": {
+      "title": "Expertise de base",
+      "categories": [
+        { "name": "Systèmes de contrôle", "items": ["Crestron DM-MD", "Crestron DMPS", "AMX NetLinx", "QSC Q-SYS"] },
+        { "name": "Solutions audio", "items": ["Réseau Dante", "Audio AES67", "Systèmes de microphones sans fil", "Mixage professionnel"] },
+        { "name": "Technologie vidéo", "items": ["Distribution 4K/8K", "Fibre DigitalMedia", "DXLink", "HDBaseT"] },
+        { "name": "Plateformes de collaboration", "items": ["Zoom Rooms", "Microsoft Teams Rooms", "Cisco Webex", "Google Meet"] }
+      ]
+    }
+  },
+  "sectors": [
+    { "name": "Commercial" },
+    { "name": "Entreprise" },
+    { "name": "Développement" },
+    { "name": "Santé" },
+    { "name": "Gouvernement" },
+    { "name": "Éducation" }
+  ],
+  "partners": ["Crestron", "AMX", "Cisco", "Zoom", "Microsoft", "QSC", "Dante"]
+}
