@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Calendar, User, Tag } from 'lucide-react';
+import { Calendar, ExternalLink, Linkedin } from 'lucide-react';
 import Hero from '../components/Hero';
 import { useContent, useT, useLanguage } from '../context/LanguageContext';
 import './News.css';
@@ -16,20 +16,13 @@ export default function News() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
   const formatDate = (dateString) => {
@@ -51,7 +44,6 @@ export default function News() {
         compact={true}
       />
 
-      {/* News Feed Section */}
       <section className="section news-section">
         <div className="container">
           <motion.div
@@ -59,70 +51,59 @@ export default function News() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: '-50px' }}
           >
-            {news.map((article, index) => (
-              <motion.article
+            {news.map((article) => (
+              <motion.a
                 key={article.id}
+                href={article.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="news-card"
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -4 }}
               >
-                <div className="news-header">
-                  <div className="news-meta">
-                    <span className="news-category">{article.category}</span>
+                <div className="news-card-content">
+                  <div className="news-card-top">
                     <span className="news-date">
-                      <Calendar size={16} />
+                      <Calendar size={14} />
                       {formatDate(article.date)}
                     </span>
+                    <Linkedin size={20} className="news-linkedin-icon" />
                   </div>
                   <h3>{article.title}</h3>
+                  <p>{article.excerpt}</p>
                 </div>
-
-                <div className="news-body">
-                  <p className="news-excerpt">{article.excerpt}</p>
-                  <p className="news-content">{article.content}</p>
-                </div>
-
-                <div className="news-footer">
-                  <span className="news-author">
-                    <User size={16} />
-                    {t('news.by')} {article.author}
+                <div className="news-card-footer">
+                  <span className="news-read-linkedin">
+                    {t('news.read_on_linkedin')} <ExternalLink size={14} />
                   </span>
-                  <a href="#" className="read-more">
-                    {t('news.read_more')}
-                  </a>
                 </div>
-              </motion.article>
+              </motion.a>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="section newsletter-section">
+      <section className="section news-linkedin-cta">
         <div className="container">
           <motion.div
-            className="newsletter-content"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
+            className="linkedin-cta-content"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >
-            <motion.h2 variants={itemVariants}>{t('news.stay_updated')}</motion.h2>
-            <motion.p variants={itemVariants}>
-              {t('news.newsletter_text')}
-            </motion.p>
-            <motion.form variants={itemVariants} className="newsletter-form">
-              <input
-                type="email"
-                placeholder={t('news.email_placeholder')}
-                required
-              />
-              <button type="submit" className="btn btn-primary">
-                {t('news.subscribe')}
-              </button>
-            </motion.form>
+            <Linkedin size={32} className="linkedin-cta-icon" />
+            <h2>{t('news.follow_us')}</h2>
+            <p>{t('news.follow_text')}</p>
+            <a
+              href="https://www.linkedin.com/company/jprunier-inc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary linkedin-btn"
+            >
+              <Linkedin size={18} /> {t('news.follow_linkedin')}
+            </a>
           </motion.div>
         </div>
       </section>

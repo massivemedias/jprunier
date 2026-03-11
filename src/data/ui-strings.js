@@ -52,6 +52,10 @@ export const uiStrings = {
     'news.email_placeholder': 'Enter your email',
     'news.subscribe': 'Subscribe',
     'news.read_more': 'Read More →',
+    'news.read_on_linkedin': 'Read on LinkedIn',
+    'news.follow_us': 'Follow us on LinkedIn',
+    'news.follow_text': 'Stay up to date with our latest projects, events, and AI-AV industry insights.',
+    'news.follow_linkedin': 'Follow JPrunier',
     'news.by': 'By',
 
     // Footer
@@ -110,6 +114,10 @@ export const uiStrings = {
     'news.email_placeholder': 'Entrez votre courriel',
     'news.subscribe': 'S\'abonner',
     'news.read_more': 'Lire la suite →',
+    'news.read_on_linkedin': 'Lire sur LinkedIn',
+    'news.follow_us': 'Suivez-nous sur LinkedIn',
+    'news.follow_text': 'Restez informé de nos derniers projets, événements et tendances de l\'industrie IA-AV.',
+    'news.follow_linkedin': 'Suivre JPrunier',
     'news.by': 'Par',
 
     // Footer

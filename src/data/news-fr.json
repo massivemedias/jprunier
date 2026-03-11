@@ -1,38 +1,30 @@
 [
   {
     "id": 1,
-    "title": "JPrunier lance une intégration de réservation de salles alimentée par l'IA",
-    "excerpt": "Nous sommes ravis d'annoncer notre nouveau système intelligent de réservation de salles qui s'intègre parfaitement aux systèmes de contrôle Crestron.",
-    "date": "2024-03-08",
-    "category": "Lancement produit",
-    "author": "Équipe Innovation",
-    "content": "Notre dernière solution combine la planification IA avec la disponibilité des salles en temps réel, permettant aux organisations d'optimiser leurs espaces de réunion et d'améliorer l'expérience utilisateur."
+    "title": "ISE 2026",
+    "excerpt": "Début de semaine bien rempli à ISE 2026. Échanges stratégiques avec nos clients canadiens et européens, discussions passionnantes autour des enjeux AI-AV avec nos partenaires.",
+    "date": "2026-02-04",
+    "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   },
   {
     "id": 2,
-    "title": "JPrunier obtient la certification Spécialiste Crestron",
-    "excerpt": "Nous sommes fiers d'annoncer le renouvellement de notre certification en tant que partenaire d'intégration Crestron de premier plan.",
-    "date": "2024-02-15",
-    "category": "Certification",
-    "author": "Direction",
-    "content": "Cette certification démontre notre engagement envers l'excellence et l'expertise de notre équipe dans la conception et la mise en œuvre de solutions Crestron."
+    "title": "Rendez-vous à Barcelone !",
+    "excerpt": "JPrunier Inc. sera présent à l'ISE 2026 à Barcelone, du 03 au 06 février prochain.",
+    "date": "2026-01-26",
+    "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   },
   {
     "id": 3,
-    "title": "Expansion vers de nouveaux marchés : JPrunier ouvre un bureau à Paris",
-    "excerpt": "Nous sommes ravis d'ouvrir notre nouveau centre européen pour mieux servir nos clients en France et au-delà.",
-    "date": "2024-01-20",
-    "category": "Nouvelles de l'entreprise",
-    "author": "PDG",
-    "content": "Notre bureau parisien offrira un soutien local, des services de conseil et des capacités d'intégration à travers l'Europe."
+    "title": "JPrunier Inc. — Votre passerelle technologique AV-TI-AI",
+    "excerpt": "Développement de solutions logicielles. Canada - Europe - Moyen-Orient.",
+    "date": "2025-10-28",
+    "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   },
   {
     "id": 4,
-    "title": "Webinaire : L'avenir des systèmes AV intelligents",
-    "excerpt": "Rejoignez nos experts pour discuter des tendances en automatisation alimentée par l'IA et de l'évolution des systèmes de contrôle modernes.",
-    "date": "2023-12-10",
-    "category": "Événement",
-    "author": "Équipe Formation",
-    "content": "Inscrivez-vous dès maintenant à notre webinaire gratuit explorant comment l'IA transforme l'industrie de l'intégration AV."
+    "title": "Très belle intégration signée Naoli et Alive Technology",
+    "excerpt": "Un projet d'intégration impressionnant démontrant le meilleur de l'AV et de l'IA ensemble.",
+    "date": "2025-10-19",
+    "linkedinUrl": "https://www.linkedin.com/company/jprunier-inc"
   }
 ]
