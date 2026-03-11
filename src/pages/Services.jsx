@@ -39,6 +39,7 @@ export default function Services() {
         subtitle={hero.services.subtitle}
         backgroundImage={`${base}images/bg-ai-generated.png`}
         centered={true}
+        compact={true}
       />
 
       {/* Services Intro Section */}

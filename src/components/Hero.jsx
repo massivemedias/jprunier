@@ -13,10 +13,11 @@ export default function Hero({
   ctaSecondary,
   ctaSecondaryLink,
   centered = false,
+  compact = false,
 }) {
   return (
     <section
-      className={`hero ${centered ? 'hero-centered' : ''}`}
+      className={`hero ${centered ? 'hero-centered' : ''} ${compact ? 'hero-compact' : ''}`}
       style={{
         backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
       }}

@@ -283,7 +283,26 @@
   line-height: var(--line-height-relaxed);
 }
 
-/* ====== EXPERTISE (white) ====== */
+/* ====== EXPERTISE (white with bg image) ====== */
+.expertise-home-section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.expertise-home-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+}
+
+.expertise-home-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
 .expertise-home-section .section-title {
   color: var(--text-dark);
 }
@@ -372,6 +391,22 @@
 /* ====== SECTORS (dark, split) ====== */
 .sectors-home-section {
   background-color: var(--background);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.sectors-home-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 21, 32, 0.75);
+  z-index: 0;
+}
+
+.sectors-home-section > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .sectors-split {

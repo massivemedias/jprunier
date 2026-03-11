@@ -38,6 +38,7 @@ export default function About() {
         subtitle={hero.about.subtitle}
         backgroundImage={`${base}images/bg-abstract.png`}
         centered={true}
+        compact={true}
       />
 
       {/* Company Overview Section */}

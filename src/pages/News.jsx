@@ -48,6 +48,7 @@ export default function News() {
         subtitle={hero.news.subtitle}
         backgroundImage={`${base}images/bg-bubbles.png`}
         centered={true}
+        compact={true}
       />
 
       {/* News Feed Section */}

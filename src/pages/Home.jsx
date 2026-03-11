@@ -218,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* 7. EXPERTISE YOU CAN TRUST */}
-      <section className="section-light expertise-home-section">
+      <section className="section-light expertise-home-section" style={{ backgroundImage: `url(${base}images/bg-ia-av-spheres.jpg)` }}>
         <div className="container">
           <motion.h2
             className="section-title"
@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* 9. ACTIVE ACROSS ALL SECTORS */}
-      <section className="section sectors-home-section">
+      <section className="section sectors-home-section" style={{ backgroundImage: `url(${base}images/bg-neural-network.png)` }}>
         <div className="container">
           <motion.div
             className="sectors-split"

@@ -68,6 +68,7 @@ export default function Contact() {
         subtitle={hero.contact.subtitle}
         backgroundImage={`${base}images/bg-variante.png`}
         centered={true}
+        compact={true}
       />
 
       {/* Contact Form & Info Section */}
