@@ -267,8 +267,8 @@
 
 [data-theme="light"] .hero-cta-secondary:hover {
   background: rgba(0, 0, 0, 0.05) !important;
-  border-color: var(--accent-violet) !important;
-  color: var(--accent-violet) !important;
+  border-color: #3a3a3a !important;
+  color: #3a3a3a !important;
 }
 
 /* --- Contact section — keep dark bg but fix link colors --- */
@@ -322,11 +322,11 @@
 }
 
 [data-theme="light"] .contact-info-item a:hover {
-  color: var(--accent-violet);
+  color: #6440e0;
 }
 
 [data-theme="light"] .contact-info-item svg {
-  color: var(--accent-violet);
+  color: #3a3a3a;
 }
 
 [data-theme="light"] .info-label {
@@ -335,7 +335,7 @@
 
 /* --- Brochure card — keep purple gradient visible in light theme --- */
 [data-theme="light"] .brochure-card {
-  background: linear-gradient(135deg, var(--accent-violet) 0%, #9b7dff 100%) !important;
+  background: linear-gradient(135deg, #6440e0 0%, #9b7dff 100%) !important;
   border-color: transparent;
 }
 
