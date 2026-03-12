@@ -2,6 +2,11 @@ import type { CollectionConfig } from 'payload'
 
 export const Media: CollectionConfig = {
   slug: 'media',
+  labels: { singular: 'Média', plural: 'Médias' },
+  admin: {
+    group: 'Configuration',
+    description: 'Images, logos, certifications et documents PDF',
+  },
   access: { read: () => true },
   upload: {
     staticDir: '../public/media',
@@ -14,21 +19,22 @@ export const Media: CollectionConfig = {
     },
   },
   fields: [
-    { name: 'alt', type: 'text', required: true, localized: true },
+    { name: 'alt', type: 'text', required: true, localized: true, admin: { description: 'Texte alternatif pour l\'accessibilité' } },
     {
       name: 'category',
       type: 'select',
+      required: true,
+      admin: { description: 'Catégorie pour organiser les médias' },
       options: [
-        { label: 'Interface Screenshot', value: 'interface' },
-        { label: 'Certification Badge', value: 'certification' },
-        { label: 'Client Logo', value: 'client' },
-        { label: 'Background', value: 'background' },
+        { label: 'Capture d\'interface', value: 'interface' },
+        { label: 'Badge certification', value: 'certification' },
+        { label: 'Logo client', value: 'client' },
+        { label: 'Arrière-plan', value: 'background' },
         { label: 'Photo', value: 'photo' },
-        { label: 'Tech Partner Logo', value: 'partner' },
-        { label: 'Brochure (PDF)', value: 'brochure' },
-        { label: 'Other', value: 'other' },
+        { label: 'Logo partenaire', value: 'partner' },
+        { label: 'Brochure PDF', value: 'brochure' },
+        { label: 'Autre', value: 'other' },
       ],
-      admin: { description: 'Category for organizing media in the admin panel' },
     },
   ],
 }
