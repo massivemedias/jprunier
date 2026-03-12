@@ -1,4 +1,7 @@
-.contact-section { background: var(--off-white, #f8f9fa); }
+/* Contact section — always dark themed */
+.contact-section {
+  background: #0a1520;
+}
 
 .contact-grid {
   display: grid;
@@ -8,51 +11,52 @@
 }
 
 .contact-form-wrapper {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(26, 43, 61, 0.6);
+  border: 1px solid rgba(116, 86, 241, 0.12);
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form-wrapper h2 { color: var(--text-dark, #1a1a2e); margin-bottom: var(--spacing-xl); font-size: var(--font-size-xl); }
+.contact-form-wrapper h2 { color: #E7EBEE; margin-bottom: var(--spacing-xl); font-size: var(--font-size-xl); }
 
 .contact-form { display: flex; flex-direction: column; gap: var(--spacing-lg); }
 .form-group { display: flex; flex-direction: column; gap: var(--spacing-sm); }
-.form-group label { font-weight: 600; color: var(--text-dark, #1a1a2e); font-size: var(--font-size-sm); }
+.form-group label { font-weight: 600; color: #E7EBEE; font-size: var(--font-size-sm); }
 
 .form-group input,
 .form-group textarea {
-  background: var(--off-white, #f8f9fa);
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md, 8px);
   padding: 0.75rem 1rem;
   font-size: var(--font-size-base);
-  color: var(--text-dark, #1a1a2e);
+  color: #E7EBEE;
   transition: border-color var(--transition-base);
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: #999; }
+.form-group textarea::placeholder { color: rgba(255, 255, 255, 0.35); }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-violet);
-  box-shadow: 0 0 0 3px rgba(116, 86, 241, 0.1);
+  box-shadow: 0 0 0 3px rgba(116, 86, 241, 0.2);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .contact-info-wrapper { display: flex; flex-direction: column; gap: var(--spacing-2xl); }
 
 .contact-info-section {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(26, 43, 61, 0.6);
+  border: 1px solid rgba(116, 86, 241, 0.12);
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
-.contact-info-section h3 { color: var(--text-dark, #1a1a2e); margin-bottom: var(--spacing-xl); font-size: var(--font-size-lg); }
+.contact-info-section h3 { color: #E7EBEE; margin-bottom: var(--spacing-xl); font-size: var(--font-size-lg); }
 
 .contact-info-item {
   display: flex;
@@ -63,10 +67,15 @@
 
 .contact-info-item:last-child { margin-bottom: 0; }
 .contact-info-item svg { color: var(--accent-violet); flex-shrink: 0; margin-top: 2px; }
-.info-label { font-size: var(--font-size-sm); color: #888; margin-bottom: var(--spacing-xs); }
-.contact-info-item p { margin: 0; color: var(--text-dark, #1a1a2e); }
+.info-label { font-size: var(--font-size-sm); color: rgba(255, 255, 255, 0.5); margin-bottom: var(--spacing-xs); }
+.contact-info-item p { margin: 0; color: #E7EBEE; }
 .contact-info-item a { color: var(--accent-violet); transition: color var(--transition-base); }
 .contact-info-item a:hover { color: var(--accent-violet-light, #9b7dff); }
+
+.contact-section .btn-primary {
+  background: var(--accent-violet);
+  color: white;
+}
 
 .map-section { background-color: var(--background); }
 .map-section h2 { color: var(--gray-light); }
@@ -83,6 +92,24 @@
   color: var(--gray-dark);
   font-size: var(--font-size-lg);
   margin-top: var(--spacing-2xl);
+}
+
+.form-success {
+  color: #4ade80;
+  font-size: var(--font-size-sm);
+  padding: 0.75rem 1rem;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.form-error {
+  color: #f87171;
+  font-size: var(--font-size-sm);
+  padding: 0.75rem 1rem;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  border-radius: var(--radius-md);
 }
 
 @media (max-width: 768px) {

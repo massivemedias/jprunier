@@ -34,11 +34,29 @@ export default function ContactClient({
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState(false)
+  const [error, setError] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    setFormData({ name: '', email: '', phone: '', company: '', message: '' })
-    alert(t('contact.success'))
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (!res.ok) throw new Error('Failed')
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' })
+      setSent(true)
+      setTimeout(() => setSent(false), 5000)
+    } catch {
+      setError(t('contact.error') || 'An error occurred. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   const offices = settings.offices || []
@@ -106,8 +124,10 @@ export default function ContactClient({
                     rows={5}
                   />
                 </div>
-                <button type="submit" className="btn btn-primary">
-                  {t('contact.submit')}
+                {sent && <p className="form-success">{t('contact.success')}</p>}
+                {error && <p className="form-error">{error}</p>}
+                <button type="submit" className="btn btn-primary" disabled={sending}>
+                  {sending ? '...' : t('contact.submit')}
                 </button>
               </form>
             </motion.div>
