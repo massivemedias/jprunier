@@ -4,8 +4,14 @@ export const Media: CollectionConfig = {
   slug: 'media',
   access: { read: () => true },
   upload: {
-    staticDir: '../public',
+    staticDir: '../public/media',
     mimeTypes: ['image/*', 'application/pdf'],
+    adminThumbnail: ({ doc }) => {
+      if (doc?.filename) {
+        return `/media/${doc.filename}`
+      }
+      return ''
+    },
   },
   fields: [
     { name: 'alt', type: 'text', required: true, localized: true },

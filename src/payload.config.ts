@@ -1,6 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
+import sharp from 'sharp'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 // import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
@@ -46,5 +47,6 @@ export default buildConfig({
     url: process.env.MONGODB_URI || '',
   }),
   editor: lexicalEditor(),
+  sharp,
   plugins: [],
 })
