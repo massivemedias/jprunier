@@ -1,0 +1,60 @@
+.about-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface) 100%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-3xl);
+}
+
+.about-intro,
+.about-mission,
+.about-vision {
+  background: rgba(116, 86, 241, 0.05);
+  border-left: 4px solid var(--accent-violet);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+}
+
+.about-intro h2,
+.about-mission h3,
+.about-vision h3 {
+  color: var(--accent-violet);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-intro p,
+.about-mission p,
+.about-vision p {
+  color: var(--gray-light);
+  line-height: var(--line-height-relaxed);
+}
+
+.values-section { background-color: var(--background); }
+
+.value-card {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
+  border: 1px solid rgba(116, 86, 241, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  transition: all var(--transition-base);
+}
+
+.value-card:hover {
+  border-color: var(--accent-violet);
+  box-shadow: 0 20px 40px rgba(116, 86, 241, 0.2);
+  transform: translateY(-5px);
+}
+
+.value-card h3 { color: var(--accent-violet); margin-bottom: var(--spacing-md); }
+.value-card p { color: var(--gray-medium); margin: 0; }
+
+.testimonials-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface) 100%);
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: var(--spacing-2xl); }
+  .about-intro, .about-mission, .about-vision { padding: var(--spacing-xl); }
+}
