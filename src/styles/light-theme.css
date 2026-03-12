@@ -224,6 +224,40 @@
   border-color: rgba(60, 40, 10, 0.1);
 }
 
+/* --- Accordion section — light bg, readable cards --- */
+[data-theme="light"] .accordion-section {
+  background: var(--background);
+  background-image: none;
+}
+
+[data-theme="light"] .accordion-item {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.08);
+  backdrop-filter: none;
+}
+
+[data-theme="light"] .accordion-item:hover,
+[data-theme="light"] .accordion-open {
+  border-color: rgba(60, 40, 10, 0.15);
+}
+
+[data-theme="light"] .accordion-header h3 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .accordion-icon-circle {
+  background: rgba(60, 40, 10, 0.08);
+  border-color: rgba(60, 40, 10, 0.12);
+}
+
+[data-theme="light"] .accordion-icon-circle svg {
+  color: #3a3a3a;
+}
+
+[data-theme="light"] .accordion-body p {
+  color: var(--text-dark-secondary);
+}
+
 /* --- Focus states — remove violet glow --- */
 [data-theme="light"] input:focus,
 [data-theme="light"] textarea:focus,
