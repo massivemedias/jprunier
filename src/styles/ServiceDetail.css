@@ -391,6 +391,13 @@
   flex: 1;
   overflow: hidden;
   border-radius: var(--radius-xl);
+  max-height: 50vh;
+}
+
+.carousel-viewport img {
+  max-height: 50vh;
+  object-fit: contain;
+  width: 100%;
 }
 
 .carousel-track {
