@@ -1,6 +1,8 @@
 import { getGlobal, getCollection } from '../../lib/payload'
 import HomeClient from './HomeClient'
 
+export const dynamic = 'force-dynamic'
+
 export default async function HomePage() {
   const [homePage, services, sectors] = await Promise.all([
     getGlobal('home-page'),

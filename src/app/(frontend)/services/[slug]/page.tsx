@@ -2,9 +2,15 @@ import { getCollectionBySlug, getCollection, getAllSlugs } from '../../../../lib
 import ServiceDetailClient from './ServiceDetailClient'
 
 export async function generateStaticParams() {
-  const slugs = await getAllSlugs('services')
-  return slugs.map((slug: string) => ({ slug }))
+  try {
+    const slugs = await getAllSlugs('services')
+    return slugs.map((slug: string) => ({ slug }))
+  } catch {
+    return []
+  }
 }
+
+export const dynamic = 'force-dynamic'
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params

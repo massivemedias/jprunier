@@ -1,6 +1,8 @@
 import { getGlobal, getCollection } from '../../../lib/payload'
 import NewsClient from './NewsClient'
 
+export const dynamic = 'force-dynamic'
+
 export default async function NewsPage() {
   const [newsPage, articles] = await Promise.all([
     getGlobal('news-page'),
