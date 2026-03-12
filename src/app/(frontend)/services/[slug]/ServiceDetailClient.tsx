@@ -370,7 +370,13 @@ export default function ServiceDetailClient({
                   const linkProps = client.url ? { href: client.url, target: '_blank', rel: 'noopener noreferrer' } : {}
                   return (
                     <CardTag key={i} className="client-card" {...linkProps}>
-                      <img src={client.logo || ''} alt={client.name} className="client-logo" loading="lazy" />
+                      <img
+                        src={client.logo || ''}
+                        alt={client.name}
+                        className="client-logo"
+                        loading="lazy"
+                        style={client.name?.toLowerCase() === 'wsp' ? { width: '100px', height: '65px' } : undefined}
+                      />
                       <span className="client-name">{client.name}</span>
                       {client.period && <span className="client-period">{client.period}</span>}
                     </CardTag>
