@@ -111,11 +111,6 @@
   border-color: rgba(60, 40, 10, 0.06);
 }
 
-[data-theme="light"] .brochure-card {
-  background: var(--surface);
-  border-color: rgba(60, 40, 10, 0.08);
-}
-
 [data-theme="light"] .other-service-card {
   background: var(--surface);
   border-color: rgba(60, 40, 10, 0.08);
@@ -234,4 +229,178 @@
 
 [data-theme="light"] .testimonial-avatar {
   border-color: rgba(60, 40, 10, 0.1);
+}
+
+/* --- Hero overlay — much more transparent in light theme --- */
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(247, 243, 236, 0.45) 0%,
+    rgba(247, 243, 236, 0.3) 50%,
+    rgba(100, 64, 224, 0.05) 100%
+  );
+}
+
+[data-theme="light"] .hero-title {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .hero-subtitle {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] .hero-cta-secondary {
+  border-color: var(--text-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+[data-theme="light"] .hero-cta-secondary:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-color: var(--accent-violet) !important;
+  color: var(--accent-violet) !important;
+}
+
+/* --- Contact section — keep dark bg but fix link colors --- */
+[data-theme="light"] .contact-section {
+  background: #f7f3ec;
+}
+
+[data-theme="light"] .contact-form-wrapper {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.08);
+  box-shadow: 0 4px 24px rgba(60, 40, 10, 0.06);
+}
+
+[data-theme="light"] .contact-form-wrapper h2 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .form-group label {
+  color: var(--text-dark-secondary);
+}
+
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea {
+  background: var(--background);
+  border-color: rgba(60, 40, 10, 0.12);
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .form-group input::placeholder,
+[data-theme="light"] .form-group textarea::placeholder {
+  color: var(--gray-dark);
+}
+
+[data-theme="light"] .contact-info-section {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.08);
+  box-shadow: 0 4px 24px rgba(60, 40, 10, 0.06);
+}
+
+[data-theme="light"] .contact-info-section h3 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .contact-info-item p {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .contact-info-item a {
+  color: #4a4a4a;
+  font-weight: 500;
+}
+
+[data-theme="light"] .contact-info-item a:hover {
+  color: var(--accent-violet);
+}
+
+[data-theme="light"] .contact-info-item svg {
+  color: var(--accent-violet);
+}
+
+[data-theme="light"] .info-label {
+  color: var(--gray-dark);
+}
+
+/* --- Brochure card — keep purple gradient visible in light theme --- */
+[data-theme="light"] .brochure-card {
+  background: linear-gradient(135deg, var(--accent-violet) 0%, #9b7dff 100%) !important;
+  border-color: transparent;
+}
+
+[data-theme="light"] .brochure-content h3 {
+  color: white;
+}
+
+[data-theme="light"] .brochure-content p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] .brochure-content .section-icon {
+  color: white;
+}
+
+/* --- Client logos — remove brightness filter that makes them invisible --- */
+[data-theme="light"] .client-logo {
+  filter: none;
+  opacity: 1;
+}
+
+[data-theme="light"] .client-card:hover .client-logo {
+  filter: none;
+  opacity: 1;
+}
+
+[data-theme="light"] .client-card {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.1);
+}
+
+[data-theme="light"] .client-card:hover {
+  border-color: rgba(60, 40, 10, 0.2);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
+}
+
+[data-theme="light"] .client-name {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .client-period {
+  color: var(--accent-violet);
+}
+
+/* --- Service references section --- */
+[data-theme="light"] .service-references {
+  background-color: var(--background);
+}
+
+[data-theme="light"] .service-references h2 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .service-references .section-subtitle {
+  color: var(--text-dark-secondary);
+}
+
+/* --- Warranty section --- fix for light --- */
+[data-theme="light"] .service-warranty {
+  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+}
+
+[data-theme="light"] .warranty-header h2 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .warranty-item {
+  color: var(--text-dark);
+  background: rgba(100, 64, 224, 0.05);
+}
+
+/* --- Service not found --- */
+[data-theme="light"] .service-not-found {
+  background: var(--background);
+}
+
+[data-theme="light"] .service-not-found h2 {
+  color: var(--text-dark);
 }
