@@ -109,10 +109,20 @@ export default function Header({
               {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
             </button>
 
-            <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
-              <Globe size={15} />
-              <span>{language === 'fr' ? 'EN' : 'FR'}</span>
-            </button>
+            <div className="lang-pill" role="group" aria-label="Language toggle">
+              <button
+                className={`lang-pill-btn ${language === 'fr' ? 'lang-pill-active' : ''}`}
+                onClick={() => setLanguage('fr')}
+              >
+                FR
+              </button>
+              <button
+                className={`lang-pill-btn ${language === 'en' ? 'lang-pill-active' : ''}`}
+                onClick={() => setLanguage('en')}
+              >
+                EN
+              </button>
+            </div>
 
             <Link href="/contact" className="header-cta" onClick={closeMobileMenu}>
               {t('nav.contact')}
