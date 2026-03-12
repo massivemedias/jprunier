@@ -95,13 +95,8 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* PARALLAX WINDOW 1 */}
-      <div className="parallax-window" style={{ backgroundImage: 'url(/images/bg-ai-generated.png)' }}>
-        <div className="parallax-overlay" />
-      </div>
-
       {/* 4. GLOBAL SERVICES */}
-      <section className="section services-home-section diagonal-top" style={{ backgroundImage: 'url(/images/hero-bg.png)' }}>
+      <section className="section services-home-section" style={{ backgroundImage: 'url(/images/hero-bg.png)' }}>
         <div className="services-overlay"></div>
         <div className="container services-home-content">
           <motion.h2
@@ -165,7 +160,7 @@ export default function HomeClient({
       </section>
 
       {/* 5. AI & AV */}
-      <section className="section-light aiav-section diagonal-top-light">
+      <section className="section-light aiav-section">
         <div className="container">
           <motion.div
             className="aiav-grid"
@@ -186,7 +181,7 @@ export default function HomeClient({
       </section>
 
       {/* 6. CONNECTING SPACES — accordion */}
-      <section className="section accordion-section diagonal-top">
+      <section className="section accordion-section">
         <div className="container">
           <motion.div
             variants={containerVariants}
@@ -230,11 +225,6 @@ export default function HomeClient({
           </motion.div>
         </div>
       </section>
-
-      {/* PARALLAX WINDOW 2 */}
-      <div className="parallax-window" style={{ backgroundImage: 'url(/images/bg-ia-av-spheres.jpg)' }}>
-        <div className="parallax-overlay parallax-overlay-light" />
-      </div>
 
       {/* 7. EXPERTISE YOU CAN TRUST */}
       <section className="section-light expertise-home-section" style={{ backgroundImage: 'url(/images/bg-ia-av-spheres.jpg)' }}>
@@ -284,11 +274,6 @@ export default function HomeClient({
           </motion.div>
         </div>
       </section>
-
-      {/* PARALLAX WINDOW 3 */}
-      <div className="parallax-window parallax-tall" style={{ backgroundImage: 'url(/images/bg-neural-network.png)' }}>
-        <div className="parallax-overlay" />
-      </div>
 
       {/* 9. ACTIVE ACROSS ALL SECTORS */}
       <section className="section sectors-home-section" style={{ backgroundImage: 'url(/images/bg-neural-network.png)' }}>

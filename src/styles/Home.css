@@ -191,7 +191,7 @@
 
 /* ====== AI & AV (white) ====== */
 .aiav-section {
-  padding: var(--spacing-4xl) var(--spacing-lg);
+  padding: var(--spacing-3xl) var(--spacing-lg);
   overflow: hidden;
 }
 
@@ -203,20 +203,20 @@
 }
 
 .aiav-title {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   color: var(--accent-violet) !important;
   margin-bottom: var(--spacing-xs);
   font-weight: 700;
 }
 
 .aiav-subtitle {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-lg);
   color: var(--gray-medium) !important;
   font-weight: 400;
 }
 
 .aiav-image img {
-  max-width: 100%;
+  max-width: 280px;
   height: auto;
 }
 
@@ -505,7 +505,7 @@
 /* ====== PARALLAX WINDOW EFFECT ====== */
 .parallax-window {
   position: relative;
-  height: 280px;
+  height: 180px;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -514,7 +514,7 @@
 }
 
 .parallax-tall {
-  height: 350px;
+  height: 220px;
 }
 
 .parallax-overlay {
@@ -530,16 +530,16 @@
 /* ====== DIAGONAL SECTION DIVIDERS ====== */
 .diagonal-top {
   position: relative;
-  margin-top: -60px;
-  padding-top: calc(6rem + 60px);
-  clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -40px;
+  padding-top: calc(6rem + 40px);
+  clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
 }
 
 .diagonal-top-light {
   position: relative;
-  margin-top: -60px;
-  padding-top: calc(6rem + 60px);
-  clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 100%);
+  margin-top: -40px;
+  padding-top: calc(6rem + 40px);
+  clip-path: polygon(0 0, 100% 40px, 100% 100%, 0 100%);
 }
 
 /* Ensure overlays still work inside clipped sections */
