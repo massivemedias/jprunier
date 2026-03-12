@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Code, Lightbulb, Settings, Zap, CheckCircle, ArrowLeft, Mail, Download, Award, Shield, X } from 'lucide-react'
+import { Code, Lightbulb, Settings, Zap, CheckCircle, ArrowLeft, ArrowRight, Mail, Download, Award, Shield, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import Hero from '../../../../components/Hero'
 import { useLocalizedData, useT } from '../../../../context/LanguageContext'
 import '../../../../styles/ServiceDetail.css'
@@ -20,23 +20,29 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' as const } },
 }
 
-function ImageLightbox({ isOpen, imageSrc, imageAlt, onClose }: {
-  isOpen: boolean; imageSrc: string; imageAlt: string; onClose: () => void
+function ImageLightbox({ isOpen, images, currentIndex, onClose, onPrev, onNext }: {
+  isOpen: boolean; images: { src: string; alt: string }[]; currentIndex: number; onClose: () => void; onPrev: () => void; onNext: () => void
 }) {
   useEffect(() => {
     if (!isOpen) return
-    const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowLeft') onPrev()
+      if (e.key === 'ArrowRight') onNext()
+    }
     document.addEventListener('keydown', handleKey)
     document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', handleKey)
       document.body.style.overflow = ''
     }
-  }, [isOpen, onClose])
+  }, [isOpen, onClose, onPrev, onNext])
+
+  const current = images[currentIndex]
 
   return (
     <AnimatePresence>
-      {isOpen && (
+      {isOpen && current && (
         <motion.div
           className="lightbox-overlay"
           initial={{ opacity: 0 }}
@@ -47,15 +53,39 @@ function ImageLightbox({ isOpen, imageSrc, imageAlt, onClose }: {
           <button className="lightbox-close" onClick={onClose} aria-label="Close">
             <X size={24} />
           </button>
+          {images.length > 1 && (
+            <>
+              <button
+                className="lightbox-arrow lightbox-arrow-left"
+                onClick={(e) => { e.stopPropagation(); onPrev() }}
+                aria-label="Previous"
+              >
+                <ChevronLeft size={36} />
+              </button>
+              <button
+                className="lightbox-arrow lightbox-arrow-right"
+                onClick={(e) => { e.stopPropagation(); onNext() }}
+                aria-label="Next"
+              >
+                <ChevronRight size={36} />
+              </button>
+            </>
+          )}
           <motion.img
-            src={imageSrc}
-            alt={imageAlt}
+            key={currentIndex}
+            src={current.src}
+            alt={current.alt}
             className="lightbox-image"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           />
+          {images.length > 1 && (
+            <div className="lightbox-counter" onClick={(e) => e.stopPropagation()}>
+              {currentIndex + 1} / {images.length}
+            </div>
+          )}
         </motion.div>
       )}
     </AnimatePresence>
@@ -70,7 +100,11 @@ export default function ServiceDetailClient({
   const service = useLocalizedData(serviceEn, serviceFr)
   const allServices = useLocalizedData(allServicesEn, allServicesFr)
   const t = useT()
-  const [lightbox, setLightbox] = useState({ open: false, src: '', alt: '' })
+  const [lightbox, setLightbox] = useState({ open: false, index: 0 })
+  const galleryImages = (service.interfacesGallery?.items || []).map((item: any) => ({
+    src: item.image || '',
+    alt: item.caption || '',
+  }))
 
   if (!service) {
     return (
@@ -253,7 +287,7 @@ export default function ServiceDetailClient({
                     <div
                       key={i}
                       className="interface-card"
-                      onClick={() => setLightbox({ open: true, src: imgUrl, alt: imgAlt })}
+                      onClick={() => setLightbox({ open: true, index: i })}
                     >
                       <img src={imgUrl} alt={imgAlt} loading="lazy" />
                       <div className="interface-caption">{item.caption}</div>
@@ -400,9 +434,11 @@ export default function ServiceDetailClient({
 
       <ImageLightbox
         isOpen={lightbox.open}
-        imageSrc={lightbox.src}
-        imageAlt={lightbox.alt}
-        onClose={() => setLightbox({ open: false, src: '', alt: '' })}
+        images={galleryImages}
+        currentIndex={lightbox.index}
+        onClose={() => setLightbox({ open: false, index: 0 })}
+        onPrev={() => setLightbox(prev => ({ ...prev, index: (prev.index - 1 + galleryImages.length) % galleryImages.length }))}
+        onNext={() => setLightbox(prev => ({ ...prev, index: (prev.index + 1) % galleryImages.length }))}
       />
     </>
   )
