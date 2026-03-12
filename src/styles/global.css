@@ -65,6 +65,27 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Light Theme */
+[data-theme="light"] {
+  --primary-dark: #e8edf2;
+  --primary-dark-light: #dce3ea;
+  --accent-violet: #6440e0;
+  --accent-violet-light: #7a5af0;
+  --gray-dark: #8b9aaa;
+  --gray-light: #1a2a3a;
+  --gray-medium: #4d5d6d;
+  --background: #f5f7fa;
+  --surface: #ffffff;
+  --surface-light: #eef1f5;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --text-dark: #1a1a2e;
+  --text-dark-secondary: #4a4a6a;
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --accent-orange: #e8833a;
+}
+
 /* Reset & Base Styles */
 * {
   margin: 0;
@@ -250,6 +271,31 @@ input::placeholder, textarea::placeholder {
 .mb-2xl { margin-bottom: var(--spacing-2xl); }
 .mb-3xl { margin-bottom: var(--spacing-3xl); }
 .mb-4xl { margin-bottom: var(--spacing-4xl); }
+
+/* Light theme - forms and glass */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: var(--surface);
+  color: var(--gray-light);
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: var(--gray-dark);
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .btn-secondary {
+  background-color: var(--surface-light);
+  color: var(--gray-light);
+  border-color: var(--accent-violet);
+}
 
 /* Responsive */
 @media (max-width: 768px) {

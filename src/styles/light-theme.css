@@ -1,0 +1,155 @@
+/* ================================================
+   Light Theme Overrides
+   Override hardcoded dark-theme rgba values
+   ================================================ */
+
+/* --- Service Detail --- */
+[data-theme="light"] .service-detail-main { background-color: var(--background); }
+
+[data-theme="light"] .sidebar-card {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .sidebar-cta {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .interface-card {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .interface-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .certification-badge {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: var(--surface);
+}
+
+[data-theme="light"] .client-card {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: var(--surface);
+}
+
+[data-theme="light"] .tech-tag {
+  background: var(--surface-light);
+  color: var(--gray-light);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .domain-tag {
+  background: var(--surface-light);
+  color: var(--gray-light);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .extended-service-item {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .warranty-item {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .brochure-card {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .other-service-card {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .other-service-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent-violet);
+}
+
+/* --- Home Page --- */
+[data-theme="light"] .partner-item {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .stat-card,
+[data-theme="light"] .service-card,
+[data-theme="light"] .value-card,
+[data-theme="light"] .connecting-card,
+[data-theme="light"] .expertise-card {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .service-card:hover,
+[data-theme="light"] .value-card:hover,
+[data-theme="light"] .connecting-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- About Page --- */
+[data-theme="light"] .testimonial-card {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .testimonial-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Services List Page --- */
+[data-theme="light"] .service-list-card {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .service-list-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .crestron-card,
+[data-theme="light"] .expertise-category {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* --- Contact Page --- */
+[data-theme="light"] .contact-form-card,
+[data-theme="light"] .office-card {
+  background: var(--surface);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* --- Footer --- */
+[data-theme="light"] .footer {
+  background-color: var(--surface);
+  border-top-color: rgba(0, 0, 0, 0.06);
+}
+
+/* --- Alternating sections --- */
+[data-theme="light"] .service-audiovisual,
+[data-theme="light"] .service-extended-programming,
+[data-theme="light"] .service-ai-bridge,
+[data-theme="light"] .service-warranty,
+[data-theme="light"] .service-brochure,
+[data-theme="light"] .service-detail-others {
+  background-color: var(--surface-light);
+}
+
+[data-theme="light"] .news-linkedin-cta {
+  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+}
+
+/* --- Scroll to top button --- */
+[data-theme="light"] .scroll-to-top {
+  background: var(--accent-violet);
+  color: white;
+  box-shadow: 0 4px 15px rgba(100, 64, 224, 0.3);
+}
+
+/* --- Lightbox --- */
+[data-theme="light"] .lightbox-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}

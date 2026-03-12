@@ -2,6 +2,7 @@ import React from 'react'
 import { getLayoutData } from '../../lib/payload'
 import FrontendShell from './FrontendShell'
 import '../../styles/global.css'
+import '../../styles/light-theme.css'
 
 export const dynamic = 'force-dynamic'
 

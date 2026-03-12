@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, ChevronDown, Globe } from 'lucide-react'
+import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react'
 import { useLanguage, useT, useLocalizedData } from '../context/LanguageContext'
+import { useTheme } from '../context/ThemeContext'
 import './Header.css'
 
 type Service = { slug: string; title: string }
@@ -19,6 +20,7 @@ export default function Header({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { language, setLanguage } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
   const t = useT()
   const pathname = usePathname()
   const services = useLocalizedData(servicesEn, servicesFr)
@@ -95,10 +97,18 @@ export default function Header({
                 <Globe size={16} />
                 {language === 'fr' ? 'English' : 'Français'}
               </button>
+              <button className="mobile-lang-btn" onClick={toggleTheme}>
+                {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+                {theme === 'dark' ? 'Light mode' : 'Dark mode'}
+              </button>
             </div>
           </nav>
 
           <div className="header-right">
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            </button>
+
             <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
               <Globe size={15} />
               <span>{language === 'fr' ? 'EN' : 'FR'}</span>

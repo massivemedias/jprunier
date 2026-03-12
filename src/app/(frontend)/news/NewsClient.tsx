@@ -60,23 +60,16 @@ export default function NewsClient({
             whileInView="visible"
             viewport={{ once: true, margin: '-50px' }}
           >
-            {articles.map((article: any) => {
-              const imgUrl = article.image?.url || article.image || ''
-              return (
+            {articles.map((article: any) => (
                 <motion.a
                   key={article.id}
                   href={article.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`news-card${imgUrl ? '' : ' news-card-no-image'}`}
+                  className="news-card news-card-no-image"
                   variants={itemVariants}
                   whileHover={{ y: -4 }}
                 >
-                  {imgUrl && (
-                    <div className="news-card-image">
-                      <img src={imgUrl} alt={article.title} loading="lazy" />
-                    </div>
-                  )}
                   <div className="news-card-body">
                     <div className="news-card-header">
                       <span className="news-date">
@@ -92,8 +85,7 @@ export default function NewsClient({
                     </span>
                   </div>
                 </motion.a>
-              )
-            })}
+              ))}
           </motion.div>
         </div>
       </section>

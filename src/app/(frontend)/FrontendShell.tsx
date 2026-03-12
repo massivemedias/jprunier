@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react'
 import { LanguageProvider } from '../../context/LanguageContext'
+import { ThemeProvider } from '../../context/ThemeContext'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ScrollToTop from '../../components/ScrollToTop'
@@ -22,16 +23,18 @@ export default function FrontendShell({
   layoutData: LayoutData
 }) {
   return (
-    <LanguageProvider
-      dataEn={{ uiStrings: layoutData.uiStrings.en }}
-      dataFr={{ uiStrings: layoutData.uiStrings.fr }}
-    >
-      <div className="app">
-        <Header servicesEn={layoutData.servicesEn} servicesFr={layoutData.servicesFr} />
-        <ScrollToTop />
-        <main className="main-content">{children}</main>
-        <Footer dataEn={layoutData.footerEn} dataFr={layoutData.footerFr} />
-      </div>
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider
+        dataEn={{ uiStrings: layoutData.uiStrings.en }}
+        dataFr={{ uiStrings: layoutData.uiStrings.fr }}
+      >
+        <div className="app">
+          <Header servicesEn={layoutData.servicesEn} servicesFr={layoutData.servicesFr} />
+          <ScrollToTop />
+          <main className="main-content">{children}</main>
+          <Footer dataEn={layoutData.footerEn} dataFr={layoutData.footerFr} />
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
