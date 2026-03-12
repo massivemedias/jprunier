@@ -3,7 +3,7 @@ import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
 import sharp from 'sharp'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { lexicalEditor, UploadFeature } from '@payloadcms/richtext-lexical'
 // import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -26,9 +26,15 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     meta: {
-      titleSuffix: ' — JPrunier CMS',
-      description: 'Panneau d\'administration JPrunier Inc.',
+      titleSuffix: ' — MASSIVE CMS',
+      description: 'MASSIVE CMS — Panneau d\'administration JPrunier Inc.',
       icons: [{ url: '/favicon.ico' }],
+    },
+    components: {
+      graphics: {
+        Logo: '/src/admin/Logo',
+        Icon: '/src/admin/Icon',
+      },
     },
     importMap: {
       baseDir: path.resolve(dirname),
@@ -74,7 +80,24 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || '',
   }),
-  editor: lexicalEditor(),
+  editor: lexicalEditor({
+    features: ({ defaultFeatures }) => [
+      ...defaultFeatures,
+      UploadFeature({
+        collections: {
+          media: {
+            fields: [
+              {
+                name: 'caption',
+                type: 'text',
+                label: 'Légende',
+              },
+            ],
+          },
+        },
+      }),
+    ],
+  }),
   sharp,
   plugins: [],
 })
