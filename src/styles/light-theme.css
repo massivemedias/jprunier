@@ -366,12 +366,12 @@
 
 /* --- Client logos — remove brightness filter that makes them invisible --- */
 [data-theme="light"] .client-logo {
-  filter: none;
+  filter: invert(1) grayscale(1) brightness(0.4);
   opacity: 1;
 }
 
 [data-theme="light"] .client-card:hover .client-logo {
-  filter: none;
+  filter: invert(1) grayscale(1) brightness(0.3);
   opacity: 1;
 }
 
