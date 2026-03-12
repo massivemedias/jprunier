@@ -384,7 +384,7 @@ export default function ServiceDetailClient({
                         alt={client.name}
                         className="client-logo"
                         loading="lazy"
-                        style={client.name?.toLowerCase() === 'wsp' ? { width: '100px', height: '65px' } : undefined}
+                        style={client.name?.toLowerCase() === 'wsp' ? { width: '80px', height: '50px' } : undefined}
                       />
                       <span className="client-name">{client.name}</span>
                       {client.period && <span className="client-period">{client.period}</span>}
