@@ -54,8 +54,16 @@ async function uploadMedia(
     })
   }
 
+  // Manually copy file to public/media/ for static serving (Payload v3 may not write to disk)
+  const mediaDir = path.resolve(process.cwd(), 'public', 'media')
+  if (!fs.existsSync(mediaDir)) fs.mkdirSync(mediaDir, { recursive: true })
+  const destPath = path.resolve(mediaDir, doc.filename || path.basename(fullPath))
+  if (!fs.existsSync(destPath)) {
+    fs.copyFileSync(fullPath, destPath)
+  }
+
   mediaCache.set(filePath, doc.id)
-  console.log(`  📷 Uploaded: ${path.basename(fullPath)} → ${doc.id}`)
+  console.log(`  📷 Uploaded: ${doc.filename} → ${doc.id}`)
   return doc.id
 }
 
@@ -487,13 +495,14 @@ async function seed() {
     console.log('→ Admin user already exists, skipping...')
   }
 
-  // Clear existing collection data
+  // Clear existing collection data (including media to avoid duplicates)
   console.log('→ Clearing existing collections...')
-  for (const col of ['services', 'testimonials', 'news-articles', 'sectors'] as const) {
-    const existing = await payload.find({ collection: col, limit: 100 })
+  for (const col of ['media', 'services', 'testimonials', 'news-articles', 'sectors'] as const) {
+    const existing = await payload.find({ collection: col, limit: 500 })
     for (const doc of existing.docs) {
       await payload.delete({ collection: col, id: doc.id })
     }
+    if (existing.docs.length > 0) console.log(`  Cleared ${existing.docs.length} ${col} records`)
   }
 
   // 1. Site Settings
