@@ -42,7 +42,7 @@ export default function Hero({
             className="hero-title"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
+            transition={{ duration: 0.9, ease: 'easeOut' as const }}
           >
             {title}
           </motion.h1>
@@ -52,7 +52,7 @@ export default function Hero({
               className="hero-subtitle"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.25, ease: 'easeOut' }}
+              transition={{ duration: 0.9, delay: 0.25, ease: 'easeOut' as const }}
             >
               {subtitle}
             </motion.p>
@@ -63,7 +63,7 @@ export default function Hero({
               className="hero-ctas"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
+              transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' as const }}
             >
               {ctaPrimary && (
                 <Link href={ctaPrimaryLink || '/contact'} className="btn btn-primary hero-cta-btn">
