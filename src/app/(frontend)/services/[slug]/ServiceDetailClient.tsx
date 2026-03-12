@@ -10,6 +10,15 @@ import '../../../../styles/ServiceDetail.css'
 
 const iconMap: Record<string, any> = { Code, Lightbulb, Settings, Zap }
 
+// Helper: resolve a Payload upload field (can be a string path, media object, or ID)
+function resolveMediaUrl(field: any): string {
+  if (!field) return ''
+  if (typeof field === 'string') return field // fallback: plain text path
+  if (field.filename) return `/media/${field.filename}` // populated media object
+  if (field.url) return field.url
+  return ''
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
@@ -103,7 +112,7 @@ export default function ServiceDetailClient({
   const [lightbox, setLightbox] = useState({ open: false, index: 0 })
   const [carouselIndex, setCarouselIndex] = useState(0)
   const galleryImages = (service.interfacesGallery?.items || []).map((item: any) => ({
-    src: item.image || '',
+    src: resolveMediaUrl(item.image),
     alt: item.caption || '',
   }))
 
@@ -123,7 +132,7 @@ export default function ServiceDetailClient({
       <Hero
         title={service.title}
         subtitle={service.description}
-        backgroundImage={service.heroImage || '/images/bg-ai-generated.png'}
+        backgroundImage={resolveMediaUrl(service.heroImage) || '/images/bg-ai-generated.png'}
         centered
         compact
       />
@@ -299,7 +308,7 @@ export default function ServiceDetailClient({
                           className="interface-card"
                           onClick={() => setLightbox({ open: true, index: i })}
                         >
-                          <img src={item.image || ''} alt={item.caption || ''} loading="lazy" />
+                          <img src={resolveMediaUrl(item.image)} alt={item.caption || ''} loading="lazy" />
                           <div className="interface-caption">{item.caption}</div>
                         </div>
                       </div>
@@ -344,7 +353,7 @@ export default function ServiceDetailClient({
               <motion.div className="certifications-grid" variants={itemVariants}>
                 {service.certificationsSection.badges.map((badge: any, i: number) => (
                   <div key={i} className="certification-badge">
-                    <img src={badge.image || ''} alt={badge.name} loading="lazy" />
+                    <img src={resolveMediaUrl(badge.image)} alt={badge.name} loading="lazy" />
                     <span className="badge-name">{badge.name}</span>
                     <span className="badge-issuer">{badge.issuer}</span>
                   </div>
@@ -371,7 +380,7 @@ export default function ServiceDetailClient({
                   return (
                     <CardTag key={i} className="client-card" {...linkProps}>
                       <img
-                        src={client.logo || ''}
+                        src={resolveMediaUrl(client.logo)}
                         alt={client.name}
                         className="client-logo"
                         loading="lazy"
@@ -411,7 +420,7 @@ export default function ServiceDetailClient({
       )}
 
       {/* Brochure Download */}
-      {(service.brochureDownload?.file || service.brochureDownload?.fileUrl) && (
+      {(service.brochureDownload?.file) && (
         <section className="section service-brochure">
           <div className="container">
             <motion.div
@@ -429,7 +438,7 @@ export default function ServiceDetailClient({
                 </div>
               </motion.div>
               <motion.a
-                href={service.brochureDownload.file || '#'}
+                href={resolveMediaUrl(service.brochureDownload.file) || '#'}
                 className="btn btn-primary brochure-btn"
                 target="_blank"
                 rel="noopener noreferrer"

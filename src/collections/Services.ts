@@ -38,7 +38,7 @@ export const Services: CollectionConfig = {
             {
               type: 'row',
               fields: [
-                { name: 'heroImage', type: 'text', admin: { width: '70%', description: 'Chemin image hero (ex: /images/bg-ai-generated.png)' } },
+                { name: 'heroImage', type: 'upload', relationTo: 'media', admin: { width: '70%', description: 'Image hero du service' } },
                 { name: 'sortOrder', type: 'number', defaultValue: 0, admin: { width: '30%', description: 'Ordre d\'affichage' } },
               ],
             },
@@ -93,7 +93,7 @@ export const Services: CollectionConfig = {
               { name: 'title', type: 'text', localized: true },
               { name: 'subtitle', type: 'text', localized: true },
               { name: 'items', type: 'array', labels: { singular: 'Image', plural: 'Images' }, fields: [
-                { name: 'image', type: 'text', required: true, admin: { description: 'Chemin (ex: /images/interfaces/mcd-byom.webp)' } },
+                { name: 'image', type: 'upload', relationTo: 'media', required: true, admin: { description: 'Capture d\'écran de l\'interface' } },
                 { name: 'caption', type: 'text', localized: true },
               ] },
             ] },
@@ -101,7 +101,7 @@ export const Services: CollectionConfig = {
               { name: 'title', type: 'text', localized: true },
               { name: 'subtitle', type: 'text', localized: true },
               { name: 'badges', type: 'array', labels: { singular: 'Badge', plural: 'Badges' }, fields: [
-                { name: 'image', type: 'text', required: true, admin: { description: 'Chemin badge (ex: /images/certifications/crestron-cmpg.webp)' } },
+                { name: 'image', type: 'upload', relationTo: 'media', required: true, admin: { description: 'Image du badge de certification' } },
                 { name: 'name', type: 'text' },
                 { name: 'issuer', type: 'text' },
               ] },
@@ -111,7 +111,7 @@ export const Services: CollectionConfig = {
               { name: 'subtitle', type: 'text', localized: true },
               { name: 'clients', type: 'array', labels: { singular: 'Client', plural: 'Clients' }, fields: [
                 { name: 'name', type: 'text', required: true },
-                { name: 'logo', type: 'text', required: true, admin: { description: 'Chemin logo (ex: /images/clients/bell.webp)' } },
+                { name: 'logo', type: 'upload', relationTo: 'media', required: true, admin: { description: 'Logo du client' } },
                 { name: 'period', type: 'text', admin: { description: 'Période (ex: 2018-2025)' } },
                 { name: 'url', type: 'text', admin: { description: 'URL du site client' } },
               ] },
@@ -129,7 +129,7 @@ export const Services: CollectionConfig = {
               { name: 'title', type: 'text', localized: true },
               { name: 'description', type: 'text', localized: true },
               { name: 'buttonText', type: 'text', localized: true },
-              { name: 'file', type: 'text', admin: { description: 'Chemin PDF (ex: /docs/JPrunierInc_EN.V4.pdf)' } },
+              { name: 'file', type: 'upload', relationTo: 'media', admin: { description: 'Fichier PDF de la brochure' } },
             ] },
           ],
         },

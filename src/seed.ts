@@ -496,13 +496,29 @@ async function seed() {
   }
 
   // Clear existing collection data (including media to avoid duplicates)
+  // Use direct MongoDB for services (avoids schema casting issues during migration from text→upload fields)
   console.log('→ Clearing existing collections...')
-  for (const col of ['media', 'services', 'testimonials', 'news-articles', 'sectors'] as const) {
-    const existing = await payload.find({ collection: col, limit: 500 })
-    for (const doc of existing.docs) {
-      await payload.delete({ collection: col, id: doc.id })
+  const mongooseLib = (await import('mongoose')).default
+  let directDb: any = null
+  try {
+    const directConn = await mongooseLib.createConnection(process.env.MONGODB_URI || '').asPromise()
+    directDb = directConn.db
+    for (const colName of ['services', 'media', 'testimonials', 'news-articles', 'sectors']) {
+      const result = await directDb.collection(colName).deleteMany({})
+      if (result.deletedCount > 0) console.log(`  Cleared ${result.deletedCount} ${colName} records`)
     }
-    if (existing.docs.length > 0) console.log(`  Cleared ${existing.docs.length} ${col} records`)
+    await directConn.close()
+  } catch (e: any) {
+    console.log(`  Direct MongoDB clear failed: ${e.message}, falling back to Payload API`)
+    for (const col of ['media', 'services', 'testimonials', 'news-articles', 'sectors'] as const) {
+      try {
+        const existing = await payload.find({ collection: col, limit: 500 })
+        for (const doc of existing.docs) {
+          await payload.delete({ collection: col, id: doc.id })
+        }
+        if (existing.docs.length > 0) console.log(`  Cleared ${existing.docs.length} ${col} records`)
+      } catch {}
+    }
   }
 
   // 1. Site Settings
@@ -698,40 +714,50 @@ async function seed() {
 
   console.log('→ Media uploads complete')
 
+  // Helper: get media ID from path (uses mediaCache populated by uploadMedia)
+  function getMediaId(filePath: string): string | undefined {
+    return mediaCache.get(filePath)
+  }
+
   // 9. Services collection
   console.log('→ Services...')
   for (let i = 0; i < servicesEn.length; i++) {
     const en = servicesEn[i] as any
     const fr = servicesFr[i] as any
 
-    // Build interfaces gallery items with static paths
+    // Build interfaces gallery items with media IDs
     let galleryItems: any[] | undefined
     if (en.interfacesGallery?.items) {
       galleryItems = en.interfacesGallery.items.map((item: any) => ({
-        image: item.src,
+        image: getMediaId(item.src) || null,
         caption: item.caption,
-      }))
+      })).filter((item: any) => item.image)
     }
 
-    // Build certification badges with static paths
+    // Build certification badges with media IDs
     let badgeItems: any[] | undefined
     if (en.certificationsSection?.badges) {
       badgeItems = en.certificationsSection.badges.map((badge: any) => ({
-        image: badge.src,
+        image: getMediaId(badge.src) || null,
         name: badge.name,
         issuer: badge.issuer,
-      }))
+      })).filter((item: any) => item.image)
     }
 
-    // Build client references with static paths
+    // Build client references with media IDs
     let clientItems: any[] | undefined
     if (en.referencesSection?.clients) {
       clientItems = en.referencesSection.clients.map((client: any) => ({
         name: client.name,
-        logo: client.logo,
+        logo: getMediaId(client.logo) || null,
         period: client.period,
-      }))
+        url: client.url,
+      })).filter((item: any) => item.logo)
     }
+
+    // Get hero image and brochure media IDs
+    const heroImageId = getMediaId('/images/bg-ai-generated.png')
+    const brochureId = en.brochureDownload ? getMediaId(en.brochureDownload.fileUrl) : undefined
 
     const doc = await payload.create({
       collection: 'services',
@@ -748,7 +774,7 @@ async function seed() {
         features: en.features,
         technologies: en.technologies.map((t: string) => ({ name: t })),
         details: en.details,
-        heroImage: '/images/bg-ai-generated.png',
+        heroImage: heroImageId || null,
         sortOrder: i,
         // Enriched sections
         ...(en.audiovisualSection ? { audiovisualSection: { title: en.audiovisualSection.title, description: en.audiovisualSection.description, domains: en.audiovisualSection.domains.map((d: string) => ({ name: d })) } } : {}),
@@ -758,7 +784,7 @@ async function seed() {
         ...(badgeItems ? { certificationsSection: { title: en.certificationsSection.title, subtitle: en.certificationsSection.subtitle, badges: badgeItems } } : {}),
         ...(clientItems ? { referencesSection: { title: en.referencesSection.title, subtitle: en.referencesSection.subtitle, clients: clientItems } } : {}),
         ...(en.warrantySection ? { warrantySection: { title: en.warrantySection.title, items: en.warrantySection.items.map((t: string) => ({ text: t })) } } : {}),
-        ...(en.brochureDownload ? { brochureDownload: { title: en.brochureDownload.title, description: en.brochureDownload.description, buttonText: en.brochureDownload.buttonText, file: en.brochureDownload.fileUrl } } : {}),
+        ...(en.brochureDownload ? { brochureDownload: { title: en.brochureDownload.title, description: en.brochureDownload.description, buttonText: en.brochureDownload.buttonText, file: brochureId || null } } : {}),
       },
     })
     // Capture array item IDs from EN create to preserve localized linkage
@@ -794,21 +820,22 @@ async function seed() {
     }
     if (fr.interfacesGallery && en.interfacesGallery?.items) {
       const enGallery = d.interfacesGallery?.items || []
-      frData.interfacesGallery = { title: fr.interfacesGallery.title, subtitle: fr.interfacesGallery.subtitle, items: fr.interfacesGallery.items.map((item: any, j: number) => ({ id: enGallery[j]?.id, image: en.interfacesGallery.items[j]?.src || enGallery[j]?.image, caption: item.caption })) }
+      frData.interfacesGallery = { title: fr.interfacesGallery.title, subtitle: fr.interfacesGallery.subtitle, items: fr.interfacesGallery.items.map((item: any, j: number) => ({ id: enGallery[j]?.id, image: enGallery[j]?.image, caption: item.caption })) }
     }
     if (fr.certificationsSection) {
       frData.certificationsSection = { title: fr.certificationsSection.title, subtitle: fr.certificationsSection.subtitle }
     }
     if (fr.referencesSection && en.referencesSection?.clients) {
       const enClients = d.referencesSection?.clients || []
-      frData.referencesSection = { title: fr.referencesSection.title, subtitle: fr.referencesSection.subtitle, clients: fr.referencesSection.clients?.map((c: any, j: number) => ({ id: enClients[j]?.id, name: c.name, logo: en.referencesSection.clients[j]?.logo || enClients[j]?.logo, period: en.referencesSection.clients[j]?.period })) }
+      frData.referencesSection = { title: fr.referencesSection.title, subtitle: fr.referencesSection.subtitle, clients: fr.referencesSection.clients?.map((c: any, j: number) => ({ id: enClients[j]?.id, name: c.name, logo: enClients[j]?.logo, period: en.referencesSection.clients[j]?.period, url: en.referencesSection.clients[j]?.url })) }
     }
     if (fr.warrantySection) {
       const enWarrantyItems = d.warrantySection?.items || []
       frData.warrantySection = { title: fr.warrantySection.title, items: fr.warrantySection.items.map((text: string, j: number) => ({ id: enWarrantyItems[j]?.id, text })) }
     }
     if (fr.brochureDownload) {
-      frData.brochureDownload = { title: fr.brochureDownload.title, description: fr.brochureDownload.description, buttonText: fr.brochureDownload.buttonText, file: fr.brochureDownload.fileUrl }
+      const frBrochureId = getMediaId(fr.brochureDownload.fileUrl)
+      frData.brochureDownload = { title: fr.brochureDownload.title, description: fr.brochureDownload.description, buttonText: fr.brochureDownload.buttonText, file: frBrochureId || d.brochureDownload?.file }
     }
 
     await payload.update({
