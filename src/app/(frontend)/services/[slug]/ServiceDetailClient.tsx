@@ -101,6 +101,7 @@ export default function ServiceDetailClient({
   const allServices = useLocalizedData(allServicesEn, allServicesFr)
   const t = useT()
   const [lightbox, setLightbox] = useState({ open: false, index: 0 })
+  const [carouselIndex, setCarouselIndex] = useState(0)
   const galleryImages = (service.interfacesGallery?.items || []).map((item: any) => ({
     src: item.image || '',
     alt: item.caption || '',
@@ -270,7 +271,7 @@ export default function ServiceDetailClient({
         </section>
       )}
 
-      {/* Interfaces Gallery */}
+      {/* Interfaces Gallery Carousel */}
       {service.interfacesGallery?.items?.length > 0 && (
         <section className="section service-interfaces">
           <div className="container">
@@ -279,22 +280,50 @@ export default function ServiceDetailClient({
               <motion.p className="section-description" variants={itemVariants}>
                 {service.interfacesGallery.subtitle}
               </motion.p>
-              <motion.div className="interfaces-grid" variants={itemVariants}>
-                {service.interfacesGallery.items.map((item: any, i: number) => {
-                  const imgUrl = item.image || ''
-                  const imgAlt = item.caption || ''
-                  return (
-                    <div
-                      key={i}
-                      className="interface-card"
-                      onClick={() => setLightbox({ open: true, index: i })}
-                    >
-                      <img src={imgUrl} alt={imgAlt} loading="lazy" />
-                      <div className="interface-caption">{item.caption}</div>
-                    </div>
-                  )
-                })}
+              <motion.div className="carousel-wrapper" variants={itemVariants}>
+                <button
+                  className="carousel-arrow carousel-arrow-left"
+                  onClick={() => setCarouselIndex(prev => (prev - 1 + galleryImages.length) % galleryImages.length)}
+                  aria-label="Previous"
+                >
+                  <ChevronLeft size={28} />
+                </button>
+                <div className="carousel-viewport">
+                  <div
+                    className="carousel-track"
+                    style={{ transform: `translateX(-${carouselIndex * 100}%)` }}
+                  >
+                    {service.interfacesGallery.items.map((item: any, i: number) => (
+                      <div key={i} className="carousel-slide">
+                        <div
+                          className="interface-card"
+                          onClick={() => setLightbox({ open: true, index: i })}
+                        >
+                          <img src={item.image || ''} alt={item.caption || ''} loading="lazy" />
+                          <div className="interface-caption">{item.caption}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <button
+                  className="carousel-arrow carousel-arrow-right"
+                  onClick={() => setCarouselIndex(prev => (prev + 1) % galleryImages.length)}
+                  aria-label="Next"
+                >
+                  <ChevronRight size={28} />
+                </button>
               </motion.div>
+              <div className="carousel-dots">
+                {service.interfacesGallery.items.map((_: any, i: number) => (
+                  <button
+                    key={i}
+                    className={`carousel-dot ${i === carouselIndex ? 'carousel-dot-active' : ''}`}
+                    onClick={() => setCarouselIndex(i)}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>

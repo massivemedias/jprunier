@@ -369,7 +369,7 @@
   margin-top: 2px;
 }
 
-/* ─── Interfaces Gallery ─── */
+/* ─── Interfaces Gallery / Carousel ─── */
 .service-interfaces {
   background-color: var(--background);
 }
@@ -379,12 +379,82 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.interfaces-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-xl);
+/* Carousel */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
 }
 
+.carousel-viewport {
+  flex: 1;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(16, 33, 54, 0.8);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background: rgba(116, 86, 241, 0.3);
+  border-color: rgba(116, 86, 241, 0.5);
+  color: white;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--spacing-lg);
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-dot-active {
+  background: var(--accent-violet);
+  border-color: var(--accent-violet);
+  box-shadow: 0 0 8px rgba(116, 86, 241, 0.5);
+}
+
+/* Interface card (inside carousel) */
 .interface-card {
   position: relative;
   border-radius: var(--radius-xl);
@@ -397,7 +467,6 @@
 .interface-card:hover {
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  transform: translateY(-4px);
 }
 
 .interface-card img {
@@ -420,6 +489,23 @@
   color: white;
   font-size: var(--font-size-sm);
   font-weight: 500;
+}
+
+/* Light theme carousel */
+[data-theme="light"] .carousel-arrow {
+  background: rgba(247, 243, 236, 0.9);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .carousel-arrow:hover {
+  background: rgba(100, 64, 224, 0.1);
+  border-color: rgba(100, 64, 224, 0.3);
+  color: var(--accent-violet);
+}
+
+[data-theme="light"] .carousel-dot {
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 /* ─── Certifications ─── */
@@ -682,8 +768,9 @@
     grid-template-columns: 1fr;
   }
 
-  .interfaces-grid {
-    grid-template-columns: 1fr;
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
   }
 
   .clients-grid {
