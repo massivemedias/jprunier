@@ -185,30 +185,36 @@
 /* Language pill toggle */
 .lang-pill {
   display: inline-flex;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  overflow: hidden;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  padding: 3px;
+  gap: 2px;
 }
 
 .lang-pill-btn {
   background: none;
   border: none;
-  padding: 0.3rem 0.65rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.7rem;
+  padding: 0.35rem 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.72rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   letter-spacing: 0.04em;
+  border-radius: 50px;
+  line-height: 1;
 }
 
 .lang-pill-btn:hover {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .lang-pill-active {
   background: var(--accent-violet);
   color: white;
+  box-shadow: 0 2px 8px rgba(116, 86, 241, 0.4);
 }
 
 .lang-pill-active:hover {
@@ -276,24 +282,22 @@
 [data-theme="light"] .dropdown-item:hover { color: var(--accent-violet); background: rgba(100, 64, 224, 0.05); }
 
 [data-theme="light"] .lang-pill {
-  border-color: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"] .lang-pill-btn {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.35);
 }
 
 [data-theme="light"] .lang-pill-btn:hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 [data-theme="light"] .lang-pill-active {
   background: var(--accent-violet);
   color: white;
-}
-
-[data-theme="light"] .lang-pill-active:hover {
-  color: white;
+  box-shadow: 0 2px 8px rgba(116, 86, 241, 0.3);
 }
 
 [data-theme="light"] .mobile-menu-toggle { color: var(--gray-light); }
