@@ -231,6 +231,17 @@
   border-color: rgba(60, 40, 10, 0.1);
 }
 
+/* --- Primary button — dark gray instead of violet in light theme --- */
+[data-theme="light"] .btn-primary {
+  background-color: #3a3a3a;
+  color: white;
+}
+
+[data-theme="light"] .btn-primary:hover {
+  background-color: #2a2a2a;
+  color: white;
+}
+
 /* --- Hero overlay — much more transparent in light theme --- */
 [data-theme="light"] .hero-overlay {
   background: linear-gradient(
