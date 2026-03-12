@@ -89,7 +89,7 @@
   transition: all var(--transition-base);
 }
 
-.capability-item:hover { background: rgba(116, 86, 241, 0.1); border-left: 3px solid var(--accent-violet); }
+.capability-item:hover { background: rgba(116, 86, 241, 0.1); }
 
 .capability-check { color: var(--accent-violet); font-weight: 700; font-size: var(--font-size-lg); flex-shrink: 0; }
 .capability-item span:last-child { color: var(--gray-light); font-size: var(--font-size-sm); }

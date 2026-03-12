@@ -12,7 +12,7 @@
 .about-mission,
 .about-vision {
   background: rgba(255, 255, 255, 0.03);
-  border-left: 3px solid rgba(116, 86, 241, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   padding: var(--spacing-2xl);
   border-radius: var(--radius-lg);
 }

@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Linkedin, Github, Mail } from 'lucide-react'
+import { Github, Mail } from 'lucide-react'
+import LinkedInIcon from './LinkedInIcon'
 import { useLanguage, useT, useLocalizedData } from '../context/LanguageContext'
 import './Footer.css'
 
@@ -47,7 +48,7 @@ export default function Footer({
           <div className="footer-inner">
             <div className="footer-social">
               <a href={data.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
-                <Linkedin size={20} />
+                <LinkedInIcon size={20} />
               </a>
               <a href={data.social.github} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
                 <Github size={20} />

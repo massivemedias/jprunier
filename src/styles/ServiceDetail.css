@@ -82,7 +82,7 @@
   padding: var(--spacing-lg);
   background: rgba(116, 86, 241, 0.05);
   border-radius: var(--radius-lg);
-  border-left: 3px solid var(--accent-violet);
+  border-left: none;
   transition: all var(--transition-base);
 }
 
@@ -361,7 +361,7 @@
   padding: var(--spacing-md);
   background: rgba(116, 86, 241, 0.05);
   border-radius: var(--radius-lg);
-  border-left: 3px solid var(--accent-violet);
+  border-left: none;
 }
 
 .ai-bridge-capability .feature-check {

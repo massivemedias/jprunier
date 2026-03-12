@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, ExternalLink, Linkedin as LinkedInIcon } from 'lucide-react'
+import { Calendar, ExternalLink } from 'lucide-react'
+import LinkedInIcon from '../../../components/LinkedInIcon'
 import Hero from '../../../components/Hero'
 import { useLocalizedData, useT, useLanguage } from '../../../context/LanguageContext'
 import '../../../styles/News.css'

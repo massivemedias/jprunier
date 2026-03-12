@@ -364,7 +364,7 @@
     transform: none;
     background: rgba(10, 21, 32, 0.5);
     border: none;
-    border-left: 2px solid var(--accent-violet);
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 0;
     margin: 0 var(--spacing-xl);
     padding: var(--spacing-xs) 0;

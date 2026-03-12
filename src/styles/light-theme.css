@@ -219,7 +219,7 @@
 [data-theme="light"] .about-mission,
 [data-theme="light"] .about-vision {
   background: rgba(60, 40, 10, 0.02);
-  border-left-color: rgba(100, 64, 224, 0.3);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .value-card {
