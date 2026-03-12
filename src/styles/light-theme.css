@@ -255,13 +255,18 @@
   color: white;
 }
 
-/* --- Hero overlay — much more transparent in light theme --- */
+/* --- Hero — blend out dark bg, keep only the wave pattern --- */
+[data-theme="light"] .hero {
+  background-color: #f7f3ec;
+  background-blend-mode: screen;
+}
+
 [data-theme="light"] .hero-overlay {
   background: linear-gradient(
     135deg,
-    rgba(247, 243, 236, 0.75) 0%,
-    rgba(247, 243, 236, 0.65) 50%,
-    rgba(247, 243, 236, 0.55) 100%
+    rgba(247, 243, 236, 0.3) 0%,
+    rgba(247, 243, 236, 0.15) 50%,
+    rgba(247, 243, 236, 0.1) 100%
   );
 }
 
