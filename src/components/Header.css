@@ -214,7 +214,11 @@
 .lang-pill-active {
   background: var(--accent-violet);
   color: white;
-  box-shadow: 0 2px 8px rgba(116, 86, 241, 0.4);
+  border: 1.5px solid rgba(140, 120, 255, 0.8);
+  box-shadow:
+    0 0 8px rgba(116, 86, 241, 0.5),
+    0 0 20px rgba(116, 86, 241, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .lang-pill-active:hover {
@@ -297,7 +301,10 @@
 [data-theme="light"] .lang-pill-active {
   background: var(--accent-violet);
   color: white;
-  box-shadow: 0 2px 8px rgba(116, 86, 241, 0.3);
+  border: 1.5px solid rgba(140, 120, 255, 0.7);
+  box-shadow:
+    0 0 8px rgba(116, 86, 241, 0.4),
+    0 0 16px rgba(116, 86, 241, 0.2);
 }
 
 [data-theme="light"] .mobile-menu-toggle { color: var(--gray-light); }
