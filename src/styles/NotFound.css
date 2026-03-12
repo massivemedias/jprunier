@@ -1,0 +1,205 @@
+/* ═══════════════════════════════════════
+   404 Not Found Page
+   ═══════════════════════════════════════ */
+
+.not-found-page {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4xl) var(--spacing-lg);
+  overflow: hidden;
+}
+
+/* Background glow effects */
+.not-found-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  opacity: 0.15;
+}
+
+.not-found-glow-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-violet);
+  top: -10%;
+  right: -5%;
+}
+
+.not-found-glow-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-orange);
+  bottom: -10%;
+  left: -5%;
+}
+
+.not-found-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 640px;
+}
+
+/* Large 404 code */
+.not-found-code-wrapper {
+  margin-bottom: var(--spacing-lg);
+}
+
+.not-found-code {
+  font-size: clamp(6rem, 15vw, 10rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(
+    135deg,
+    var(--accent-violet) 0%,
+    var(--accent-violet-light) 40%,
+    var(--accent-orange) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  user-select: none;
+}
+
+/* Title */
+.not-found-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--gray-light);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Subtitle */
+.not-found-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--gray-medium);
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
+}
+
+/* CTA buttons */
+.not-found-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-3xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.not-found-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+}
+
+/* Service links section */
+.not-found-services {
+  width: 100%;
+}
+
+.not-found-services-title {
+  font-size: var(--font-size-sm);
+  color: var(--gray-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+}
+
+.not-found-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.not-found-service-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  color: var(--gray-light);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.not-found-service-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.not-found-service-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(116, 86, 241, 0.15);
+  color: var(--accent-violet);
+  flex-shrink: 0;
+}
+
+.not-found-service-card:hover .not-found-service-icon {
+  background: rgba(116, 86, 241, 0.25);
+}
+
+/* ── Light theme ── */
+[data-theme="light"] .not-found-glow-1 {
+  opacity: 0.08;
+}
+
+[data-theme="light"] .not-found-glow-2 {
+  opacity: 0.06;
+}
+
+[data-theme="light"] .not-found-service-card {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
+  border-color: rgba(60, 40, 10, 0.08);
+}
+
+[data-theme="light"] .not-found-service-card:hover {
+  border-color: rgba(60, 40, 10, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .not-found-service-icon {
+  background: rgba(116, 86, 241, 0.1);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .not-found-page {
+    min-height: 70vh;
+    padding: var(--spacing-3xl) var(--spacing-md);
+  }
+
+  .not-found-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .not-found-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
