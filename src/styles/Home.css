@@ -502,6 +502,52 @@
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
+/* ====== PARALLAX WINDOW EFFECT ====== */
+.parallax-window {
+  position: relative;
+  height: 280px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.parallax-tall {
+  height: 350px;
+}
+
+.parallax-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 21, 32, 0.55);
+}
+
+.parallax-overlay-light {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ====== DIAGONAL SECTION DIVIDERS ====== */
+.diagonal-top {
+  position: relative;
+  margin-top: -60px;
+  padding-top: calc(6rem + 60px);
+  clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+}
+
+.diagonal-top-light {
+  position: relative;
+  margin-top: -60px;
+  padding-top: calc(6rem + 60px);
+  clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 100%);
+}
+
+/* Ensure overlays still work inside clipped sections */
+.diagonal-top .services-overlay,
+.diagonal-top::before {
+  clip-path: none;
+}
+
 /* ====== RESPONSIVE ====== */
 @media (max-width: 1024px) {
   .services-grid-3 { grid-template-columns: 1fr 1fr; }
@@ -520,4 +566,19 @@
   .cta-banner-content { flex-direction: column; text-align: center; }
   .services-home-title { text-align: center; }
   .discover-card { padding: var(--spacing-2xl); }
+
+  /* Parallax fallback for mobile (iOS doesn't support background-attachment: fixed) */
+  .parallax-window {
+    background-attachment: scroll;
+    height: 180px;
+  }
+  .parallax-tall { height: 220px; }
+
+  .diagonal-top,
+  .diagonal-top-light {
+    margin-top: -30px;
+    padding-top: calc(4rem + 30px);
+  }
+  .diagonal-top { clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%); }
+  .diagonal-top-light { clip-path: polygon(0 0, 100% 30px, 100% 100%, 0 100%); }
 }
