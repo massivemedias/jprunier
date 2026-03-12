@@ -156,6 +156,7 @@ export const Services: CollectionConfig = {
             { name: 'name', type: 'text', required: true },
             { name: 'logo', type: 'text', required: true, admin: { description: 'Static image path (e.g. /images/clients/bell.webp)' } },
             { name: 'period', type: 'text' },
+            { name: 'url', type: 'text', admin: { description: 'Client website URL' } },
           ],
         },
       ],

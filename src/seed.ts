@@ -192,18 +192,18 @@ const sharedBrochure = {
 
 const programmingReferences = {
   en: { title: "References", subtitle: "Trusted by leading organizations across North America and Europe", clients: [
-    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025" },
-    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020" },
-    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025" },
-    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025" },
-    { name: "Air France", logo: "/images/clients/air-france.webp" },
-    { name: "Bell", logo: "/images/clients/bell.webp" },
-    { name: "WSP", logo: "/images/clients/wsp.webp" },
-    { name: "Pratt & Whitney", logo: "/images/clients/pratt.webp" },
-    { name: "Solotech", logo: "/images/clients/solotech.webp" },
-    { name: "Fondaction", logo: "/images/clients/fondaction.webp" },
-    { name: "Cain Lamarré", logo: "/images/clients/cain-lamarre.webp" },
-    { name: "ICAO", logo: "/images/clients/icao.webp" },
+    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025", url: "https://www.port-montreal.com" },
+    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020", url: "https://casinos.lotoquebec.com/fr/montreal" },
+    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025", url: "https://www.chusj.org" },
+    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025", url: "https://www.banque-france.fr" },
+    { name: "Air France", logo: "/images/clients/air-france.webp", url: "https://www.airfrance.com" },
+    { name: "Bell", logo: "/images/clients/bell.webp", url: "https://www.bell.ca" },
+    { name: "WSP", logo: "/images/clients/wsp.webp", url: "https://www.wsp.com" },
+    { name: "Pratt & Whitney", logo: "/images/clients/pratt.webp", url: "https://www.prattwhitney.com" },
+    { name: "Solotech", logo: "/images/clients/solotech.webp", url: "https://www.solotech.com" },
+    { name: "Fondaction", logo: "/images/clients/fondaction.webp", url: "https://www.fondaction.com" },
+    { name: "Cain Lamarré", logo: "/images/clients/cain-lamarre.webp", url: "https://www.cainlamarre.ca" },
+    { name: "ICAO", logo: "/images/clients/icao.webp", url: "https://www.icao.int" },
   ]},
   fr: { title: "Références", subtitle: "La confiance des grandes organisations en Amérique du Nord et en Europe", clients: [
     { name: "Port de Montréal" }, { name: "Casino de Montréal" }, { name: "CHU Sainte-Justine" },
@@ -215,40 +215,40 @@ const programmingReferences = {
 
 const consultingReferences = {
   en: { title: "References", subtitle: "Trusted by leading organizations across North America and Europe", clients: [
-    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025" },
-    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020" },
-    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025" },
-    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025" },
-    { name: "Air France", logo: "/images/clients/air-france.webp" },
-    { name: "WSP", logo: "/images/clients/wsp.webp" },
-    { name: "Solotech", logo: "/images/clients/solotech.webp" },
-    { name: "ICAO", logo: "/images/clients/icao.webp" },
+    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025", url: "https://www.port-montreal.com" },
+    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020", url: "https://casinos.lotoquebec.com/fr/montreal" },
+    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025", url: "https://www.chusj.org" },
+    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025", url: "https://www.banque-france.fr" },
+    { name: "Air France", logo: "/images/clients/air-france.webp", url: "https://www.airfrance.com" },
+    { name: "WSP", logo: "/images/clients/wsp.webp", url: "https://www.wsp.com" },
+    { name: "Solotech", logo: "/images/clients/solotech.webp", url: "https://www.solotech.com" },
+    { name: "ICAO", logo: "/images/clients/icao.webp", url: "https://www.icao.int" },
   ]},
   fr: { title: "Références", subtitle: "La confiance des grandes organisations en Amérique du Nord et en Europe" },
 }
 
 const adminReferences = {
   en: { title: "References", subtitle: "Trusted by leading organizations across North America and Europe", clients: [
-    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025" },
-    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020" },
-    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025" },
-    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025" },
-    { name: "WSP", logo: "/images/clients/wsp.webp" },
-    { name: "Solotech", logo: "/images/clients/solotech.webp" },
+    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025", url: "https://www.port-montreal.com" },
+    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020", url: "https://casinos.lotoquebec.com/fr/montreal" },
+    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025", url: "https://www.chusj.org" },
+    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025", url: "https://www.banque-france.fr" },
+    { name: "WSP", logo: "/images/clients/wsp.webp", url: "https://www.wsp.com" },
+    { name: "Solotech", logo: "/images/clients/solotech.webp", url: "https://www.solotech.com" },
   ]},
   fr: { title: "Références", subtitle: "La confiance des grandes organisations en Amérique du Nord et en Europe" },
 }
 
 const integrationReferences = {
   en: { title: "References", subtitle: "Trusted by leading organizations across North America and Europe", clients: [
-    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025" },
-    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020" },
-    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025" },
-    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025" },
-    { name: "Bell", logo: "/images/clients/bell.webp" },
-    { name: "WSP", logo: "/images/clients/wsp.webp" },
-    { name: "Pratt & Whitney", logo: "/images/clients/pratt.webp" },
-    { name: "Solotech", logo: "/images/clients/solotech.webp" },
+    { name: "Port of Montreal", logo: "/images/clients/port-de-montreal.webp", period: "2012–2025", url: "https://www.port-montreal.com" },
+    { name: "Casino de Montréal", logo: "/images/clients/casino-mtl.webp", period: "2015–2020", url: "https://casinos.lotoquebec.com/fr/montreal" },
+    { name: "CHU Sainte-Justine", logo: "/images/clients/chu-sainte-justine.webp", period: "2018–2025", url: "https://www.chusj.org" },
+    { name: "Banque de France", logo: "/images/clients/banque-de-france.webp", period: "2025", url: "https://www.banque-france.fr" },
+    { name: "Bell", logo: "/images/clients/bell.webp", url: "https://www.bell.ca" },
+    { name: "WSP", logo: "/images/clients/wsp.webp", url: "https://www.wsp.com" },
+    { name: "Pratt & Whitney", logo: "/images/clients/pratt.webp", url: "https://www.prattwhitney.com" },
+    { name: "Solotech", logo: "/images/clients/solotech.webp", url: "https://www.solotech.com" },
   ]},
   fr: { title: "Références", subtitle: "La confiance des grandes organisations en Amérique du Nord et en Europe" },
 }

@@ -500,7 +500,7 @@
 
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: var(--spacing-xl);
   align-items: stretch;
 }
@@ -517,8 +517,10 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
-  min-height: 180px;
+  min-height: 200px;
   height: 100%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .client-card:hover {
@@ -527,8 +529,8 @@
 }
 
 .client-logo {
-  width: 90px;
-  height: 65px;
+  width: 140px;
+  height: 90px;
   object-fit: contain;
   filter: brightness(1.6) grayscale(0.3);
   opacity: 0.85;

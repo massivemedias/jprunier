@@ -336,13 +336,17 @@ export default function ServiceDetailClient({
                 {service.referencesSection.subtitle}
               </motion.p>
               <motion.div className="clients-grid" variants={itemVariants}>
-                {service.referencesSection.clients.map((client: any, i: number) => (
-                  <div key={i} className="client-card">
-                    <img src={client.logo || ''} alt={client.name} className="client-logo" loading="lazy" />
-                    <span className="client-name">{client.name}</span>
-                    {client.period && <span className="client-period">{client.period}</span>}
-                  </div>
-                ))}
+                {service.referencesSection.clients.map((client: any, i: number) => {
+                  const CardTag = client.url ? 'a' : 'div'
+                  const linkProps = client.url ? { href: client.url, target: '_blank', rel: 'noopener noreferrer' } : {}
+                  return (
+                    <CardTag key={i} className="client-card" {...linkProps}>
+                      <img src={client.logo || ''} alt={client.name} className="client-logo" loading="lazy" />
+                      <span className="client-name">{client.name}</span>
+                      {client.period && <span className="client-period">{client.period}</span>}
+                    </CardTag>
+                  )
+                })}
               </motion.div>
             </motion.div>
           </div>
