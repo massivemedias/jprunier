@@ -26,14 +26,14 @@ export const AboutPage: GlobalConfig = {
                 { name: 'backgroundImage', type: 'upload', relationTo: 'media', admin: { description: 'Image de fond du hero' } },
               ],
             },
-            { name: 'intro', type: 'textarea', localized: true, admin: { description: 'Texte d\'introduction "Qui sommes-nous"' } },
+            { name: 'intro', type: 'richText', localized: true, admin: { description: 'Texte d\'introduction "Qui sommes-nous"' } },
           ],
         },
         {
           label: '🚀 Mission & Vision',
           fields: [
-            { name: 'mission', type: 'textarea', localized: true, admin: { description: 'Notre mission — Pourquoi JPrunier existe' } },
-            { name: 'vision', type: 'textarea', localized: true, admin: { description: 'Notre vision — Où nous allons' } },
+            { name: 'mission', type: 'richText', localized: true, admin: { description: 'Notre mission — Pourquoi JPrunier existe' } },
+            { name: 'vision', type: 'richText', localized: true, admin: { description: 'Notre vision — Où nous allons' } },
           ],
         },
         {

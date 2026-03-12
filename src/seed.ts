@@ -5,6 +5,28 @@ import config from './payload.config'
 import fs from 'fs'
 import path from 'path'
 
+// Helper: convert plain text to Lexical richText JSON format
+function textToLexical(text: string) {
+  return {
+    root: {
+      type: 'root',
+      children: text.split('\n').filter(Boolean).map(paragraph => ({
+        type: 'paragraph',
+        children: [{ type: 'text', text: paragraph, format: 0, detail: 0, mode: 'normal', style: '', version: 1 }],
+        direction: 'ltr',
+        format: '',
+        indent: 0,
+        textFormat: 0,
+        version: 1,
+      })),
+      direction: 'ltr',
+      format: '',
+      indent: 0,
+      version: 1,
+    },
+  }
+}
+
 // Media upload helper — uploads a file from public/ to the Media collection, with caching
 const mediaCache = new Map<string, string>() // path → media doc ID
 
@@ -590,7 +612,7 @@ async function seed() {
   const aboutResult = await payload.updateGlobal({
     slug: 'about-page',
     locale: 'en',
-    data: { hero: contentEn.hero.about, intro: contentEn.about.intro, mission: contentEn.about.mission, vision: contentEn.about.vision, values: contentEn.about.values },
+    data: { hero: contentEn.hero.about, intro: textToLexical(contentEn.about.intro), mission: textToLexical(contentEn.about.mission), vision: textToLexical(contentEn.about.vision), values: contentEn.about.values },
   })
   const aboutValIds = ((aboutResult as any).values || []).map((v: any) => v.id)
   console.log('→ About Page (FR)...')
@@ -599,9 +621,9 @@ async function seed() {
     locale: 'fr',
     data: {
       hero: contentFr.hero.about,
-      intro: contentFr.about.intro,
-      mission: contentFr.about.mission,
-      vision: contentFr.about.vision,
+      intro: textToLexical(contentFr.about.intro),
+      mission: textToLexical(contentFr.about.mission),
+      vision: textToLexical(contentFr.about.vision),
       values: contentFr.about.values.map((v: any, i: number) => ({ id: aboutValIds[i], ...v })),
     },
   })
@@ -712,12 +734,38 @@ async function seed() {
   await uploadMedia(payload, '/images/bg-bubbles.png', 'Bubbles Background', 'background')
   await uploadMedia(payload, '/images/bg-variante.png', 'Variant Background', 'background')
 
+  // Upload hero backgrounds for pages
+  const heroBgHome = await uploadMedia(payload, '/images/bg-ia-av-spheres.jpg', 'Hero Home Background', 'background', 'Fond Hero Accueil')
+  const heroBgAbout = await uploadMedia(payload, '/images/hero-bg.png', 'Hero About Background', 'background', 'Fond Hero À propos')
+  const heroBgServices = await uploadMedia(payload, '/images/bg-neural-network.png', 'Hero Services Background', 'background', 'Fond Hero Services')
+  const heroBgContact = await uploadMedia(payload, '/images/bg-abstract.png', 'Hero Contact Background', 'background', 'Fond Hero Contact')
+
   console.log('→ Media uploads complete')
 
   // Helper: get media ID from path (uses mediaCache populated by uploadMedia)
   function getMediaId(filePath: string): string | undefined {
     return mediaCache.get(filePath)
   }
+
+  // 8b. Link background images to page globals
+  console.log('→ Linking background images to pages...')
+  if (heroBgHome) {
+    await payload.updateGlobal({ slug: 'home-page', data: { hero: { backgroundImage: heroBgHome } } })
+  }
+  if (heroBgAbout) {
+    await payload.updateGlobal({ slug: 'about-page', data: { hero: { backgroundImage: heroBgAbout } } })
+  }
+  if (heroBgServices) {
+    await payload.updateGlobal({ slug: 'services-page', data: { hero: { backgroundImage: heroBgServices } } })
+  }
+  if (heroBgContact) {
+    await payload.updateGlobal({ slug: 'contact-page', data: { hero: { backgroundImage: heroBgContact } } })
+  }
+  if (heroBgHome) {
+    // Reuse a bg for news page
+    await payload.updateGlobal({ slug: 'news-page', data: { hero: { backgroundImage: heroBgHome } } })
+  }
+  console.log('→ Background images linked to pages')
 
   // 9. Services collection
   console.log('→ Services...')

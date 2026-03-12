@@ -6,6 +6,24 @@ import TestimonialCard from '../../../components/TestimonialCard'
 import { useLocalizedData, useT } from '../../../context/LanguageContext'
 import '../../../styles/About.css'
 
+// Helper: extract plain text from richText (Lexical JSON) or fallback to string
+function renderRichText(field: any): string {
+  if (!field) return ''
+  if (typeof field === 'string') return field
+  // Lexical JSON format
+  if (field?.root?.children) {
+    return field.root.children
+      .map((node: any) => {
+        if (node.children) {
+          return node.children.map((child: any) => child.text || '').join('')
+        }
+        return ''
+      })
+      .join('\n')
+  }
+  return ''
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
@@ -46,15 +64,15 @@ export default function AboutClient({
           >
             <motion.div className="about-intro" variants={itemVariants}>
               <h2>{t('about.who_we_are')}</h2>
-              <p>{about.intro}</p>
+              <p>{renderRichText(about.intro)}</p>
             </motion.div>
             <motion.div className="about-mission" variants={itemVariants}>
               <h3>{t('about.our_mission')}</h3>
-              <p>{about.mission}</p>
+              <p>{renderRichText(about.mission)}</p>
             </motion.div>
             <motion.div className="about-vision" variants={itemVariants}>
               <h3>{t('about.our_vision')}</h3>
-              <p>{about.vision}</p>
+              <p>{renderRichText(about.vision)}</p>
             </motion.div>
           </motion.div>
         </div>
