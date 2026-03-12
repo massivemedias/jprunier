@@ -649,8 +649,45 @@ async function seed() {
     },
   })
 
-  // 8. Static image paths (no media uploads needed — images served from public/)
-  console.log('→ Using static image paths (no media uploads)...')
+  // 8. Upload media files so admin panel shows thumbnails
+  console.log('→ Uploading media files...')
+
+  // Upload all interface screenshots
+  for (const item of interfacesGalleryData.en.items) {
+    await uploadMedia(payload, item.src, item.alt, 'interface', interfacesGalleryData.fr.items.find((f: any) => true)?.alt)
+  }
+
+  // Upload certification badges
+  const certBadges = [
+    { src: '/images/certifications/crestron-cmpg.webp', alt: 'Crestron Master Programmer Gold', altFr: 'Programmeur Maître Crestron Or' },
+    { src: '/images/certifications/qsys-control_201.webp', alt: 'Q-SYS Control 201', altFr: 'Contrôle Q-SYS 201' },
+    { src: '/images/certifications/qsys-level_2.webp', alt: 'Q-SYS Level 2', altFr: 'Q-SYS Niveau 2' },
+    { src: '/images/certifications/qsys-reflect_enterprise_manager.webp', alt: 'Q-SYS Reflect Enterprise Manager', altFr: 'Q-SYS Reflect Enterprise Manager' },
+  ]
+  for (const badge of certBadges) {
+    await uploadMedia(payload, badge.src, badge.alt, 'certification', badge.altFr)
+  }
+
+  // Upload client logos
+  const clientLogoPaths = [
+    'port-de-montreal', 'casino-mtl', 'chu-sainte-justine', 'banque-de-france',
+    'air-france', 'bell', 'wsp', 'pratt', 'solotech', 'fondaction', 'cain-lamarre', 'icao',
+    'national-bank', 'intact', 'cn', 'rbc', 'rio-tinto',
+  ]
+  for (const name of clientLogoPaths) {
+    await uploadMedia(payload, `/images/clients/${name}.webp`, name, 'client')
+  }
+
+  // Upload brochures
+  await uploadMedia(payload, '/docs/JPrunierInc_EN.V4.pdf', 'JPrunier Brochure EN', 'brochure', 'Brochure JPrunier EN')
+  await uploadMedia(payload, '/docs/JPrunierInc_FR.V4.pdf', 'JPrunier Brochure FR', 'brochure', 'Brochure JPrunier FR')
+
+  // Upload backgrounds
+  await uploadMedia(payload, '/images/bg-ai-generated.png', 'AI Generated Background', 'background')
+  await uploadMedia(payload, '/images/bg-bubbles.png', 'Bubbles Background', 'background')
+  await uploadMedia(payload, '/images/bg-variante.png', 'Variant Background', 'background')
+
+  console.log('→ Media uploads complete')
 
   // 9. Services collection
   console.log('→ Services...')
