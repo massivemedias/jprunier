@@ -1,7 +1,64 @@
 /* ================================================
-   Light Theme Overrides
+   Light Theme Overrides — Warm Sepia
    Override hardcoded dark-theme rgba values
    ================================================ */
+
+/* --- Global section backgrounds --- */
+[data-theme="light"] .section { background-color: var(--background); }
+[data-theme="light"] .section-light { background-color: var(--surface); }
+
+/* --- Home Page sections --- */
+[data-theme="light"] .gateway-section { background-color: var(--surface); }
+[data-theme="light"] .partners-section-light { background-color: var(--surface); }
+[data-theme="light"] .aiav-section { background-color: var(--surface); }
+[data-theme="light"] .achievements-section { background-color: var(--surface); }
+
+[data-theme="light"] .expertise-home-section::before {
+  background: rgba(247, 243, 236, 0.92);
+}
+
+[data-theme="light"] .expertise-home-item {
+  background: var(--surface);
+  box-shadow: 0 2px 12px rgba(60, 40, 10, 0.06);
+}
+
+[data-theme="light"] .expertise-home-item:hover {
+  box-shadow: 0 12px 30px rgba(60, 40, 10, 0.1);
+}
+
+/* Services section with bg image — keep dark in light mode */
+/* (intentionally dark sections stay dark) */
+
+/* Accordion section — keep dark in light mode */
+
+/* Sectors section — keep dark in light mode */
+
+/* Discover CTA — keep dark in light mode */
+
+/* Cards in dark sections stay dark, cards in light sections use sepia */
+[data-theme="light"] .partner-item {
+  border-color: rgba(60, 40, 10, 0.06);
+}
+
+[data-theme="light"] .stat-card,
+[data-theme="light"] .service-card,
+[data-theme="light"] .value-card,
+[data-theme="light"] .connecting-card,
+[data-theme="light"] .expertise-card {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.06);
+}
+
+[data-theme="light"] .service-card:hover,
+[data-theme="light"] .value-card:hover,
+[data-theme="light"] .connecting-card:hover {
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
+}
+
+/* Partner logos in light mode — no invert needed */
+[data-theme="light"] .partner-logo-img-dark {
+  mix-blend-mode: multiply;
+}
 
 /* --- Service Detail --- */
 [data-theme="light"] .service-detail-main { background-color: var(--background); }
@@ -69,26 +126,6 @@
   border-color: var(--accent-violet);
 }
 
-/* --- Home Page --- */
-[data-theme="light"] .partner-item {
-  border-color: rgba(60, 40, 10, 0.06);
-}
-
-[data-theme="light"] .stat-card,
-[data-theme="light"] .service-card,
-[data-theme="light"] .value-card,
-[data-theme="light"] .connecting-card,
-[data-theme="light"] .expertise-card {
-  background: var(--surface);
-  border-color: rgba(60, 40, 10, 0.06);
-}
-
-[data-theme="light"] .service-card:hover,
-[data-theme="light"] .value-card:hover,
-[data-theme="light"] .connecting-card:hover {
-  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
-}
-
 /* --- About Page --- */
 [data-theme="light"] .testimonial-card {
   background: var(--surface);
@@ -115,20 +152,17 @@
   border-color: rgba(60, 40, 10, 0.06);
 }
 
-/* --- Contact Page --- */
-[data-theme="light"] .contact-form-card,
-[data-theme="light"] .office-card {
-  background: var(--surface);
-  border-color: rgba(60, 40, 10, 0.06);
-}
-
 /* --- Footer --- */
 [data-theme="light"] .footer {
-  background-color: var(--surface);
+  background-color: var(--surface-light);
   border-top-color: rgba(60, 40, 10, 0.06);
 }
 
-/* --- Alternating sections --- */
+[data-theme="light"] .footer-cta-section {
+  background: var(--surface);
+}
+
+/* --- Alternating service detail sections --- */
 [data-theme="light"] .service-audiovisual,
 [data-theme="light"] .service-extended-programming,
 [data-theme="light"] .service-ai-bridge,
@@ -138,6 +172,7 @@
   background-color: var(--surface-light);
 }
 
+/* --- News --- */
 [data-theme="light"] .news-linkedin-cta {
   background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
 }
@@ -152,4 +187,14 @@
 /* --- Lightbox --- */
 [data-theme="light"] .lightbox-overlay {
   background: rgba(0, 0, 0, 0.7);
+}
+
+/* --- Map section --- */
+[data-theme="light"] .map-section {
+  background-color: var(--background);
+}
+
+[data-theme="light"] .map-placeholder {
+  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+  border-color: rgba(60, 40, 10, 0.1);
 }
