@@ -268,7 +268,7 @@
 
 [data-theme="light"] .header-scrolled {
   background-color: rgba(247, 243, 236, 0.97);
-  border-bottom-color: rgba(100, 64, 224, 0.1);
+  border-bottom-color: rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .logo-text { color: var(--gray-light); }
@@ -284,7 +284,7 @@
 }
 
 [data-theme="light"] .dropdown-item { color: rgba(0, 0, 0, 0.6); }
-[data-theme="light"] .dropdown-item:hover { color: var(--accent-violet); background: rgba(100, 64, 224, 0.05); }
+[data-theme="light"] .dropdown-item:hover { color: #3a3a3a; background: rgba(60, 40, 10, 0.05); }
 
 [data-theme="light"] .lang-pill {
   background: rgba(0, 0, 0, 0.05);
@@ -300,12 +300,12 @@
 }
 
 [data-theme="light"] .lang-pill-active {
-  background: var(--accent-violet);
+  background: #3a3a3a;
   color: white;
-  border: 1.5px solid rgba(140, 120, 255, 0.7);
+  border: 1.5px solid rgba(60, 60, 60, 0.7);
   box-shadow:
-    0 0 8px rgba(116, 86, 241, 0.4),
-    0 0 16px rgba(116, 86, 241, 0.2);
+    0 0 8px rgba(60, 60, 60, 0.3),
+    0 0 16px rgba(60, 60, 60, 0.15);
 }
 
 [data-theme="light"] .mobile-menu-toggle { color: var(--gray-light); }
@@ -424,8 +424,8 @@
 
   [data-theme="light"] .nav > .nav-link:hover,
   [data-theme="light"] .nav > .nav-dropdown > .nav-link:hover {
-    background: rgba(100, 64, 224, 0.05);
-    color: var(--accent-violet);
+    background: rgba(60, 40, 10, 0.05);
+    color: #3a3a3a;
   }
 
   [data-theme="light"] .dropdown-menu {

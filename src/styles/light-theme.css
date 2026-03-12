@@ -172,13 +172,6 @@
   background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
 }
 
-/* --- Scroll to top button --- */
-[data-theme="light"] .scroll-to-top {
-  background: var(--accent-violet);
-  color: white;
-  box-shadow: 0 4px 15px rgba(100, 64, 224, 0.3);
-}
-
 /* --- Lightbox --- */
 [data-theme="light"] .lightbox-overlay {
   background: rgba(0, 0, 0, 0.7);
@@ -229,6 +222,26 @@
 
 [data-theme="light"] .testimonial-avatar {
   border-color: rgba(60, 40, 10, 0.1);
+}
+
+/* --- Focus states — remove violet glow --- */
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  border-color: #3a3a3a;
+  box-shadow: 0 0 0 3px rgba(60, 60, 60, 0.1);
+}
+
+[data-theme="light"] .form-group input:focus,
+[data-theme="light"] .form-group textarea:focus {
+  border-color: #3a3a3a;
+  box-shadow: 0 0 0 3px rgba(60, 60, 60, 0.1);
+}
+
+/* --- Scroll to top — dark gray --- */
+[data-theme="light"] .scroll-to-top {
+  background: #3a3a3a;
+  box-shadow: 0 4px 15px rgba(60, 60, 60, 0.3);
 }
 
 /* --- Primary button — dark gray instead of violet in light theme --- */
