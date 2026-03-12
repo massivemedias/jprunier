@@ -830,12 +830,14 @@ async function seed() {
   for (let i = 0; i < newsEn.length; i++) {
     const en = newsEn[i]
     const fr = newsFr[i]
-    // Upload news image if it exists locally
-    let imageId: string | undefined
-    if (en.image) {
-      const id = await uploadMedia(payload, en.image, en.title, 'photo', fr.title)
-      if (id) imageId = id
+    // Use static image path from /images/ folder
+    const imageMap: Record<string, string> = {
+      'images/bg-ia-av-spheres.jpg': '/images/bg-ia-av-spheres.jpg',
+      'images/bg-bubbles.png': '/images/bg-bubbles.png',
+      'images/bg-neural-network.png': '/images/bg-neural-network.png',
+      'images/bg-ai-generated.png': '/images/bg-ai-generated.png',
     }
+    const staticImage = en.image ? (imageMap[en.image] || `/images/${en.image.replace('images/', '')}`) : ''
     const doc = await payload.create({
       collection: 'news-articles',
       locale: 'en',
@@ -843,7 +845,7 @@ async function seed() {
         title: en.title,
         excerpt: en.excerpt,
         date: en.date,
-        ...(imageId ? { image: imageId } : {}),
+        image: staticImage,
         linkedinUrl: en.linkedinUrl,
       },
     })

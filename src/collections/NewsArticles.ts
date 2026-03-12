@@ -8,7 +8,7 @@ export const NewsArticles: CollectionConfig = {
     { name: 'title', type: 'text', required: true, localized: true },
     { name: 'excerpt', type: 'textarea', required: true, localized: true },
     { name: 'date', type: 'date', required: true },
-    { name: 'image', type: 'upload', relationTo: 'media' },
+    { name: 'image', type: 'text', admin: { description: 'Image path (e.g. /images/bg-bubbles.png)' } },
     { name: 'linkedinUrl', type: 'text' },
   ],
 }
