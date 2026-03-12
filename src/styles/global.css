@@ -65,25 +65,25 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Light Theme */
+/* Light Theme — Warm Sepia */
 [data-theme="light"] {
-  --primary-dark: #e8edf2;
-  --primary-dark-light: #dce3ea;
+  --primary-dark: #ece5d8;
+  --primary-dark-light: #e0d7c8;
   --accent-violet: #6440e0;
   --accent-violet-light: #7a5af0;
-  --gray-dark: #8b9aaa;
-  --gray-light: #1a2a3a;
-  --gray-medium: #4d5d6d;
-  --background: #f5f7fa;
-  --surface: #ffffff;
-  --surface-light: #eef1f5;
-  --white: #ffffff;
-  --off-white: #f8f9fa;
-  --text-dark: #1a1a2e;
-  --text-dark-secondary: #4a4a6a;
-  --glass-bg: rgba(0, 0, 0, 0.03);
-  --glass-border: rgba(0, 0, 0, 0.08);
-  --accent-orange: #e8833a;
+  --gray-dark: #9a8e7e;
+  --gray-light: #2c2416;
+  --gray-medium: #6b5d4d;
+  --background: #f7f3ec;
+  --surface: #fdfbf7;
+  --surface-light: #f0ebe2;
+  --white: #fdfbf7;
+  --off-white: #f5f0e8;
+  --text-dark: #2c2416;
+  --text-dark-secondary: #5c5040;
+  --glass-bg: rgba(60, 40, 10, 0.03);
+  --glass-border: rgba(60, 40, 10, 0.08);
+  --accent-orange: #d47a32;
 }
 
 /* Reset & Base Styles */

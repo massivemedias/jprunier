@@ -8,70 +8,70 @@
 
 [data-theme="light"] .sidebar-card {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .sidebar-cta {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .interface-card {
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .interface-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .certification-badge {
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(60, 40, 10, 0.08);
   background: var(--surface);
 }
 
 [data-theme="light"] .client-card {
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(60, 40, 10, 0.08);
   background: var(--surface);
 }
 
 [data-theme="light"] .tech-tag {
   background: var(--surface-light);
   color: var(--gray-light);
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .domain-tag {
   background: var(--surface-light);
   color: var(--gray-light);
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .extended-service-item {
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .warranty-item {
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .brochure-card {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .other-service-card {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .other-service-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
   border-color: var(--accent-violet);
 }
 
 /* --- Home Page --- */
 [data-theme="light"] .partner-item {
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .stat-card,
@@ -80,52 +80,52 @@
 [data-theme="light"] .connecting-card,
 [data-theme="light"] .expertise-card {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .service-card:hover,
 [data-theme="light"] .value-card:hover,
 [data-theme="light"] .connecting-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
 }
 
 /* --- About Page --- */
 [data-theme="light"] .testimonial-card {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .testimonial-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
 }
 
 /* --- Services List Page --- */
 [data-theme="light"] .service-list-card {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 [data-theme="light"] .service-list-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
 }
 
 [data-theme="light"] .crestron-card,
 [data-theme="light"] .expertise-category {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 /* --- Contact Page --- */
 [data-theme="light"] .contact-form-card,
 [data-theme="light"] .office-card {
   background: var(--surface);
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(60, 40, 10, 0.06);
 }
 
 /* --- Footer --- */
 [data-theme="light"] .footer {
   background-color: var(--surface);
-  border-top-color: rgba(0, 0, 0, 0.06);
+  border-top-color: rgba(60, 40, 10, 0.06);
 }
 
 /* --- Alternating sections --- */
