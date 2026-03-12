@@ -123,7 +123,7 @@
 
 [data-theme="light"] .other-service-card:hover {
   box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
-  border-color: var(--accent-violet);
+  border-color: rgba(60, 40, 10, 0.15);
 }
 
 /* --- About Page --- */
@@ -194,7 +194,44 @@
   background-color: var(--background);
 }
 
-[data-theme="light"] .map-placeholder {
-  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+[data-theme="light"] .map-card {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.08);
+}
+
+[data-theme="light"] .map-card h3 {
+  color: var(--text-dark);
+}
+
+/* --- Services List Cards --- */
+[data-theme="light"] .service-link-card {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.06);
+}
+
+[data-theme="light"] .service-link-card:hover {
+  border-color: rgba(60, 40, 10, 0.15);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
+}
+
+/* --- About sections --- */
+[data-theme="light"] .about-intro,
+[data-theme="light"] .about-mission,
+[data-theme="light"] .about-vision {
+  background: rgba(60, 40, 10, 0.02);
+  border-left-color: rgba(100, 64, 224, 0.3);
+}
+
+[data-theme="light"] .value-card {
+  background: var(--surface);
+  border-color: rgba(60, 40, 10, 0.06);
+}
+
+[data-theme="light"] .value-card:hover {
+  border-color: rgba(60, 40, 10, 0.15);
+  box-shadow: 0 10px 30px rgba(60, 40, 10, 0.08);
+}
+
+[data-theme="light"] .testimonial-avatar {
   border-color: rgba(60, 40, 10, 0.1);
 }

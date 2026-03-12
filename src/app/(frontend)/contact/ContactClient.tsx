@@ -173,8 +173,37 @@ export default function ContactClient({
       <section className="section map-section">
         <div className="container">
           <h2 className="text-center">{t('contact.locations')}</h2>
-          <div className="map-placeholder">
-            <p>{t('contact.map_coming')}</p>
+          <div className="maps-grid">
+            <div className="map-card">
+              <h3>Montréal, Canada</h3>
+              <div className="map-embed">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178787.94399028498!2d-73.87438724687498!3d45.5591827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC!5e0!3m2!1sen!2sca!4v1710000000000"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, borderRadius: '12px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Montréal, Canada"
+                />
+              </div>
+            </div>
+            <div className="map-card">
+              <h3>Paris, France</h3>
+              <div className="map-embed">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.95922188!2d2.2646349!3d48.858370099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sfr!4v1710000000000"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, borderRadius: '12px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Paris, France"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

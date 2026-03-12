@@ -2,7 +2,7 @@
 .service-detail-breadcrumb {
   background: var(--primary-dark);
   padding: var(--spacing-md) var(--spacing-lg);
-  border-bottom: 1px solid rgba(116, 86, 241, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .breadcrumb-link {
@@ -121,7 +121,7 @@
 
 .sidebar-card {
   background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
-  border: 1px solid rgba(116, 86, 241, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-xl);
   padding: var(--spacing-xl);
 }
@@ -163,7 +163,7 @@
 .tech-tag {
   padding: 0.25rem 0.75rem;
   background: rgba(116, 86, 241, 0.1);
-  border: 1px solid rgba(116, 86, 241, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   color: var(--gray-light);
   font-size: 0.75rem;
@@ -224,16 +224,16 @@
   flex-direction: column;
   padding: var(--spacing-xl);
   background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
-  border: 1px solid rgba(116, 86, 241, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-xl);
   text-decoration: none;
   transition: all var(--transition-base);
 }
 
 .other-service-card:hover {
-  border-color: var(--accent-violet);
+  border-color: rgba(255, 255, 255, 0.12);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(116, 86, 241, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .other-service-icon {
@@ -280,7 +280,7 @@
 .domain-tag {
   padding: 0.5rem 1.25rem;
   background: rgba(116, 86, 241, 0.1);
-  border: 1px solid rgba(116, 86, 241, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   color: var(--gray-light);
   font-size: var(--font-size-sm);
@@ -328,8 +328,8 @@
 /* ─── AI Bridge Section ─── */
 .service-ai-bridge {
   background: linear-gradient(135deg, rgba(116, 86, 241, 0.08) 0%, var(--surface) 100%);
-  border-top: 1px solid rgba(116, 86, 241, 0.15);
-  border-bottom: 1px solid rgba(116, 86, 241, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .service-ai-bridge h2 {
@@ -390,13 +390,13 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid rgba(116, 86, 241, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all var(--transition-base);
 }
 
 .interface-card:hover {
-  border-color: var(--accent-violet);
-  box-shadow: 0 12px 30px rgba(116, 86, 241, 0.2);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   transform: translateY(-4px);
 }
 
@@ -459,16 +459,16 @@
   gap: var(--spacing-sm);
   padding: var(--spacing-xl);
   background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
-  border: 1px solid rgba(116, 86, 241, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-xl);
   transition: all var(--transition-base);
   min-width: 180px;
 }
 
 .certification-badge:hover {
-  border-color: var(--accent-violet);
+  border-color: rgba(255, 255, 255, 0.12);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(116, 86, 241, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .certification-badge img {
@@ -513,13 +513,13 @@
   gap: var(--spacing-sm);
   padding: var(--spacing-lg);
   background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
-  border: 1px solid rgba(116, 86, 241, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
 }
 
 .client-card:hover {
-  border-color: rgba(116, 86, 241, 0.3);
+  border-color: rgba(255, 255, 255, 0.12);
   transform: translateY(-2px);
 }
 

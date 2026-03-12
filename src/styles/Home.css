@@ -160,8 +160,8 @@
 
 .service-card-small:hover {
   transform: translateY(-6px);
-  border-color: var(--accent-violet);
-  box-shadow: 0 20px 40px rgba(116, 86, 241, 0.15);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .service-small-icon {
@@ -229,7 +229,7 @@
 }
 
 .accordion-item {
-  border: 1px solid rgba(116, 86, 241, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-md);
   overflow: hidden;
@@ -241,7 +241,7 @@
 
 .accordion-item:hover,
 .accordion-open {
-  border-color: var(--accent-violet);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .accordion-header {

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Code, Lightbulb, Settings, Zap, CheckCircle, ArrowLeft, Mail, Download, Award, Shield, X } from 'lucide-react'
