@@ -25,8 +25,36 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   admin: {
     user: Users.slug,
+    meta: {
+      titleSuffix: ' — JPrunier CMS',
+      description: 'Panneau d\'administration JPrunier Inc.',
+      icons: [{ url: '/favicon.ico' }],
+    },
     importMap: {
       baseDir: path.resolve(dirname),
+    },
+    dateFormat: 'dd/MM/yyyy HH:mm',
+    avatar: 'gravatar',
+    livePreview: {
+      url: ({ data, collectionConfig, globalConfig }) => {
+        const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jprunier.com'
+        if (collectionConfig?.slug === 'services' && data?.slug) {
+          return `${baseUrl}/services/${data.slug}`
+        }
+        if (globalConfig?.slug === 'home-page') return baseUrl
+        if (globalConfig?.slug === 'about-page') return `${baseUrl}/about`
+        if (globalConfig?.slug === 'services-page') return `${baseUrl}/services`
+        if (globalConfig?.slug === 'contact-page') return `${baseUrl}/contact`
+        if (globalConfig?.slug === 'news-page') return `${baseUrl}/news`
+        return baseUrl
+      },
+      breakpoints: [
+        { label: 'Mobile', name: 'mobile', width: 375, height: 812 },
+        { label: 'Tablette', name: 'tablet', width: 768, height: 1024 },
+        { label: 'Desktop', name: 'desktop', width: 1440, height: 900 },
+      ],
+      collections: ['services'],
+      globals: ['home-page', 'about-page', 'services-page', 'contact-page', 'news-page'],
     },
   },
   collections: [Users, Media, Services, Testimonials, NewsArticles, Sectors],
