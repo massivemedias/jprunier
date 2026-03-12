@@ -88,7 +88,7 @@ export default function ServiceDetailClient({
       <Hero
         title={service.title}
         subtitle={service.description}
-        backgroundImage={service.heroImage?.url || '/images/bg-ai-generated.png'}
+        backgroundImage={service.heroImage || '/images/bg-ai-generated.png'}
         centered
         compact
       />
@@ -247,8 +247,8 @@ export default function ServiceDetailClient({
               </motion.p>
               <motion.div className="interfaces-grid" variants={itemVariants}>
                 {service.interfacesGallery.items.map((item: any, i: number) => {
-                  const imgUrl = item.image?.url || item.src || ''
-                  const imgAlt = item.image?.alt || item.alt || ''
+                  const imgUrl = item.image || ''
+                  const imgAlt = item.caption || ''
                   return (
                     <div
                       key={i}
@@ -281,7 +281,7 @@ export default function ServiceDetailClient({
               <motion.div className="certifications-grid" variants={itemVariants}>
                 {service.certificationsSection.badges.map((badge: any, i: number) => (
                   <div key={i} className="certification-badge">
-                    <img src={badge.image?.url || badge.src || ''} alt={badge.name} loading="lazy" />
+                    <img src={badge.image || ''} alt={badge.name} loading="lazy" />
                     <span className="badge-name">{badge.name}</span>
                     <span className="badge-issuer">{badge.issuer}</span>
                   </div>
@@ -304,7 +304,7 @@ export default function ServiceDetailClient({
               <motion.div className="clients-grid" variants={itemVariants}>
                 {service.referencesSection.clients.map((client: any, i: number) => (
                   <div key={i} className="client-card">
-                    <img src={client.logo?.url || client.logo || ''} alt={client.name} className="client-logo" loading="lazy" />
+                    <img src={client.logo || ''} alt={client.name} className="client-logo" loading="lazy" />
                     <span className="client-name">{client.name}</span>
                     {client.period && <span className="client-period">{client.period}</span>}
                   </div>
@@ -356,7 +356,7 @@ export default function ServiceDetailClient({
                 </div>
               </motion.div>
               <motion.a
-                href={service.brochureDownload.file?.url || service.brochureDownload.fileUrl || '#'}
+                href={service.brochureDownload.file || '#'}
                 className="btn btn-primary brochure-btn"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -46,9 +46,8 @@ export const Services: CollectionConfig = {
     { name: 'details', type: 'textarea', localized: true },
     {
       name: 'heroImage',
-      type: 'upload',
-      relationTo: 'media',
-      admin: { description: 'Background image for the service hero section' },
+      type: 'text',
+      admin: { description: 'Static image path for the service hero section (e.g. /images/bg-ai-generated.png)' },
     },
     { name: 'sortOrder', type: 'number', defaultValue: 0 },
 
@@ -115,7 +114,7 @@ export const Services: CollectionConfig = {
           name: 'items',
           type: 'array',
           fields: [
-            { name: 'image', type: 'upload', relationTo: 'media', required: true },
+            { name: 'image', type: 'text', required: true, admin: { description: 'Static image path (e.g. /images/interfaces/mcd-byom.webp)' } },
             { name: 'caption', type: 'text', localized: true },
           ],
         },
@@ -134,7 +133,7 @@ export const Services: CollectionConfig = {
           name: 'badges',
           type: 'array',
           fields: [
-            { name: 'image', type: 'upload', relationTo: 'media', required: true },
+            { name: 'image', type: 'text', required: true, admin: { description: 'Static image path (e.g. /images/certifications/crestron-cmpg.webp)' } },
             { name: 'name', type: 'text' },
             { name: 'issuer', type: 'text' },
           ],
@@ -155,7 +154,7 @@ export const Services: CollectionConfig = {
           type: 'array',
           fields: [
             { name: 'name', type: 'text', required: true },
-            { name: 'logo', type: 'upload', relationTo: 'media', required: true },
+            { name: 'logo', type: 'text', required: true, admin: { description: 'Static image path (e.g. /images/clients/bell.webp)' } },
             { name: 'period', type: 'text' },
           ],
         },
@@ -186,7 +185,7 @@ export const Services: CollectionConfig = {
         { name: 'title', type: 'text', localized: true },
         { name: 'description', type: 'text', localized: true },
         { name: 'buttonText', type: 'text', localized: true },
-        { name: 'file', type: 'upload', relationTo: 'media' },
+        { name: 'file', type: 'text', admin: { description: 'Static file path (e.g. /docs/JPrunierInc_EN.V4.pdf)' } },
       ],
     },
   ],

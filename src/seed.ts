@@ -649,42 +649,8 @@ async function seed() {
     },
   })
 
-  // 8. Upload all media assets first
-  console.log('→ Uploading media assets...')
-
-  // Upload hero background
-  const heroImageId = await uploadMedia(payload, '/images/bg-ai-generated.png', 'AI Generated Background', 'background', 'Arrière-plan généré par IA')
-
-  // Upload certification badges
-  const certMediaIds: Record<string, string> = {}
-  for (const badge of sharedCertifications.en.badges) {
-    certMediaIds[badge.src] = await uploadMedia(payload, badge.src, badge.name, 'certification')
-  }
-
-  // Upload client logos (deduplicate across all reference sets)
-  const clientMediaIds: Record<string, string> = {}
-  const allClientSets = [programmingReferences.en, consultingReferences.en, adminReferences.en, integrationReferences.en]
-  for (const refSet of allClientSets) {
-    for (const client of refSet.clients) {
-      if (!clientMediaIds[client.logo]) {
-        clientMediaIds[client.logo] = await uploadMedia(payload, client.logo, `${client.name} logo`, 'client', `Logo ${client.name}`)
-      }
-    }
-  }
-
-  // Upload interface screenshots
-  const interfaceMediaIds: Record<string, string> = {}
-  for (let j = 0; j < interfacesGalleryData.en.items.length; j++) {
-    const enItem = interfacesGalleryData.en.items[j]
-    const frItem = interfacesGalleryData.fr.items[j]
-    interfaceMediaIds[enItem.src] = await uploadMedia(payload, enItem.src, enItem.alt, 'interface', frItem.alt)
-  }
-
-  // Upload brochure PDFs
-  const brochureEnId = await uploadMedia(payload, sharedBrochure.en.fileUrl, 'JPrunier Brochure EN', 'brochure', 'Brochure JPrunier EN')
-  const brochureFrId = await uploadMedia(payload, sharedBrochure.fr.fileUrl, 'JPrunier Brochure FR', 'brochure', 'Brochure JPrunier FR')
-
-  console.log(`  ✅ Uploaded ${mediaCache.size} media assets`)
+  // 8. Static image paths (no media uploads needed — images served from public/)
+  console.log('→ Using static image paths (no media uploads)...')
 
   // 9. Services collection
   console.log('→ Services...')
@@ -692,31 +658,31 @@ async function seed() {
     const en = servicesEn[i] as any
     const fr = servicesFr[i] as any
 
-    // Build interfaces gallery items with media IDs
+    // Build interfaces gallery items with static paths
     let galleryItems: any[] | undefined
     if (en.interfacesGallery?.items) {
       galleryItems = en.interfacesGallery.items.map((item: any) => ({
-        image: interfaceMediaIds[item.src] || null,
+        image: item.src,
         caption: item.caption,
       }))
     }
 
-    // Build certification badges with media IDs
+    // Build certification badges with static paths
     let badgeItems: any[] | undefined
     if (en.certificationsSection?.badges) {
       badgeItems = en.certificationsSection.badges.map((badge: any) => ({
-        image: certMediaIds[badge.src] || null,
+        image: badge.src,
         name: badge.name,
         issuer: badge.issuer,
       }))
     }
 
-    // Build client references with media IDs
+    // Build client references with static paths
     let clientItems: any[] | undefined
     if (en.referencesSection?.clients) {
       clientItems = en.referencesSection.clients.map((client: any) => ({
         name: client.name,
-        logo: clientMediaIds[client.logo] || null,
+        logo: client.logo,
         period: client.period,
       }))
     }
@@ -736,7 +702,7 @@ async function seed() {
         features: en.features,
         technologies: en.technologies.map((t: string) => ({ name: t })),
         details: en.details,
-        heroImage: heroImageId || undefined,
+        heroImage: '/images/bg-ai-generated.png',
         sortOrder: i,
         // Enriched sections
         ...(en.audiovisualSection ? { audiovisualSection: { title: en.audiovisualSection.title, description: en.audiovisualSection.description, domains: en.audiovisualSection.domains.map((d: string) => ({ name: d })) } } : {}),
@@ -746,7 +712,7 @@ async function seed() {
         ...(badgeItems ? { certificationsSection: { title: en.certificationsSection.title, subtitle: en.certificationsSection.subtitle, badges: badgeItems } } : {}),
         ...(clientItems ? { referencesSection: { title: en.referencesSection.title, subtitle: en.referencesSection.subtitle, clients: clientItems } } : {}),
         ...(en.warrantySection ? { warrantySection: { title: en.warrantySection.title, items: en.warrantySection.items.map((t: string) => ({ text: t })) } } : {}),
-        ...(en.brochureDownload ? { brochureDownload: { title: en.brochureDownload.title, description: en.brochureDownload.description, buttonText: en.brochureDownload.buttonText, file: brochureEnId || undefined } } : {}),
+        ...(en.brochureDownload ? { brochureDownload: { title: en.brochureDownload.title, description: en.brochureDownload.description, buttonText: en.brochureDownload.buttonText, file: en.brochureDownload.fileUrl } } : {}),
       },
     })
     // Capture array item IDs from EN create to preserve localized linkage
@@ -780,23 +746,23 @@ async function seed() {
       const enCaps = d.aiBridgeSection?.capabilities || []
       frData.aiBridgeSection = { title: fr.aiBridgeSection.title, tagline: fr.aiBridgeSection.tagline, description: fr.aiBridgeSection.description, capabilities: fr.aiBridgeSection.capabilities.map((text: string, j: number) => ({ id: enCaps[j]?.id, text })) }
     }
-    if (fr.interfacesGallery) {
+    if (fr.interfacesGallery && en.interfacesGallery?.items) {
       const enGallery = d.interfacesGallery?.items || []
-      frData.interfacesGallery = { title: fr.interfacesGallery.title, subtitle: fr.interfacesGallery.subtitle, items: fr.interfacesGallery.items.map((item: any, j: number) => ({ id: enGallery[j]?.id, image: enGallery[j]?.image, caption: item.caption })) }
+      frData.interfacesGallery = { title: fr.interfacesGallery.title, subtitle: fr.interfacesGallery.subtitle, items: fr.interfacesGallery.items.map((item: any, j: number) => ({ id: enGallery[j]?.id, image: en.interfacesGallery.items[j]?.src || enGallery[j]?.image, caption: item.caption })) }
     }
     if (fr.certificationsSection) {
       frData.certificationsSection = { title: fr.certificationsSection.title, subtitle: fr.certificationsSection.subtitle }
     }
-    if (fr.referencesSection) {
+    if (fr.referencesSection && en.referencesSection?.clients) {
       const enClients = d.referencesSection?.clients || []
-      frData.referencesSection = { title: fr.referencesSection.title, subtitle: fr.referencesSection.subtitle, clients: fr.referencesSection.clients?.map((c: any, j: number) => ({ id: enClients[j]?.id, name: c.name, logo: enClients[j]?.logo, period: enClients[j]?.period })) }
+      frData.referencesSection = { title: fr.referencesSection.title, subtitle: fr.referencesSection.subtitle, clients: fr.referencesSection.clients?.map((c: any, j: number) => ({ id: enClients[j]?.id, name: c.name, logo: en.referencesSection.clients[j]?.logo || enClients[j]?.logo, period: en.referencesSection.clients[j]?.period })) }
     }
     if (fr.warrantySection) {
       const enWarrantyItems = d.warrantySection?.items || []
       frData.warrantySection = { title: fr.warrantySection.title, items: fr.warrantySection.items.map((text: string, j: number) => ({ id: enWarrantyItems[j]?.id, text })) }
     }
     if (fr.brochureDownload) {
-      frData.brochureDownload = { title: fr.brochureDownload.title, description: fr.brochureDownload.description, buttonText: fr.brochureDownload.buttonText, file: brochureFrId || undefined }
+      frData.brochureDownload = { title: fr.brochureDownload.title, description: fr.brochureDownload.description, buttonText: fr.brochureDownload.buttonText, file: fr.brochureDownload.fileUrl }
     }
 
     await payload.update({
