@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
-import TestimonialCard from '../components/TestimonialCard';
 import { useContent, useT } from '../context/LanguageContext';
 import './About.css';
 
 const base = import.meta.env.BASE_URL;
 
 export default function About() {
-  const { content, testimonials } = useContent();
+  const { content } = useContent();
   const t = useT();
   const { hero, about } = content;
 
@@ -99,35 +98,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section testimonials-section">
-        <div className="container">
-          <div className="section-title">
-            <h2>{t('about.testimonials_title')}</h2>
-            <p className="section-subtitle">{t('about.testimonials_subtitle')}</p>
-          </div>
-
-          <motion.div
-            className="grid grid-2"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
-          >
-            {testimonials.map((testimonial) => (
-              <motion.div key={testimonial.id} variants={itemVariants}>
-                <TestimonialCard
-                  author={testimonial.author}
-                  title={testimonial.title}
-                  company={testimonial.company}
-                  text={testimonial.text}
-                  avatar={testimonial.avatar}
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 }
