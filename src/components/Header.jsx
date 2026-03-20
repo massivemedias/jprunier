@@ -94,7 +94,7 @@ export default function Header() {
                 {content.services.main_services.map((service) => (
                   <Link
                     key={service.id}
-                    to={`/services/${service.id}`}
+                    to={`/services#${service.id}`}
                     className="dropdown-item"
                     onClick={closeMobileMenu}
                   >

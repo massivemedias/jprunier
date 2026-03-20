@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Lightbulb, Settings, Zap, ChevronDown, ChevronUp, Shield, Award, GraduationCap, Mail, LayoutGrid, Link2, MessageCircle } from 'lucide-react';
+import { Code, Compass, LayoutDashboard, Wrench, ChevronDown, ChevronUp, Shield, Award, GraduationCap, Mail, LayoutGrid, Link2, MessageCircle } from 'lucide-react';
 import Hero from '../components/Hero';
 import { useContent, useT } from '../context/LanguageContext';
 import './Home.css';
@@ -27,7 +27,7 @@ export default function Home() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
-  const iconMap = { Code, Lightbulb, Settings, Zap };
+  const iconMap = { Code, Compass, LayoutDashboard, Wrench };
   const accordionIcons = { grid: LayoutGrid, link: Link2, chat: MessageCircle };
   const expertiseIcons = [Shield, Award, GraduationCap];
 
@@ -120,7 +120,7 @@ export default function Home() {
               const IconComp = iconMap[service.icon];
               return (
                 <motion.div key={service.id} variants={itemVariants}>
-                  <Link to={`/services/${service.id}`} className="service-card-small glass-card">
+                  <Link to={`/services#${service.id}`} className="service-card-small glass-card">
                     <div className="service-small-icon">{IconComp && <IconComp size={24} />}</div>
                     <h4>{service.title}</h4>
                     <p>{service.description}</p>
@@ -131,6 +131,28 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* 4b. AUDIOVISUAL EXPERTISE */}
+      {services.main_services[0]?.audiovisual_section && (
+        <section className="section audiovisual-home-section">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="av-expertise-title">{services.main_services[0].audiovisual_section.title}</h2>
+              <p className="av-expertise-desc">{services.main_services[0].audiovisual_section.description}</p>
+              <div className="av-expertise-domains">
+                {services.main_services[0].audiovisual_section.domains.map((domain, i) => (
+                  <span key={i} className="av-domain-tag">{domain}</span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* 5. AI & AV CONVERGENCE */}
       <section className="section-light aiav-section">

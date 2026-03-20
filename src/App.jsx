@@ -8,8 +8,13 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import News from './pages/News';
-import ServiceDetail from './pages/ServiceDetail';
+import { Navigate, useParams } from 'react-router-dom';
 import './styles/global.css';
+
+function ServiceRedirect() {
+  const { serviceId } = useParams();
+  return <Navigate to={`/services#${serviceId}`} replace />;
+}
 
 function App() {
   return (
@@ -23,7 +28,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/services/:serviceId" element={<ServiceDetail />} />
+              <Route path="/services/:serviceId" element={<ServiceRedirect />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/news" element={<News />} />
             </Routes>

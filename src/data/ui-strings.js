@@ -71,8 +71,8 @@ export const uiStrings = {
     'services.not_found': 'Service not found',
     'services.learn_more': 'Learn more',
     'services.audiovisual': 'Audiovisual Expertise',
-    'services.ai_bridge': 'AI – IT Bridge',
-    'services.interfaces': 'Interface Examples',
+    'services.ai_bridge': 'AI – AV Bridge',
+    'services.interfaces': 'User Interface Examples',
     'services.certifications': 'Certifications',
 
     'services.download_brochure': 'Download Brochure',
@@ -155,8 +155,8 @@ export const uiStrings = {
     'services.not_found': 'Service introuvable',
     'services.learn_more': 'En savoir plus',
     'services.audiovisual': 'Expertise audiovisuelle',
-    'services.ai_bridge': 'Passerelle IA – TI',
-    'services.interfaces': 'Exemples d\'interfaces',
+    'services.ai_bridge': 'Passerelle IA – AV',
+    'services.interfaces': 'Exemples d\'interfaces utilisateur',
     'services.certifications': 'Certifications',
 
     'services.download_brochure': 'Télécharger la brochure',
