@@ -9,13 +9,15 @@ export const uiStrings = {
     // Home
     'home.technologies': 'Technologies',
     'home.technologies_suffix': ' we integrate',
-    'home.global_services': 'Global Services',
-    'home.ai_av': 'AI & AV',
-    'home.here_we_are': 'Here we are.',
+    'home.global_services': 'Technology Services',
+    'home.ai_av': 'AI & AV Convergence',
+    'home.here_we_are': 'Artificial intelligence is reshaping how audiovisual systems operate.',
+    'home.ai_av_desc': 'JPrunier designs intelligent AV architectures capable of integrating data, automation and AI-driven services.',
     'home.expertise_title': 'Expertise you can trust',
     'home.questions': 'Do you have any questions?',
     'home.email_us': 'Email us',
-    'home.sectors_title': 'Active across all sectors',
+    'home.sectors_title': 'Active across multiple industries',
+    'home.sectors_footer': 'Supporting integrators, consultants, and enterprise clients across Canada and Europe.',
 
     // About
     'about.who_we_are': 'Who We Are',
@@ -68,6 +70,15 @@ export const uiStrings = {
     'services.other_services': 'Explore our other services',
     'services.not_found': 'Service not found',
     'services.learn_more': 'Learn more',
+    'services.audiovisual': 'Audiovisual Expertise',
+    'services.ai_bridge': 'AI – IT Bridge',
+    'services.interfaces': 'Interface Examples',
+    'services.certifications': 'Certifications',
+
+    'services.download_brochure': 'Download Brochure',
+    'services.quality_guarantee': 'Quality Guarantee',
+    'services.our_domains': 'Our domains',
+    'services.extended_services': 'Complete Services',
 
     // Footer
     'footer.rights': 'All rights reserved.',
@@ -82,13 +93,15 @@ export const uiStrings = {
     // Home
     'home.technologies': 'Technologies',
     'home.technologies_suffix': ' que nous intégrons',
-    'home.global_services': 'Services globaux',
-    'home.ai_av': 'IA & AV',
-    'home.here_we_are': 'Nous y sommes.',
+    'home.global_services': 'Services technologiques',
+    'home.ai_av': 'Convergence IA & AV',
+    'home.here_we_are': 'L\'intelligence artificielle transforme le fonctionnement des systèmes audiovisuels.',
+    'home.ai_av_desc': 'JPrunier conçoit des architectures AV intelligentes capables d\'intégrer données, automatisation et services pilotés par l\'IA.',
     'home.expertise_title': 'Une expertise de confiance',
     'home.questions': 'Vous avez des questions ?',
     'home.email_us': 'Écrivez-nous',
-    'home.sectors_title': 'Actifs dans tous les secteurs',
+    'home.sectors_title': 'Actifs dans de multiples industries',
+    'home.sectors_footer': 'Accompagner les intégrateurs, consultants et clients entreprises au Canada et en Europe.',
 
     // About
     'about.who_we_are': 'Qui sommes-nous',
@@ -141,6 +154,15 @@ export const uiStrings = {
     'services.other_services': 'Explorez nos autres services',
     'services.not_found': 'Service introuvable',
     'services.learn_more': 'En savoir plus',
+    'services.audiovisual': 'Expertise audiovisuelle',
+    'services.ai_bridge': 'Passerelle IA – TI',
+    'services.interfaces': 'Exemples d\'interfaces',
+    'services.certifications': 'Certifications',
+
+    'services.download_brochure': 'Télécharger la brochure',
+    'services.quality_guarantee': 'Garantie qualité',
+    'services.our_domains': 'Nos domaines',
+    'services.extended_services': 'Services complets',
 
     // Footer
     'footer.rights': 'Tous droits réservés.',

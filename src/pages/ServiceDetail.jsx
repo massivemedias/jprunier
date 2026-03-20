@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Code, Lightbulb, Settings, Zap, CheckCircle, ArrowLeft, Mail } from 'lucide-react';
+import { Code, Lightbulb, Settings, Zap, CheckCircle, ArrowLeft, Mail, Download, Award, Shield } from 'lucide-react';
 import Hero from '../components/Hero';
+import ImageLightbox from '../components/ImageLightbox';
 import { useContent, useT } from '../context/LanguageContext';
 import './ServiceDetail.css';
 
@@ -14,6 +16,7 @@ export default function ServiceDetail() {
   const { content } = useContent();
   const t = useT();
   const { services } = content;
+  const [lightbox, setLightbox] = useState({ open: false, src: '', alt: '' });
 
   const service = services.main_services.find((s) => s.id === serviceId);
 
@@ -127,6 +130,216 @@ export default function ServiceDetail() {
         </div>
       </section>
 
+      {/* Audiovisual Section (programming only) */}
+      {service.audiovisual_section && (
+        <section className="section service-audiovisual">
+          <div className="container">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.h2 variants={itemVariants}>{service.audiovisual_section.title}</motion.h2>
+              <motion.p className="section-description" variants={itemVariants}>
+                {service.audiovisual_section.description}
+              </motion.p>
+              <motion.div className="audiovisual-domains" variants={itemVariants}>
+                {service.audiovisual_section.domains.map((domain, i) => (
+                  <span key={i} className="domain-tag">{domain}</span>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Extended Programming Services */}
+      {service.extended_programming && (
+        <section className="section service-extended-programming">
+          <div className="container">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.h2 variants={itemVariants}>{service.extended_programming.title}</motion.h2>
+              <motion.div className="extended-services-list" variants={itemVariants}>
+                {service.extended_programming.items.map((item, i) => (
+                  <div key={i} className="extended-service-item">
+                    <CheckCircle size={16} className="feature-check" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </motion.div>
+              <motion.p className="extended-languages" variants={itemVariants}>
+                {service.extended_programming.languages}
+              </motion.p>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* AI Bridge Section */}
+      {service.ai_bridge_section && (
+        <section className="section service-ai-bridge">
+          <div className="container">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.h2 variants={itemVariants}>{service.ai_bridge_section.title}</motion.h2>
+              <motion.p className="ai-bridge-tagline" variants={itemVariants}>
+                {service.ai_bridge_section.tagline}
+              </motion.p>
+              <motion.p className="section-description" variants={itemVariants}>
+                {service.ai_bridge_section.description}
+              </motion.p>
+              <motion.div className="ai-bridge-capabilities" variants={itemVariants}>
+                {service.ai_bridge_section.capabilities.map((cap, i) => (
+                  <div key={i} className="ai-bridge-capability">
+                    <CheckCircle size={16} className="feature-check" />
+                    <span>{cap}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Interfaces Gallery */}
+      {service.interfaces_gallery && (
+        <section className="section service-interfaces">
+          <div className="container">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.h2 variants={itemVariants}>{service.interfaces_gallery.title}</motion.h2>
+              <motion.p className="section-description" variants={itemVariants}>
+                {service.interfaces_gallery.subtitle}
+              </motion.p>
+              <motion.div className="interfaces-grid" variants={itemVariants}>
+                {service.interfaces_gallery.items.map((item, i) => (
+                  <div
+                    key={i}
+                    className="interface-card"
+                    onClick={() => setLightbox({ open: true, src: item.src, alt: item.alt })}
+                  >
+                    <img
+                      src={`${base}${item.src.replace(/^\//, '')}`}
+                      alt={item.alt}
+                      loading="lazy"
+                    />
+                    <div className="interface-caption">{item.caption}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Certifications */}
+      {service.certifications_section && (
+        <section className="section service-certifications">
+          <div className="container">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.div className="certifications-header" variants={itemVariants}>
+                <Award size={28} className="section-icon" />
+                <h2>{service.certifications_section.title}</h2>
+              </motion.div>
+              <motion.p className="section-description" variants={itemVariants}>
+                {service.certifications_section.subtitle}
+              </motion.p>
+              <motion.div className="certifications-grid" variants={itemVariants}>
+                {service.certifications_section.badges.map((badge, i) => (
+                  <div key={i} className="certification-badge">
+                    <img
+                      src={`${base}${badge.src.replace(/^\//, '')}`}
+                      alt={badge.name}
+                      loading="lazy"
+                    />
+                    <span className="badge-name">{badge.name}</span>
+                    <span className="badge-issuer">{badge.issuer}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Warranty */}
+      {service.warranty_section && (
+        <section className="section service-warranty">
+          <div className="container">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.div className="warranty-header" variants={itemVariants}>
+                <Shield size={28} className="section-icon" />
+                <h2>{service.warranty_section.title}</h2>
+              </motion.div>
+              <motion.div className="warranty-items" variants={itemVariants}>
+                {service.warranty_section.items.map((item, i) => (
+                  <div key={i} className="warranty-item">
+                    <CheckCircle size={16} className="feature-check" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Brochure Download */}
+      {service.brochure_download && (
+        <section className="section service-brochure">
+          <div className="container">
+            <motion.div
+              className="brochure-card"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.div className="brochure-content" variants={itemVariants}>
+                <Download size={28} className="section-icon" />
+                <div>
+                  <h3>{service.brochure_download.title}</h3>
+                  <p>{service.brochure_download.description}</p>
+                </div>
+              </motion.div>
+              <motion.a
+                href={`${base}${service.brochure_download.file_url.replace(/^\//, '')}`}
+                className="btn btn-primary brochure-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={itemVariants}
+              >
+                <Download size={16} /> {service.brochure_download.button_text}
+              </motion.a>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* Other Services */}
       <section className="section service-detail-others">
         <div className="container">
@@ -155,6 +368,13 @@ export default function ServiceDetail() {
           </motion.div>
         </div>
       </section>
+
+      <ImageLightbox
+        isOpen={lightbox.open}
+        imageSrc={lightbox.src}
+        imageAlt={lightbox.alt}
+        onClose={() => setLightbox({ open: false, src: '', alt: '' })}
+      />
     </>
   );
 }

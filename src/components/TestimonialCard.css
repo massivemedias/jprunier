@@ -1,6 +1,6 @@
 .testimonial-card {
   background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
-  border: 1px solid rgba(116, 86, 241, 0.2);
+  border: 1px solid rgba(74, 124, 201, 0.2);
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
   transition: all var(--transition-base);
@@ -8,7 +8,7 @@
 
 .testimonial-card:hover {
   border-color: var(--accent-violet);
-  box-shadow: 0 20px 40px rgba(116, 86, 241, 0.2);
+  box-shadow: 0 20px 40px rgba(74, 124, 201, 0.2);
 }
 
 .testimonial-stars {

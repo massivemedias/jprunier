@@ -1,16 +1,19 @@
+/* Google Fonts — Nunito for logo */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
 /* CSS Variables - Design System */
 :root {
-  /* Colors */
-  --primary-dark: #102136;
-  --primary-dark-light: #1a3a52;
-  --accent-violet: #7456f1;
-  --accent-violet-light: #8a6df9;
+  /* Colors — corporate blue dark palette */
+  --primary-dark: #0f1d2e;
+  --primary-dark-light: #1a3050;
+  --accent-violet: #4a7cc9;
+  --accent-violet-light: #5e90d8;
   --gray-dark: #4d5d6d;
   --gray-light: #E7EBEE;
   --gray-medium: #8b9aaa;
-  --background: #0a1520;
-  --surface: #1a2b3d;
-  --surface-light: #2a3d4f;
+  --background: #0b1926;
+  --surface: #142535;
+  --surface-light: #1e3348;
   --white: #ffffff;
   --off-white: #f8f9fa;
   --text-dark: #1a1a2e;
@@ -289,7 +292,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--accent-violet);
-  box-shadow: 0 0 0 3px rgba(116, 86, 241, 0.1);
+  box-shadow: 0 0 0 3px rgba(74, 124, 201, 0.1);
 }
 
 input::placeholder, textarea::placeholder {

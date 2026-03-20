@@ -28,7 +28,7 @@
   },
   "hero": {
     "home": {
-      "title": "AI \u2013 AV Integration and software solution",
+      "title": "AI – AV Integration and software solution",
       "subtitle": "Crestron certified programming, intelligent AV networking and AI-driven solutions - from design to deployment, across North America and Europe."
     },
     "about": {
@@ -52,23 +52,78 @@
     "services_intro": "We deliver world-class integration services combining artificial intelligence with sophisticated audio-visual systems.",
     "gateway": {
       "title": "Your technical gateway",
-      "subtitle": "Specialized ressources on demand, software developpement and integration."
+      "subtitle": "Specialized technical resources on demand for software development, AV integration, and intelligent system deployment."
     },
     "tech_partners": [
-      { "name": "Microsoft", "logo": "/images/microsoft-bw.png" },
-      { "name": "Crestron", "logo": "/images/crestron-bw.png" },
-      { "name": "OpenAI", "logo": "/images/openai-bw.png" },
-      { "name": "Dante", "logo": "/images/dante-bw.png" },
-      { "name": "QSC", "logo": "/images/qsys-logo.png" }
+      {
+        "name": "Microsoft",
+        "logo": "/images/microsoft-bw.png"
+      },
+      {
+        "name": "Crestron",
+        "logo": "/images/crestron-bw.png"
+      },
+      {
+        "name": "OpenAI",
+        "logo": "/images/openai-bw.png"
+      },
+      {
+        "name": "Dante",
+        "logo": "/images/dante-bw.png"
+      },
+      {
+        "name": "QSC",
+        "logo": "/images/qsys-logo.png"
+      },
+      {
+        "name": "Linux",
+        "logo": "/images/linux-bw.png"
+      },
+      {
+        "name": "Azure",
+        "logo": "/images/azure-bw.png"
+      },
+      {
+        "name": "Teams",
+        "logo": "/images/teams-bw.png"
+      },
+      {
+        "name": "Lightware",
+        "logo": "/images/lightware-bw.png"
+      },
+      {
+        "name": "NDI",
+        "logo": "/images/ndi-bw.png"
+      },
+      {
+        "name": "Netgear",
+        "logo": "/images/netgear-bw.png"
+      },
+      {
+        "name": "Biamp",
+        "logo": "/images/biamp-bw.png"
+      },
+      {
+        "name": "Shure",
+        "logo": "/images/shure-bw.png"
+      },
+      {
+        "name": "Sennheiser",
+        "logo": "/images/sennheiser-bw.png"
+      },
+      {
+        "name": "Yamaha",
+        "logo": "/images/yamaha-bw.png"
+      }
     ],
     "connecting_items": [
       {
         "title": "Connecting spaces",
-        "description": "We design and deploy solutions that connect rooms, buildings, and campuses through intelligent AV networking.",
+        "description": "We design and deploy solutions that connect control spaces, buildings, hospitals and campuses through intelligent AV networking.",
         "icon": "grid"
       },
       {
-        "title": "Link database",
+        "title": "Link Databases",
         "description": "Data is a big part of AV integrated to AI. We help managing data between your AV / Control plateforms.",
         "icon": "link"
       },
@@ -88,7 +143,7 @@
         "description": "Deep technical knowledge in Crestron, Dante, Q-SYS and modern collaboration platforms."
       },
       {
-        "title": "Formation",
+        "title": "Certifications",
         "description": "Continuously trained and certified team keeping pace with evolving technologies."
       }
     ],
@@ -96,10 +151,6 @@
       "title": "Discover how our expertise can shape your next project",
       "subtitle": "Let's connect to discuss your vision. Whether you're designing or integrating a conference room, smart building, optimizing your networked AV systems, or exploring AI integration - JPrunier bridges technologies together.",
       "button": "Contact us"
-    },
-    "achievements": {
-      "title": "Achievements",
-      "subtitle": "Ask us for references related to your activity."
     },
     "cta_section": {
       "title": "Ready to Transform Your Environment?",
@@ -112,10 +163,22 @@
     "mission": "To deliver quality technology services, optimize user experience, and ensure the reliability and security of integrated systems, according to the most demanding industry standards.",
     "vision": "A world where technology seamlessly adapts to human needs, creating spaces that inspire, collaborate, and innovate.",
     "values": [
-      { "title": "Excellence", "description": "We pursue the highest standards in everything we do" },
-      { "title": "Innovation", "description": "We embrace emerging technologies to solve complex challenges" },
-      { "title": "Partnership", "description": "We build lasting relationships with clients and partners" },
-      { "title": "Reliability", "description": "We deliver on our commitments with proven expertise" }
+      {
+        "title": "Excellence",
+        "description": "We pursue the highest standards in everything we do"
+      },
+      {
+        "title": "Innovation",
+        "description": "We embrace emerging technologies to solve complex challenges"
+      },
+      {
+        "title": "Partnership",
+        "description": "We build lasting relationships with clients and partners"
+      },
+      {
+        "title": "Reliability",
+        "description": "We deliver on our commitments with proven expertise"
+      }
     ]
   },
   "services": {
@@ -124,7 +187,7 @@
       {
         "id": "programming",
         "title": "Programming",
-        "description": "Modern languages for AI and AV industries, JPrunier act as CSP with Crestron Certified programmer \u2013 Master Platinium certification.",
+        "description": "Our programming services focus on the design and development of reliable, scalable and high-performance control and software solutions for AV and AI environments.",
         "icon": "Code",
         "page_title": "AV & AI Programming",
         "long_description": "JPrunier develops custom firmware, control system applications, and AI-driven software for the audiovisual industry. As a Crestron Service Provider (CSP) with Master Platinum certification, we deliver robust solutions spanning from room control interfaces to cloud-connected AV management platforms. Our programming team works across Crestron SIMPL+, C#, Python, and modern web technologies to create seamless integrations between AV hardware and intelligent software layers.",
@@ -136,64 +199,471 @@
         "bullets_right": [
           "Microsoft Azure: devOps, Database, application",
           "User Interface",
-          "Module, driver, plugin for AI \u2013 AV industries"
+          "Module, driver, plugin for AI – AV industries"
         ],
         "features": [
-          { "title": "Crestron Control Programming", "description": "SIMPL+, SIMPL#, and C# programming for 3-Series and 4-Series processors, touch panels, and NVX endpoints." },
-          { "title": "Custom User Interfaces", "description": "Design and development of intuitive touch panel interfaces, web-based dashboards, and mobile control apps." },
-          { "title": "AI Integration Modules", "description": "Development of plugins and drivers connecting AV systems to AI platforms like OpenAI, Azure Cognitive Services, and custom ML models." },
-          { "title": "Cloud & DevOps", "description": "Azure-based deployment pipelines, database management, and cloud-hosted AV monitoring applications." }
+          {
+            "title": "Crestron Control Programming",
+            "description": "SIMPL+, SIMPL#, and C# programming for 3-Series and 4-Series processors, touch panels, and NVX endpoints."
+          },
+          {
+            "title": "Custom User Interfaces",
+            "description": "Design and development of intuitive touch panel interfaces, web-based dashboards, and mobile control apps."
+          },
+          {
+            "title": "AI Integration Modules",
+            "description": "Development of plugins and drivers connecting AV systems to AI platforms like OpenAI, Azure Cognitive Services, and custom ML models."
+          },
+          {
+            "title": "Cloud & DevOps",
+            "description": "Azure-based deployment pipelines, database management, and cloud-hosted AV monitoring applications."
+          }
         ],
-        "technologies": ["Crestron SIMPL+", "C#", "Python", "Azure", "OpenAI", "Dante", "Q-SYS", "React", "Node.js"],
-        "details": "We develop custom firmware and applications for Crestron, AMX, and other control systems. Our expertise spans programming languages including SIMPL+, NetLinx, and C# to create robust, scalable solutions that integrate all aspects of your AV environment."
+        "technologies": [
+          "Crestron SIMPL+",
+          "C#",
+          "Python",
+          "Azure",
+          "OpenAI",
+          "Dante",
+          "Q-SYS",
+          "React",
+          "Node.js"
+        ],
+        "details": "We develop custom firmware and applications for Crestron, AMX, and other control systems. Our expertise spans programming languages including SIMPL+, NetLinx, and C# to create robust, scalable solutions that integrate all aspects of your AV environment.",
+        "audiovisual_section": {
+          "title": "Audiovisual Expertise",
+          "description": "JPrunier operates across B2B, B2C, and B2G sectors in Canada and Europe. Our programming expertise spans every layer of the audiovisual ecosystem, within architectures built on AV, IT, and AI technologies.",
+          "domains": [
+            "Control Systems",
+            "Video Distribution",
+            "Audio Systems",
+            "Lighting Control",
+            "Environmental Management"
+          ]
+        },
+        "extended_programming": {
+          "title": "Complete Programming Services",
+          "items": [
+            "Development and maintenance of Crestron applications",
+            "DSP programming (Q-SYS, Biamp, and others)",
+            "Q-SYS control, Lua scripting, and plug-in development",
+            "Python modules for Crestron and Q-SYS",
+            "Multi-system standardization and normalization",
+            "Cross-technology development (Crestron, Q-SYS, .NET, Linux, Python, Web, Cloud, Azure, REST APIs)",
+            "Custom audiovisual application development",
+            "User interface programming, including responsive interfaces",
+            "NDI control interface development"
+          ],
+          "languages": "SIMPL, SIMPL+, SIMPL#, .NET, OpenAI, CHTML5, Python, Q-SYS Lua scripting, Q-SYS plugin, Dante, AWS, Azure"
+        },
+        "ai_bridge_section": {
+          "title": "AI – IT Bridge",
+          "tagline": "Connected architectures designed for performance, scalability, and excellence in user experience.",
+          "description": "JPrunier bridges artificial intelligence and audiovisual technology. Our expertise in software development, AV-IT networking, protocol integration and multi-brand system standardization enables us to deliver solutions where AV hardware and AI software work as one.",
+          "capabilities": [
+            "Custom AV-AI application design and development",
+            "Technical analysis and architectural validation",
+            "Monitoring and diagnostics of existing systems",
+            "Multi-brand system standardization"
+          ]
+        },
+        "interfaces_gallery": {
+          "title": "Interface Examples",
+          "subtitle": "Custom touch panel interfaces designed and programmed by JPrunier",
+          "items": [
+            {
+              "src": "/images/interfaces/mcd-byom.webp",
+              "alt": "BYOM Meeting Room Panel",
+              "caption": "Bring Your Own Meeting"
+            },
+            {
+              "src": "/images/interfaces/mcd-presentation.webp",
+              "alt": "Presentation Mode Panel",
+              "caption": "Presentation Mode"
+            },
+            {
+              "src": "/images/interfaces/mcd-vc.webp",
+              "alt": "Video Conference Panel",
+              "caption": "Video Conference"
+            },
+            {
+              "src": "/images/interfaces/vc-odc.webp",
+              "alt": "ODC Video Conference",
+              "caption": "Open Digital Collaboration"
+            },
+            {
+              "src": "/images/interfaces/screen-01.webp",
+              "alt": "Control Interface Detail",
+              "caption": "Interface Detail"
+            },
+            {
+              "src": "/images/interfaces/screen-02.webp",
+              "alt": "Control Interface Detail",
+              "caption": "Interface Detail"
+            },
+            {
+              "src": "/images/interfaces/screen-03.webp",
+              "alt": "Control Interface Detail",
+              "caption": "Interface Detail"
+            },
+            {
+              "src": "/images/interfaces/screen-04.webp",
+              "alt": "Control Interface Detail",
+              "caption": "Interface Detail"
+            },
+            {
+              "src": "/images/interfaces/screen-05.webp",
+              "alt": "Control Interface Detail",
+              "caption": "Interface Detail"
+            },
+            {
+              "src": "/images/interfaces/screen-06.webp",
+              "alt": "Control Interface Detail",
+              "caption": "Interface Detail"
+            }
+          ]
+        },
+        "certifications_section": {
+          "title": "Certifications",
+          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
+          "badges": [
+            {
+              "src": "/images/certifications/crestron-cmpg.webp",
+              "name": "Crestron Master Platinum Gold",
+              "issuer": "Crestron"
+            },
+            {
+              "src": "/images/certifications/qsys-control_201.webp",
+              "name": "Q-SYS Control 201",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-level_2.webp",
+              "name": "Q-SYS Level 2",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
+              "name": "Q-SYS Reflect Enterprise Manager",
+              "issuer": "QSC"
+            }
+          ]
+        },
+        "brochure_download": {
+          "title": "Download CSP Brochure",
+          "description": "Get the complete JPrunier corporate services brochure.",
+          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "button_text": "Download Brochure"
+        },
+        "warranty_section": {
+          "title": "Quality Guarantee",
+          "items": [
+            "1-year warranty on all programming deliverables",
+            "Technical validation and version traceability",
+            "Post-deployment supervision and support",
+            "Complete documentation",
+            "15–30% of resource time dedicated to continuing education",
+            "Manufacturer-independent recommendations"
+          ]
+        }
       },
       {
         "id": "consulting",
         "title": "Consulting",
-        "description": "Our consulting services are designed to support engineering firms, technology architects, audiovisual consultants, and system integrators in the design and optimization of their projects.",
+        "description": "Our consulting services support engineering firms, technology architects, audiovisual consultants and system integrators in the design, optimization and standardization of complex technology environments.",
         "icon": "Lightbulb",
         "page_title": "AV-IT-AI Consulting",
         "long_description": "JPrunier's consulting practice bridges the gap between audiovisual engineering, IT infrastructure, and artificial intelligence. We work alongside architecture firms, engineering consultancies, and enterprise IT teams to design technology ecosystems that are future-ready. Whether you're planning a new headquarters, upgrading a campus, or exploring AI-enhanced collaboration spaces, our consultants bring deep technical knowledge and industry experience to every engagement.",
         "features": [
-          { "title": "Technology Assessment", "description": "Comprehensive evaluation of existing AV and IT infrastructure with recommendations for modernization and optimization." },
-          { "title": "System Design & Architecture", "description": "Detailed technical designs for conference rooms, auditoriums, command centers, and smart building environments." },
-          { "title": "Vendor Selection Support", "description": "Impartial guidance on technology selection, helping you choose the right platforms and equipment for your needs." },
-          { "title": "Project Management", "description": "End-to-end project oversight ensuring timelines, budgets, and quality standards are met throughout the integration process." }
+          {
+            "title": "Technology Assessment",
+            "description": "Comprehensive evaluation of existing AV and IT infrastructure with recommendations for modernization and optimization."
+          },
+          {
+            "title": "System Design & Architecture",
+            "description": "Detailed technical designs for conference rooms, auditoriums, command centers, and smart building environments."
+          },
+          {
+            "title": "Vendor Selection Support",
+            "description": "Impartial guidance on technology selection, helping you choose the right platforms and equipment for your needs."
+          },
+          {
+            "title": "Project Management",
+            "description": "End-to-end project oversight ensuring timelines, budgets, and quality standards are met throughout the integration process."
+          }
         ],
-        "technologies": ["Crestron", "QSC", "Biamp", "Dante", "Microsoft Teams", "Zoom", "Cisco Webex"],
-        "details": "Our consultants work with you to understand your needs and design solutions that maximize ROI."
+        "technologies": [
+          "Crestron",
+          "QSC",
+          "Biamp",
+          "Dante",
+          "Microsoft Teams",
+          "Zoom",
+          "Cisco Webex"
+        ],
+        "details": "Our consultants work with you to understand your needs and design solutions that maximize ROI.",
+        "ai_bridge_section": {
+          "title": "AI – IT Bridge",
+          "tagline": "Connected architectures designed for performance, scalability, and excellence in user experience.",
+          "description": "Our consulting practice bridges audiovisual engineering, IT infrastructure, and artificial intelligence. We support engineering firms, technology architects, and integrators in designing future-ready ecosystems.",
+          "capabilities": [
+            "Custom application design and development (AV-IT-AI)",
+            "Technical analysis and architectural validation",
+            "Monitoring and diagnostics of existing systems",
+            "Best-practice guidance for integration and supervision",
+            "Project oversight and installation supervision"
+          ]
+        },
+        "certifications_section": {
+          "title": "Certifications",
+          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
+          "badges": [
+            {
+              "src": "/images/certifications/crestron-cmpg.webp",
+              "name": "Crestron Master Platinum Gold",
+              "issuer": "Crestron"
+            },
+            {
+              "src": "/images/certifications/qsys-control_201.webp",
+              "name": "Q-SYS Control 201",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-level_2.webp",
+              "name": "Q-SYS Level 2",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
+              "name": "Q-SYS Reflect Enterprise Manager",
+              "issuer": "QSC"
+            }
+          ]
+        },
+        "brochure_download": {
+          "title": "Download CSP Brochure",
+          "description": "Get the complete JPrunier corporate services brochure.",
+          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "button_text": "Download Brochure"
+        },
+        "warranty_section": {
+          "title": "Quality Guarantee",
+          "items": [
+            "1-year warranty on all programming deliverables",
+            "Technical validation and version traceability",
+            "Post-deployment supervision and support",
+            "Complete documentation",
+            "15–30% of resource time dedicated to continuing education",
+            "Manufacturer-independent recommendations"
+          ]
+        }
       },
       {
         "id": "administration",
         "title": "Administration",
-        "description": "Our administration services ensure the reliability, supervision and performance of audiovisual, computing and network systems.",
+        "description": "Our administration services ensure the reliability, supervision and performance of audiovisual and network systems.",
         "icon": "Settings",
         "page_title": "System Administration",
         "long_description": "Keeping AV and IT systems running at peak performance requires constant vigilance and expertise. JPrunier provides comprehensive administration services including remote monitoring, proactive maintenance, firmware management, and incident response. Our team acts as an extension of your IT department, ensuring uptime and reliability across all your audiovisual and network infrastructure.",
         "features": [
-          { "title": "Remote Monitoring & Support", "description": "24/7 monitoring of AV systems with proactive alerts and rapid remote troubleshooting to minimize downtime." },
-          { "title": "Firmware & Software Updates", "description": "Scheduled maintenance cycles for control processors, DSPs, network switches, and collaboration platforms." },
-          { "title": "Network Administration", "description": "VLAN configuration, QoS optimization, and security management for AV-over-IP and Dante networks." },
-          { "title": "Performance Reporting", "description": "Regular reports on system health, usage analytics, and recommendations for capacity planning." }
+          {
+            "title": "Remote Monitoring & Support",
+            "description": "24/7 monitoring of AV systems with proactive alerts and rapid remote troubleshooting to minimize downtime."
+          },
+          {
+            "title": "Firmware & Software Updates",
+            "description": "Scheduled maintenance cycles for control processors, DSPs, network switches, and collaboration platforms."
+          },
+          {
+            "title": "Network Administration",
+            "description": "VLAN configuration, QoS optimization, and security management for AV-over-IP and Dante networks."
+          },
+          {
+            "title": "Performance Reporting",
+            "description": "Regular reports on system health, usage analytics, and recommendations for capacity planning."
+          }
         ],
-        "technologies": ["Crestron XiO Cloud", "QSC Reflect", "Dante Director", "SNMP", "Syslog", "Azure Monitor"],
-        "details": "We provide ongoing system administration, monitoring, and maintenance to ensure your AV infrastructure operates at peak performance."
+        "technologies": [
+          "Crestron XiO Cloud",
+          "QSC Reflect",
+          "Dante Director",
+          "SNMP",
+          "Syslog",
+          "Azure Monitor"
+        ],
+        "details": "We provide ongoing system administration, monitoring, and maintenance to ensure your AV infrastructure operates at peak performance.",
+        "ai_bridge_section": {
+          "title": "AI – IT Bridge",
+          "tagline": "Connected architectures designed for performance, scalability, and excellence in user experience.",
+          "description": "Our administration services ensure system stability across AV-IT-AI environments. We manage AV-IT networking including multicast architectures, Dante audio, Crestron XiO Cloud, Crestron Fusion, and Microsoft Azure environments.",
+          "capabilities": [
+            "AV-IT networking with multicast architectures",
+            "Dante audio configuration, optimization and monitoring",
+            "XiO Cloud and Crestron Fusion integration and development",
+            "Microsoft Azure environment management and supervision"
+          ]
+        },
+        "certifications_section": {
+          "title": "Certifications",
+          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
+          "badges": [
+            {
+              "src": "/images/certifications/crestron-cmpg.webp",
+              "name": "Crestron Master Platinum Gold",
+              "issuer": "Crestron"
+            },
+            {
+              "src": "/images/certifications/qsys-control_201.webp",
+              "name": "Q-SYS Control 201",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-level_2.webp",
+              "name": "Q-SYS Level 2",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
+              "name": "Q-SYS Reflect Enterprise Manager",
+              "issuer": "QSC"
+            }
+          ]
+        },
+        "brochure_download": {
+          "title": "Download CSP Brochure",
+          "description": "Get the complete JPrunier corporate services brochure.",
+          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "button_text": "Download Brochure"
+        },
+        "warranty_section": {
+          "title": "Quality Guarantee",
+          "items": [
+            "1-year warranty on all programming deliverables",
+            "Technical validation and version traceability",
+            "Post-deployment supervision and support",
+            "Complete documentation",
+            "15–30% of resource time dedicated to continuing education",
+            "Manufacturer-independent recommendations"
+          ]
+        }
       },
       {
         "id": "integration",
         "title": "Integration",
-        "description": "JPrunier Inc. provides software implementation and configuration for all audiovisual, AI and IT equipment.",
+        "description": "JPrunier Inc. provides software implementation and configuration for all audiovisual equipment.",
         "icon": "Zap",
         "page_title": "AV-AI Integration",
         "long_description": "JPrunier delivers turnkey integration services that bring together audiovisual hardware, control systems, networking, and AI capabilities into cohesive, reliable environments. From boardrooms and classrooms to large-scale command centers, we handle the complete deployment lifecycle. Our integration methodology ensures every component works together seamlessly, with thorough commissioning and documentation.",
         "features": [
-          { "title": "Hardware Deployment", "description": "Professional installation and configuration of displays, projectors, cameras, microphones, speakers, and control systems." },
-          { "title": "AV-over-IP Networks", "description": "Design and deployment of Dante, AES67, and NVX video-over-IP networks for flexible, scalable distribution." },
-          { "title": "Collaboration Room Setup", "description": "Complete deployment of Microsoft Teams Rooms, Zoom Rooms, and Cisco Webex devices with optimized audio and video." },
-          { "title": "Commissioning & Training", "description": "Rigorous testing, documentation, and end-user training to ensure smooth handoff and long-term satisfaction." }
+          {
+            "title": "Hardware Deployment",
+            "description": "Professional installation and configuration of displays, projectors, cameras, microphones, speakers, and control systems."
+          },
+          {
+            "title": "AV-over-IP Networks",
+            "description": "Design and deployment of Dante, AES67, and NVX video-over-IP networks for flexible, scalable distribution."
+          },
+          {
+            "title": "Collaboration Room Setup",
+            "description": "Complete deployment of Microsoft Teams Rooms, Zoom Rooms, and Cisco Webex devices with optimized audio and video."
+          },
+          {
+            "title": "Commissioning & Training",
+            "description": "Rigorous testing, documentation, and end-user training to ensure smooth handoff and long-term satisfaction."
+          }
         ],
-        "technologies": ["Crestron NVX", "Dante", "AES67", "HDBaseT", "Microsoft Teams", "Zoom", "Cisco", "Shure"],
-        "details": "From design through deployment, we handle the complete integration process."
+        "technologies": [
+          "Crestron NVX",
+          "Dante",
+          "AES67",
+          "HDBaseT",
+          "Microsoft Teams",
+          "Zoom",
+          "Cisco",
+          "Shure"
+        ],
+        "details": "From design through deployment, we handle the complete integration process.",
+        "ai_bridge_section": {
+          "title": "AI – IT Bridge",
+          "tagline": "Connected architectures designed for performance, scalability, and excellence in user experience.",
+          "description": "JPrunier delivers integration services that bring together AV hardware, control systems, networking, and AI capabilities. We provide software deployment and configuration for all audiovisual and IT equipment, including unified communications platforms.",
+          "capabilities": [
+            "Multi-brand audiovisual equipment configuration",
+            "Unified communications integration (Microsoft Teams, Zoom, Cisco)",
+            "On-site validation and commissioning",
+            "Firmware and microcode updates"
+          ]
+        },
+        "interfaces_gallery": {
+          "title": "Interface Examples",
+          "subtitle": "Custom touch panel interfaces designed and programmed by JPrunier",
+          "items": [
+            {
+              "src": "/images/interfaces/mcd-byom.webp",
+              "alt": "BYOM Meeting Room Panel",
+              "caption": "Bring Your Own Meeting"
+            },
+            {
+              "src": "/images/interfaces/mcd-presentation.webp",
+              "alt": "Presentation Mode Panel",
+              "caption": "Presentation Mode"
+            },
+            {
+              "src": "/images/interfaces/mcd-vc.webp",
+              "alt": "Video Conference Panel",
+              "caption": "Video Conference"
+            },
+            {
+              "src": "/images/interfaces/vc-odc.webp",
+              "alt": "ODC Video Conference",
+              "caption": "Open Digital Collaboration"
+            }
+          ]
+        },
+        "certifications_section": {
+          "title": "Certifications",
+          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
+          "badges": [
+            {
+              "src": "/images/certifications/crestron-cmpg.webp",
+              "name": "Crestron Master Platinum Gold",
+              "issuer": "Crestron"
+            },
+            {
+              "src": "/images/certifications/qsys-control_201.webp",
+              "name": "Q-SYS Control 201",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-level_2.webp",
+              "name": "Q-SYS Level 2",
+              "issuer": "QSC"
+            },
+            {
+              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
+              "name": "Q-SYS Reflect Enterprise Manager",
+              "issuer": "QSC"
+            }
+          ]
+        },
+        "brochure_download": {
+          "title": "Download CSP Brochure",
+          "description": "Get the complete JPrunier corporate services brochure.",
+          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "button_text": "Download Brochure"
+        },
+        "warranty_section": {
+          "title": "Quality Guarantee",
+          "items": [
+            "1-year warranty on all programming deliverables",
+            "Technical validation and version traceability",
+            "Post-deployment supervision and support",
+            "Complete documentation",
+            "15–30% of resource time dedicated to continuing education",
+            "Manufacturer-independent recommendations"
+          ]
+        }
       }
     ],
     "crestron_section": {
@@ -213,20 +683,72 @@
     "expertise": {
       "title": "Core Expertise",
       "categories": [
-        { "name": "Control Systems", "items": ["Crestron DM-MD", "Crestron DMPS", "AMX NetLinx", "QSC Q-SYS"] },
-        { "name": "Audio Solutions", "items": ["Dante Networking", "AES67 Audio", "Wireless Microphone Systems", "Professional Mixing"] },
-        { "name": "Video Technology", "items": ["4K/8K Distribution", "DigitalMedia Fiber", "DXLink", "HDBaseT"] },
-        { "name": "Collaboration Platforms", "items": ["Zoom Rooms", "Microsoft Teams Rooms", "Cisco Webex", "Google Meet"] }
+        {
+          "name": "Control Systems",
+          "items": [
+            "Crestron DM-MD",
+            "Crestron DMPS",
+            "AMX NetLinx",
+            "QSC Q-SYS"
+          ]
+        },
+        {
+          "name": "Audio Solutions",
+          "items": [
+            "Dante Networking",
+            "AES67 Audio",
+            "Wireless Microphone Systems",
+            "Professional Mixing"
+          ]
+        },
+        {
+          "name": "Video Technology",
+          "items": [
+            "4K/8K Distribution",
+            "DigitalMedia Fiber",
+            "DXLink",
+            "HDBaseT"
+          ]
+        },
+        {
+          "name": "Collaboration Platforms",
+          "items": [
+            "Zoom Rooms",
+            "Microsoft Teams Rooms",
+            "Cisco Webex",
+            "Google Meet"
+          ]
+        }
       ]
     }
   },
   "sectors": [
-    { "name": "Commercial" },
-    { "name": "Enterprise" },
-    { "name": "Development" },
-    { "name": "Healthcare" },
-    { "name": "Government" },
-    { "name": "Education" }
+    {
+      "name": "Commercial"
+    },
+    {
+      "name": "Enterprise"
+    },
+    {
+      "name": "Development"
+    },
+    {
+      "name": "Healthcare"
+    },
+    {
+      "name": "Government"
+    },
+    {
+      "name": "Education"
+    }
   ],
-  "partners": ["Crestron", "AMX", "Cisco", "Zoom", "Microsoft", "QSC", "Dante"]
+  "partners": [
+    "Crestron",
+    "AMX",
+    "Cisco",
+    "Zoom",
+    "Microsoft",
+    "QSC",
+    "Dante"
+  ]
 }

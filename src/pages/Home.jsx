@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code, Lightbulb, Settings, Zap, ChevronDown, ChevronUp, Shield, Award, GraduationCap, Mail, LayoutGrid, Link2, MessageCircle } from 'lucide-react';
@@ -31,6 +31,17 @@ export default function Home() {
   const accordionIcons = { grid: LayoutGrid, link: Link2, chat: MessageCircle };
   const expertiseIcons = [Shield, Award, GraduationCap];
 
+  /* Industries keywords for the sectors section */
+  const industries = [
+    { en: 'Corporate headquarters and modern workplaces', fr: 'Sièges sociaux et espaces de travail modernes' },
+    { en: 'Legal and professional service firms', fr: 'Cabinets juridiques et de services professionnels' },
+    { en: 'Financial and investment institutions', fr: 'Institutions financières et d\'investissement' },
+    { en: 'Government and public sector organizations', fr: 'Organisations gouvernementales et du secteur public' },
+    { en: 'Technology and innovation environments', fr: 'Environnements technologiques et d\'innovation' },
+    { en: 'Smart buildings and connected infrastructures', fr: 'Bâtiments intelligents et infrastructures connectées' },
+    { en: 'International AV and technology deployments', fr: 'Déploiements AV et technologiques internationaux' },
+  ];
+
   return (
     <>
       {/* 1. HERO */}
@@ -56,12 +67,11 @@ export default function Home() {
           >
             <h2>{home.gateway.title}</h2>
             <p className="gateway-subtitle">{home.gateway.subtitle}</p>
-            <img src={`${base}images/crestron-logo.png`} alt="Crestron Services Provider" className="gateway-logo" />
           </motion.div>
         </div>
       </section>
 
-      {/* 3. TECHNOLOGIES WE INTEGRATE */}
+      {/* 3. TECHNOLOGIES WE INTEGRATE — Conveyor belt carousel */}
       <section className="section-light partners-section-light">
         <div className="container">
           <motion.h2
@@ -72,23 +82,20 @@ export default function Home() {
           >
             <span className="text-highlight">{t('home.technologies')}</span>{t('home.technologies_suffix')}
           </motion.h2>
-          <motion.div
-            className="partners-row"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {home.tech_partners.map((partner, index) => (
-              <motion.div key={index} className="partner-logo-light" variants={itemVariants}>
-                <img src={`${base}${partner.logo.replace(/^\//, '')}`} alt={partner.name} className="partner-logo-img-dark" />
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="partners-carousel-wrapper">
+            <div className="partners-carousel-track">
+              {/* Duplicate logos for infinite scroll effect */}
+              {[...home.tech_partners, ...home.tech_partners].map((partner, index) => (
+                <div key={index} className="partner-logo-light">
+                  <img src={`${base}${partner.logo.replace(/^\//, '')}`} alt={partner.name} className="partner-logo-img-dark" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 4. GLOBAL SERVICES */}
+      {/* 4. TECHNOLOGY SERVICES */}
       <section className="section services-home-section" style={{ backgroundImage: `url(${base}images/hero-bg.png)` }}>
         <div className="services-overlay"></div>
         <div className="container services-home-content">
@@ -101,42 +108,15 @@ export default function Home() {
             {t('home.global_services')}
           </motion.h2>
 
-          {/* Programming — full width featured card */}
+          {/* Services in 2x2 grid */}
           <motion.div
-            className="service-card-featured glass-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="service-featured-header">
-              <div className="service-featured-icon"><Code size={28} /></div>
-              <h3>{services.main_services[0].title}</h3>
-            </div>
-            <p className="service-featured-desc">{services.main_services[0].description}</p>
-            <div className="service-featured-details">
-              <div className="detail-column">
-                {services.main_services[0].bullets_left?.map((item, i) => (
-                  <p key={i}>&#8226; {item}</p>
-                ))}
-              </div>
-              <div className="detail-column">
-                {services.main_services[0].bullets_right?.map((item, i) => (
-                  <p key={i}>&#8226; {item}</p>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* 3 smaller service cards */}
-          <motion.div
-            className="services-grid-3"
+            className="services-grid-2x2"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {services.main_services.slice(1).map((service) => {
+            {services.main_services.map((service) => {
               const IconComp = iconMap[service.icon];
               return (
                 <motion.div key={service.id} variants={itemVariants}>
@@ -152,7 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. AI & AV — HERE WE ARE */}
+      {/* 5. AI & AV CONVERGENCE */}
       <section className="section-light aiav-section">
         <div className="container">
           <motion.div
@@ -165,6 +145,7 @@ export default function Home() {
             <div className="aiav-text">
               <h2 className="aiav-title">{t('home.ai_av')}</h2>
               <p className="aiav-subtitle">{t('home.here_we_are')}</p>
+              <p className="aiav-desc">{t('home.ai_av_desc')}</p>
             </div>
             <div className="aiav-image">
               <img src={`${base}images/icon-connection.png`} alt="AI AV Connection" />
@@ -251,7 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. CTA BANNER — purple */}
+      {/* 8. CTA BANNER */}
       <section className="cta-banner-section">
         <div className="container">
           <motion.div
@@ -268,30 +249,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. ACTIVE ACROSS ALL SECTORS */}
-      <section className="section sectors-home-section" style={{ backgroundImage: `url(${base}images/bg-neural-network.png)` }}>
+      {/* 9. ACTIVE ACROSS MULTIPLE INDUSTRIES */}
+      <section className="section sectors-home-section">
         <div className="container">
           <motion.div
-            className="sectors-split"
+            className="sectors-centered"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="sectors-photo">
-              <img src={`${base}images/office-photo.jpg`} alt="Office" />
+            <h2 className="sectors-title-centered">{t('home.sectors_title')}</h2>
+            <div className="industries-keywords">
+              {industries.map((item, index) => (
+                <span key={index} className="industry-keyword">{item.en}</span>
+              ))}
             </div>
-            <div className="sectors-content">
-              <h2>{t('home.sectors_title')}</h2>
-              <div className="sectors-list">
-                {sectors.map((sector, index) => (
-                  <div key={index} className="sector-dot-item">
-                    <span className={`sector-dot sector-dot-${index}`}></span>
-                    <span>{sector.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <p className="sectors-footer-text">{t('home.sectors_footer')}</p>
           </motion.div>
         </div>
       </section>
@@ -312,20 +286,6 @@ export default function Home() {
               <p>{home.discover_cta.subtitle}</p>
               <Link to="/contact" className="btn btn-primary">{home.discover_cta.button}</Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 11. ACHIEVEMENTS */}
-      <section className="section-light achievements-section">
-        <div className="container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2>{home.achievements.title}</h2>
-            <p>{home.achievements.subtitle}</p>
           </motion.div>
         </div>
       </section>
