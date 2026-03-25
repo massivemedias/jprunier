@@ -83,7 +83,7 @@ export default function Header() {
                   }
                 }}
               >
-                {t('nav.services')} <ChevronDown size={14} className={`dropdown-chevron ${servicesOpen ? 'dropdown-chevron-open' : ''}`} />
+                {t('nav.services')}
               </Link>
               <div className={`dropdown-menu ${servicesOpen ? 'dropdown-menu-open' : ''}`}>
                 {content.services.main_services.map((service) => (

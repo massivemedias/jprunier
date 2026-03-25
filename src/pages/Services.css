@@ -15,11 +15,11 @@
 /* ====== STICKY SUBMENU ====== */
 .services-submenu {
   position: sticky;
-  top: 60px;
-  z-index: 50;
-  background: rgba(15, 29, 46, 0.97);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
+  top: 83px;
+  z-index: 99;
+  background: rgb(8, 18, 30);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0;
 }
 
@@ -35,13 +35,13 @@
 
 .submenu-item {
   flex-shrink: 0;
-  padding: 0.7rem 1.2rem;
+  padding: 0.75rem 1.2rem;
   border: none;
   border-bottom: 2px solid transparent;
   border-radius: 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -50,18 +50,19 @@
 }
 
 .submenu-item:hover {
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.03);
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .submenu-active {
   color: white;
+  font-weight: 600;
   border-bottom-color: var(--accent-violet);
 }
 
 /* ====== SERVICE BLOCKS (alternating) ====== */
 .service-block {
-  scroll-margin-top: 60px;
+  scroll-margin-top: 110px;
 }
 
 .service-block-dark {
@@ -75,7 +76,7 @@
 /* ====== CRESTRON ====== */
 .crestron-section {
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface) 100%);
-  scroll-margin-top: 60px;
+  scroll-margin-top: 110px;
 }
 
 .section-title-left {
