@@ -15,11 +15,11 @@
 /* ====== STICKY SUBMENU ====== */
 .services-submenu {
   position: sticky;
-  top: 83px;
+  top: 82px;
   z-index: 99;
   background: rgb(8, 18, 30);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 0;
 }
 
