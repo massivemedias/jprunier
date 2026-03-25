@@ -103,13 +103,13 @@
   align-items: flex-start;
   gap: var(--spacing-md);
   padding: var(--spacing-lg);
-  background: rgba(84, 146, 174, 0.05);
+  background: rgba(116, 86, 241, 0.05);
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
 }
 
 .capability-item:hover {
-  background: rgba(84, 146, 174, 0.1);
+  background: rgba(116, 86, 241, 0.1);
   border-left: 3px solid var(--accent-violet);
 }
 
@@ -127,7 +127,7 @@
 
 /* ====== SERVICES CTA ====== */
 .services-cta-section {
-  background: linear-gradient(135deg, var(--accent-violet) 0%, #6ba8c4 100%);
+  background: linear-gradient(135deg, var(--accent-violet) 0%, #9b7dff 100%);
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
@@ -172,7 +172,7 @@
 [data-theme="light"] .submenu-active {
   border-color: var(--accent-violet);
   color: var(--text-dark);
-  background: rgba(84, 146, 174, 0.08);
+  background: rgba(116, 86, 241, 0.08);
 }
 
 [data-theme="light"] .services-intro-section {

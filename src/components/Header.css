@@ -13,7 +13,7 @@
 
 .header-scrolled {
   background-color: rgba(15, 29, 46, 0.95);
-  border-bottom-color: rgba(84, 146, 174, 0.1);
+  border-bottom-color: rgba(116, 86, 241, 0.1);
   padding: var(--spacing-md) 0;
 }
 
@@ -23,7 +23,7 @@
 
 [data-theme="light"] .header-scrolled {
   background-color: rgba(255, 255, 255, 0.95);
-  border-bottom-color: rgba(84, 146, 174, 0.15);
+  border-bottom-color: rgba(116, 86, 241, 0.15);
 }
 
 .header-content {
@@ -229,7 +229,7 @@
   background: rgba(15, 29, 46, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(84, 146, 174, 0.15);
+  border: 1px solid rgba(116, 86, 241, 0.15);
   border-radius: var(--radius-md);
   padding: 0.5rem 0;
   opacity: 0;
@@ -241,7 +241,7 @@
 
 [data-theme="light"] .dropdown-menu {
   background: rgba(255, 255, 255, 0.97);
-  border-color: rgba(84, 146, 174, 0.12);
+  border-color: rgba(116, 86, 241, 0.12);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -268,13 +268,13 @@
 
 .dropdown-item:hover {
   color: white;
-  background: rgba(84, 146, 174, 0.12);
+  background: rgba(116, 86, 241, 0.12);
   padding-left: 1.5rem;
 }
 
 [data-theme="light"] .dropdown-item:hover {
   color: var(--text-dark);
-  background: rgba(84, 146, 174, 0.08);
+  background: rgba(116, 86, 241, 0.08);
 }
 
 /* Contact CTA */
@@ -338,7 +338,7 @@
     background-color: rgb(10, 21, 32);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(84, 146, 174, 0.1);
+    border-top: 1px solid rgba(116, 86, 241, 0.1);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
@@ -370,7 +370,7 @@
   }
 
   .nav > .nav-link:hover {
-    background: rgba(84, 146, 174, 0.08);
+    background: rgba(116, 86, 241, 0.08);
     color: white;
   }
 
@@ -413,7 +413,7 @@
   .dropdown-menu {
     position: static;
     transform: none;
-    background: rgba(84, 146, 174, 0.05);
+    background: rgba(116, 86, 241, 0.05);
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -453,7 +453,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    border-top: 1px solid rgba(84, 146, 174, 0.15);
+    border-top: 1px solid rgba(116, 86, 241, 0.15);
     margin-top: var(--spacing-sm);
     padding-top: var(--spacing-sm);
   }

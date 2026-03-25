@@ -6,8 +6,8 @@
   /* Colors — corporate blue dark palette */
   --primary-dark: #0f1d2e;
   --primary-dark-light: #1a3050;
-  --accent-violet: #5492AE;
-  --accent-violet-light: #6ba8c4;
+  --accent-violet: #7456f1;
+  --accent-violet-light: #9b7dff;
   --gray-dark: #4d5d6d;
   --gray-light: #E7EBEE;
   --gray-medium: #8b9aaa;
@@ -294,7 +294,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--accent-violet);
-  box-shadow: 0 0 0 3px rgba(84, 146, 174, 0.1);
+  box-shadow: 0 0 0 3px rgba(116, 86, 241, 0.1);
 }
 
 input::placeholder, textarea::placeholder {
