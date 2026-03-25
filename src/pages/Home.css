@@ -43,8 +43,8 @@
 .partners-carousel-track {
   display: flex;
   align-items: center;
-  gap: var(--spacing-3xl);
-  animation: carousel-scroll 30s linear infinite;
+  gap: var(--spacing-2xl);
+  animation: carousel-scroll 40s linear infinite;
   width: max-content;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .partner-logo-img-dark {
-  max-height: 36px;
+  max-height: 28px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);

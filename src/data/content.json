@@ -55,26 +55,18 @@
       "subtitle": "Specialized technical resources on demand for software development, AV integration, and intelligent system deployment."
     },
     "tech_partners": [
-      {
-        "name": "Microsoft",
-        "logo": "/images/microsoft-bw.png"
-      },
-      {
-        "name": "Crestron",
-        "logo": "/images/crestron-bw.png"
-      },
-      {
-        "name": "OpenAI",
-        "logo": "/images/openai-bw.png"
-      },
-      {
-        "name": "Dante",
-        "logo": "/images/dante-bw.png"
-      },
-      {
-        "name": "QSC",
-        "logo": "/images/qsys-logo.png"
-      }
+      { "name": "Microsoft", "logo": "/images/microsoft-bw.png" },
+      { "name": "Crestron", "logo": "/images/crestron-bw.png" },
+      { "name": "OpenAI", "logo": "/images/openai-bw.png" },
+      { "name": "Q-SYS", "logo": "/images/qsys-logo.png" },
+      { "name": "Biamp", "logo": "/images/biamp-logo.png" },
+      { "name": "NDI", "logo": "/images/ndi-logo.svg" },
+
+      { "name": "Dante", "logo": "/images/dante-bw.png" },
+      { "name": "Netgear", "logo": "/images/netgear-logo.svg" },
+      { "name": "Shure", "logo": "/images/shure-logo.png" },
+      { "name": "Sennheiser", "logo": "/images/sennheiser-logo.svg" },
+      { "name": "Yamaha", "logo": "/images/yamaha-logo.svg" }
     ],
     "connecting_items": [
       {
@@ -119,25 +111,27 @@
     }
   },
   "about": {
-    "intro": "JPrunier Inc. is a technology gateway in the audiovisual, IT, and artificial intelligence domains. We provide our clients with recognized expertise in software development, system control, interface design, multiplatform integration, configuration, and administration of complex audiovisual solutions.",
-    "mission": "To deliver quality technology services, optimize user experience, and ensure the reliability and security of integrated systems, according to the most demanding industry standards.",
-    "vision": "A world where technology seamlessly adapts to human needs, creating spaces that inspire, collaborate, and innovate.",
+    "intro_left": "Founded in Montreal in 2021, **JPrunier Inc.** specializes in the **programming, integration, and design of advanced technology systems** that bridge the worlds of audiovisual, information technology, and artificial intelligence.\n\nWe create **seamless connections between the digital and physical environments**, driven by performance, reliability, and simplicity of use.",
+    "intro_right": "Our expertise offers **modern system programming, user experience, cloud** and **server integration, network infrastructure**, and **system interoperability**, delivering unified solutions for **corporate, government**, and **high-end environments**.\n\nMore than specialized resources, we are **technology architects** dedicated to designing solutions that are sustainable, scalable, and aligned with the highest industry standards. We work with your IT, AI, AV teams to **facilitate enterprise grade integration**.",
+    "intro": "Founded in Montreal in 2021, JPrunier Inc. specializes in the programming, integration, and design of advanced technology systems that bridge the worlds of audiovisual, information technology, and artificial intelligence.",
+    "mission": "Our expertise offers modern system programming, user experience, cloud and server integration, network infrastructure, and system interoperability, delivering unified solutions for corporate, government, and high-end environments.",
+    "vision": "More than specialized resources, we are technology architects dedicated to designing solutions that are sustainable, scalable, and aligned with the highest industry standards. We work with your IT, AI, AV teams to facilitate enterprise grade integration.",
     "values": [
       {
-        "title": "Excellence",
-        "description": "We pursue the highest standards in everything we do"
-      },
-      {
         "title": "Innovation",
-        "description": "We embrace emerging technologies to solve complex challenges"
+        "description": "We embrace emerging technologies and design solutions that evolve with our clients."
       },
       {
-        "title": "Partnership",
-        "description": "We build lasting relationships with clients and partners"
+        "title": "Integrity",
+        "description": "We act with transparency, ethic, and respect - in every project and partnership."
       },
       {
-        "title": "Reliability",
-        "description": "We deliver on our commitments with proven expertise"
+        "title": "Precision",
+        "description": "Our craft is technical excellence: every system, every line of code, every signal path."
+      },
+      {
+        "title": "Sustainability",
+        "description": "We build long-term, efficient and scalable infrastructures that last."
       }
     ]
   },

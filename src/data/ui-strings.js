@@ -20,10 +20,10 @@ export const uiStrings = {
     'home.sectors_footer': 'Supporting integrators, consultants, and enterprise clients across Canada and Europe.',
 
     // About
-    'about.who_we_are': 'Who We Are',
+    'about.who_we_are': 'About us',
     'about.our_mission': 'Our Mission',
     'about.our_vision': 'Our Vision',
-    'about.core_values': 'Our Core Values',
+    'about.core_values': 'Company Values',
     'about.values_subtitle': 'Guiding principles that define who we are',
     'about.testimonials_title': 'What Our Clients Say',
     'about.testimonials_subtitle': 'Trusted by leading organizations',
@@ -104,10 +104,10 @@ export const uiStrings = {
     'home.sectors_footer': 'Accompagner les intégrateurs, consultants et clients entreprises au Canada et en Europe.',
 
     // About
-    'about.who_we_are': 'Qui sommes-nous',
+    'about.who_we_are': 'À propos',
     'about.our_mission': 'Notre mission',
     'about.our_vision': 'Notre vision',
-    'about.core_values': 'Nos valeurs fondamentales',
+    'about.core_values': 'Valeurs de l\'entreprise',
     'about.values_subtitle': 'Les principes qui nous définissent',
     'about.testimonials_title': 'Ce que disent nos clients',
     'about.testimonials_subtitle': 'La confiance des grandes organisations',

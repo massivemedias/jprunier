@@ -1,93 +1,122 @@
-.about-section {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface) 100%);
+/* ====== ABOUT HERO — taller than compact + parallax ====== */
+.about-page-hero .hero {
+  min-height: 60vh;
+  background-position: center 40%;
+  background-attachment: fixed;
 }
 
-.about-grid {
+.about-page-hero .hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 33, 54, 0.6) 0%,
+    rgba(11, 25, 38, 0.4) 50%,
+    rgba(84, 146, 174, 0.02) 100%
+  );
+}
+
+/* ====== ABOUT US — Light readable section ====== */
+.about-fullwidth {
+  position: relative;
+  background: #f4f6f8;
+  padding: var(--spacing-3xl) 0;
+}
+
+.about-two-col {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: var(--spacing-3xl);
+  align-items: start;
 }
 
-.about-intro,
-.about-mission,
-.about-vision {
-  background: rgba(84, 146, 174, 0.05);
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-lg);
+.about-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #1a2a3a;
+  margin-bottom: var(--spacing-xl);
 }
 
-.about-intro h2 {
-  color: var(--accent-violet);
-  margin-bottom: var(--spacing-lg);
-  font-size: var(--font-size-xl);
-}
-
-.about-mission h3,
-.about-vision h3 {
-  color: var(--accent-violet);
-  margin-bottom: var(--spacing-lg);
-  font-size: var(--font-size-xl);
-}
-
-.about-intro p,
-.about-mission p,
-.about-vision p {
-  color: var(--gray-light);
+.about-col p {
+  color: #3a4a5a;
   line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-base);
 }
 
-.values-section {
-  background-color: var(--background);
+.about-col p strong {
+  color: #1a2a3a;
+  font-weight: 700;
 }
 
-.values-grid {
-  display: flex;
-  gap: var(--spacing-xl);
+/* ====== VALUES — Parallax background image ====== */
+.values-fullwidth {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: var(--spacing-3xl) 0;
 }
 
-.values-grid .value-card {
-  flex: 1;
-  min-width: 0;
+.values-fullwidth-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 33, 54, 0.82);
+  z-index: 1;
 }
 
-.value-card {
-  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%);
-  border: 1px solid rgba(84, 146, 174, 0.2);
-  border-radius: var(--radius-xl);
-  padding: var(--spacing-2xl);
-  transition: all var(--transition-base);
+.values-fullwidth-content {
+  position: relative;
+  z-index: 2;
 }
 
-.value-card:hover {
-  border-color: var(--accent-violet);
-  box-shadow: 0 20px 40px rgba(84, 146, 174, 0.2);
-  transform: translateY(-5px);
-}
-
-.value-card h3 {
-  color: var(--accent-violet);
+.values-heading {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: white;
   margin-bottom: var(--spacing-md);
-  font-size: var(--font-size-xl);
 }
 
-.value-card p {
-  color: var(--gray-medium);
+.values-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--accent-violet);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.values-grid-flat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl) var(--spacing-3xl);
+}
+
+.value-item h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--spacing-sm);
+}
+
+.value-item p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-base);
   margin: 0;
 }
 
-.testimonials-section {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--surface) 100%);
-}
-
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  .about-grid {
+  .about-two-col {
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
   }
 
-  .about-intro,
-  .about-mission,
-  .about-vision {
-    padding: var(--spacing-xl);
+  .values-grid-flat {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  /* Disable parallax on mobile (perf) */
+  .about-page-hero .hero,
+  .values-fullwidth {
+    background-attachment: scroll;
   }
 }

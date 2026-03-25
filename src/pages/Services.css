@@ -15,12 +15,12 @@
 /* ====== STICKY SUBMENU ====== */
 .services-submenu {
   position: sticky;
-  top: 0;
+  top: 60px;
   z-index: 50;
-  background: var(--primary-dark);
+  background: rgba(15, 29, 46, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
-  padding: var(--spacing-sm) 0;
+  padding: 0.4rem 0;
 }
 
 .submenu-track {

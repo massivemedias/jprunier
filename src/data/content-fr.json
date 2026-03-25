@@ -55,26 +55,17 @@
       "subtitle": "Ressources techniques spécialisées à la demande pour le développement logiciel, l'intégration AV et le déploiement de systèmes intelligents."
     },
     "tech_partners": [
-      {
-        "name": "Microsoft",
-        "logo": "/images/microsoft-bw.png"
-      },
-      {
-        "name": "Crestron",
-        "logo": "/images/crestron-bw.png"
-      },
-      {
-        "name": "OpenAI",
-        "logo": "/images/openai-bw.png"
-      },
-      {
-        "name": "Dante",
-        "logo": "/images/dante-bw.png"
-      },
-      {
-        "name": "QSC",
-        "logo": "/images/qsys-logo.png"
-      }
+      { "name": "Microsoft", "logo": "/images/microsoft-bw.png" },
+      { "name": "Crestron", "logo": "/images/crestron-bw.png" },
+      { "name": "OpenAI", "logo": "/images/openai-bw.png" },
+      { "name": "Q-SYS", "logo": "/images/qsys-logo.png" },
+      { "name": "Biamp", "logo": "/images/biamp-logo.png" },
+      { "name": "NDI", "logo": "/images/ndi-logo.svg" },
+      { "name": "Dante", "logo": "/images/dante-bw.png" },
+      { "name": "Netgear", "logo": "/images/netgear-logo.svg" },
+      { "name": "Shure", "logo": "/images/shure-logo.png" },
+      { "name": "Sennheiser", "logo": "/images/sennheiser-logo.svg" },
+      { "name": "Yamaha", "logo": "/images/yamaha-logo.svg" }
     ],
     "connecting_items": [
       {
@@ -119,25 +110,27 @@
     }
   },
   "about": {
-    "intro": "JPrunier Inc. est une passerelle technologique dans les domaines audiovisuel, informatique et intelligence artificielle. Elle met à disposition de ses clients une expertise reconnue en développement logiciel, contrôle de systèmes, conception d'interfaces, intégration multiplateforme, configuration et administration de solutions audiovisuelles complexes.",
-    "mission": "Offrir des services technologiques de qualité, optimiser l'expérience utilisateur et assurer la fiabilité et la sécurité des systèmes intégrés, selon les standards les plus exigeants de l'industrie.",
-    "vision": "Un monde où la technologie s'adapte naturellement aux besoins humains, créant des espaces qui inspirent, collaborent et innovent.",
+    "intro_left": "Fondée à Montréal en 2021, **JPrunier Inc.** se spécialise dans la **programmation, l'intégration et la conception de systèmes technologiques avancés** qui relient les mondes de l'audiovisuel, des technologies de l'information et de l'intelligence artificielle.\n\nNous créons des **connexions transparentes entre les environnements numériques et physiques**, guidés par la performance, la fiabilité et la simplicité d'utilisation.",
+    "intro_right": "Notre expertise offre la **programmation système moderne, l'expérience utilisateur, l'intégration cloud** et **serveur, l'infrastructure réseau** et **l'interopérabilité des systèmes**, livrant des solutions unifiées pour les environnements **corporatifs, gouvernementaux** et **haut de gamme**.\n\nPlus que des ressources spécialisées, nous sommes des **architectes technologiques** dédiés à la conception de solutions durables, évolutives et alignées avec les plus hauts standards de l'industrie. Nous travaillons avec vos équipes TI, IA, AV pour **faciliter l'intégration de niveau entreprise**.",
+    "intro": "Fondée à Montréal en 2021, JPrunier Inc. se spécialise dans la programmation, l'intégration et la conception de systèmes technologiques avancés qui relient les mondes de l'audiovisuel, des technologies de l'information et de l'intelligence artificielle.",
+    "mission": "Notre expertise offre la programmation système moderne, l'expérience utilisateur, l'intégration cloud et serveur, l'infrastructure réseau et l'interopérabilité des systèmes, livrant des solutions unifiées pour les environnements corporatifs, gouvernementaux et haut de gamme.",
+    "vision": "Plus que des ressources spécialisées, nous sommes des architectes technologiques dédiés à la conception de solutions durables, évolutives et alignées avec les plus hauts standards de l'industrie. Nous travaillons avec vos équipes TI, IA, AV pour faciliter l'intégration de niveau entreprise.",
     "values": [
       {
-        "title": "Excellence",
-        "description": "Nous visons les plus hauts standards dans tout ce que nous faisons"
-      },
-      {
         "title": "Innovation",
-        "description": "Nous adoptons les technologies émergentes pour résoudre des défis complexes"
+        "description": "Nous adoptons les technologies émergentes et concevons des solutions qui évoluent avec nos clients."
       },
       {
-        "title": "Partenariat",
-        "description": "Nous bâtissons des relations durables avec nos clients et partenaires"
+        "title": "Intégrité",
+        "description": "Nous agissons avec transparence, éthique et respect - dans chaque projet et partenariat."
       },
       {
-        "title": "Fiabilité",
-        "description": "Nous tenons nos engagements grâce à une expertise éprouvée"
+        "title": "Précision",
+        "description": "Notre métier est l'excellence technique : chaque système, chaque ligne de code, chaque chemin de signal."
+      },
+      {
+        "title": "Durabilité",
+        "description": "Nous construisons des infrastructures à long terme, efficaces et évolutives qui durent."
       }
     ]
   },

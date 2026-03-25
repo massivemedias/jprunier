@@ -5,6 +5,14 @@ import './About.css';
 
 const base = import.meta.env.BASE_URL;
 
+/* Helper: convert **bold** markers to <strong> */
+function renderBold(text) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+  );
+}
+
 export default function About() {
   const { content } = useContent();
   const t = useT();
@@ -14,90 +22,82 @@ export default function About() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
   return (
     <>
-      <Hero
-        title={hero.about.title}
-        subtitle={hero.about.subtitle}
-        backgroundImage={`${base}images/bg-abstract.png`}
-        centered={true}
-        compact={true}
-      />
+      <div className="about-page-hero">
+        <Hero
+          title={hero.about.title}
+          subtitle={hero.about.subtitle}
+          backgroundImage={`${base}images/bg-abstract.png`}
+          centered={true}
+          compact={true}
+        />
+      </div>
 
-      {/* Company Overview Section */}
-      <section className="section about-section">
+      {/* About Us — clean professional section */}
+      <section className="section about-fullwidth">
+
         <div className="container">
           <motion.div
-            className="about-grid"
+            className="about-two-col"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
           >
-            <motion.div className="about-intro" variants={itemVariants}>
-              <h2>{t('about.who_we_are')}</h2>
-              <p>{about.intro}</p>
+            <motion.div className="about-col" variants={itemVariants}>
+              <h2 className="about-heading">{t('about.who_we_are')}</h2>
+              {(about.intro_left || about.intro).split('\n\n').map((p, i) => (
+                <p key={i}>{renderBold(p)}</p>
+              ))}
             </motion.div>
-
-            <motion.div className="about-mission" variants={itemVariants}>
-              <h3>{t('about.our_mission')}</h3>
-              <p>{about.mission}</p>
-            </motion.div>
-
-            <motion.div className="about-vision" variants={itemVariants}>
-              <h3>{t('about.our_vision')}</h3>
-              <p>{about.vision}</p>
+            <motion.div className="about-col" variants={itemVariants}>
+              {(about.intro_right || about.mission).split('\n\n').map((p, i) => (
+                <p key={i}>{renderBold(p)}</p>
+              ))}
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="section values-section">
-        <div className="container">
-          <div className="section-title">
-            <h2>{t('about.core_values')}</h2>
-            <p className="section-subtitle">{t('about.values_subtitle')}</p>
-          </div>
-
+      {/* Company Values — full-width with background image */}
+      <section
+        className="section values-fullwidth"
+        style={{ backgroundImage: `url(${base}images/photos/about-bg.webp)` }}
+      >
+        <div className="values-fullwidth-overlay"></div>
+        <div className="container values-fullwidth-content">
           <motion.div
-            className="values-grid"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
           >
-            {about.values.map((value, index) => (
-              <motion.div
-                key={index}
-                className="value-card"
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-              >
-                <h3>{value.title}</h3>
-                <p>{value.description}</p>
-              </motion.div>
-            ))}
+            <motion.h2 className="values-heading" variants={itemVariants}>
+              {t('about.core_values')}
+            </motion.h2>
+            <motion.div className="values-divider" variants={itemVariants} />
+
+            <motion.div className="values-grid-flat" variants={containerVariants}>
+              {about.values.map((value, index) => (
+                <motion.div key={index} className="value-item" variants={itemVariants}>
+                  <h3>{value.title}</h3>
+                  <p>{value.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </section>
-
     </>
   );
 }
