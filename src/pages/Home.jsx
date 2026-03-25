@@ -293,23 +293,21 @@ export default function Home() {
       </section>
 
       {/* 10. DISCOVER CTA */}
-      <section className="section discover-cta-section">
-        <div className="container">
-          <motion.div
-            className="discover-card glass-card"
-            style={{ backgroundImage: `url(${base}images/bg-variante.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="discover-overlay"></div>
-            <div className="discover-content">
-              <h2>{home.discover_cta.title}</h2>
-              <p>{home.discover_cta.subtitle}</p>
-              <Link to="/contact" className="btn btn-primary">{home.discover_cta.button}</Link>
-            </div>
-          </motion.div>
-        </div>
+      <section
+        className="discover-cta-section"
+        style={{ backgroundImage: `url(${base}images/bg-variante.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="discover-overlay"></div>
+        <motion.div
+          className="discover-content container"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2>{home.discover_cta.title}</h2>
+          <p>{home.discover_cta.subtitle}</p>
+          <Link to="/contact" className="btn btn-primary">{home.discover_cta.button}</Link>
+        </motion.div>
       </section>
     </>
   );

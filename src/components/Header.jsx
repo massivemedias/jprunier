@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useContent, useLanguage, useT } from '../context/LanguageContext';
 import './Header.css';
 
@@ -8,10 +8,6 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('jprunier-theme');
-    return saved ? saved === 'dark' : true;
-  });
   const { content } = useContent();
   const { language, setLanguage } = useLanguage();
   const t = useT();
@@ -32,9 +28,8 @@ export default function Header() {
   }, [location.pathname]);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-    localStorage.setItem('jprunier-theme', darkMode ? 'dark' : 'light');
-  }, [darkMode]);
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -132,9 +127,6 @@ export default function Header() {
                     EN
                   </button>
                 </div>
-                <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} aria-label="Toggle theme">
-                  {darkMode ? <Sun size={16} /> : <Moon size={16} />}
-                </button>
               </div>
             </div>
           </nav>
@@ -154,10 +146,6 @@ export default function Header() {
                 EN
               </button>
             </div>
-
-            <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} aria-label="Toggle theme">
-              {darkMode ? <Sun size={16} /> : <Moon size={16} />}
-            </button>
 
             <Link to="/contact" className="header-cta" onClick={closeMobileMenu}>
               {t('nav.contact')}

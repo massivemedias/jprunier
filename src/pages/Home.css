@@ -133,7 +133,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-lg);
-  background: rgba(74, 124, 201, 0.2);
+  background: rgba(84, 146, 174, 0.2);
   color: var(--accent-violet);
   flex-shrink: 0;
 }
@@ -189,7 +189,7 @@
 .service-card-small:hover {
   transform: translateY(-6px);
   border-color: var(--accent-violet);
-  box-shadow: 0 20px 40px rgba(74, 124, 201, 0.15);
+  box-shadow: 0 20px 40px rgba(84, 146, 174, 0.15);
 }
 
 .service-small-icon {
@@ -199,7 +199,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-lg);
-  background: rgba(74, 124, 201, 0.2);
+  background: rgba(84, 146, 174, 0.2);
   color: var(--accent-violet);
   margin-bottom: var(--spacing-lg);
 }
@@ -285,17 +285,17 @@
 
 .av-domain-tag {
   padding: 0.5rem 1.2rem;
-  border: 1px solid rgba(74, 124, 201, 0.3);
+  border: 1px solid rgba(84, 146, 174, 0.3);
   border-radius: 30px;
   font-size: var(--font-size-sm);
   color: var(--gray-light);
-  background: rgba(74, 124, 201, 0.08);
+  background: rgba(84, 146, 174, 0.08);
   transition: all var(--transition-base);
 }
 
 .av-domain-tag:hover {
   border-color: var(--accent-violet);
-  background: rgba(74, 124, 201, 0.15);
+  background: rgba(84, 146, 174, 0.15);
 }
 
 [data-theme="light"] .audiovisual-home-section {
@@ -321,7 +321,7 @@
 }
 
 .accordion-item {
-  border: 1px solid rgba(74, 124, 201, 0.15);
+  border: 1px solid rgba(84, 146, 174, 0.15);
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-md);
   overflow: hidden;
@@ -424,7 +424,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(74, 124, 201, 0.12);
+  background: rgba(84, 146, 174, 0.12);
   color: var(--accent-violet);
   display: flex;
   align-items: center;
@@ -446,7 +446,7 @@
 
 /* ====== CTA BANNER (purple) ====== */
 .cta-banner-section {
-  background: linear-gradient(135deg, var(--accent-violet) 0%, #6e9de0 100%);
+  background: linear-gradient(135deg, var(--accent-violet) 0%, #6ba8c4 100%);
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
@@ -521,7 +521,7 @@
 
 .industry-keyword:hover {
   border-color: var(--accent-violet);
-  background: rgba(74, 124, 201, 0.1);
+  background: rgba(84, 146, 174, 0.1);
 }
 
 .sectors-footer-text {
@@ -532,20 +532,15 @@
   margin: 0 auto;
 }
 
-/* ====== DISCOVER CTA (dark card) ====== */
+/* ====== DISCOVER CTA (full-width bg) ====== */
 .discover-cta-section {
-  background-color: var(--background);
-  padding: var(--spacing-2xl) var(--spacing-lg);
-}
-
-.discover-card {
   position: relative;
-  padding: var(--spacing-4xl);
+  padding: var(--spacing-3xl) var(--spacing-lg);
   text-align: center;
   overflow: hidden;
 }
 
-.discover-overlay {
+.discover-cta-section .discover-overlay {
   position: absolute;
   inset: 0;
   background: rgba(11, 25, 38, 0.75);
@@ -567,8 +562,13 @@
 
 .discover-content p {
   color: var(--gray-medium);
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
   line-height: var(--line-height-relaxed);
+}
+
+.discover-content .btn-primary {
+  padding: 0.6rem 1.5rem;
+  font-size: var(--font-size-sm);
 }
 
 /* ====== LIGHT THEME OVERRIDES ====== */
@@ -598,7 +598,7 @@
 
 [data-theme="light"] .accordion-item {
   background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(74, 124, 201, 0.12);
+  border-color: rgba(84, 146, 174, 0.12);
 }
 
 [data-theme="light"] .accordion-header h3 {

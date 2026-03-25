@@ -6,8 +6,8 @@
   /* Colors — corporate blue dark palette */
   --primary-dark: #0f1d2e;
   --primary-dark-light: #1a3050;
-  --accent-violet: #4a7cc9;
-  --accent-violet-light: #5e90d8;
+  --accent-violet: #5492AE;
+  --accent-violet-light: #6ba8c4;
   --gray-dark: #4d5d6d;
   --gray-light: #E7EBEE;
   --gray-medium: #8b9aaa;
@@ -21,6 +21,8 @@
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --accent-orange: #e8833a;
+  --btn-violet: #7456f1;
+  --btn-violet-light: #8a70f5;
 
   /* Typography */
   --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -255,12 +257,12 @@ button {
 }
 
 .btn-primary {
-  background-color: var(--accent-violet);
+  background-color: var(--btn-violet);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-violet-light);
+  background-color: var(--btn-violet-light);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -292,7 +294,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--accent-violet);
-  box-shadow: 0 0 0 3px rgba(74, 124, 201, 0.1);
+  box-shadow: 0 0 0 3px rgba(84, 146, 174, 0.1);
 }
 
 input::placeholder, textarea::placeholder {
