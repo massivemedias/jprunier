@@ -17,45 +17,46 @@
   position: sticky;
   top: 60px;
   z-index: 50;
-  background: rgba(15, 29, 46, 0.95);
+  background: rgba(15, 29, 46, 0.97);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
-  padding: 0.4rem 0;
+  padding: 0;
 }
 
 .submenu-track {
   display: flex;
-  gap: var(--spacing-xs);
+  gap: 0;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: var(--spacing-xs) 0;
 }
 
 .submenu-track::-webkit-scrollbar { display: none; }
 
 .submenu-item {
   flex-shrink: 0;
-  padding: 0.5rem 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 30px;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
   background: transparent;
-  color: var(--gray-medium);
-  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: all 0.2s ease;
   white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
 .submenu-item:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  color: var(--gray-light);
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .submenu-active {
-  border-color: var(--accent-violet);
   color: white;
-  background: rgba(84, 146, 174, 0.15);
+  border-bottom-color: var(--accent-violet);
 }
 
 /* ====== SERVICE BLOCKS (alternating) ====== */
