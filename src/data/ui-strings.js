@@ -1,10 +1,10 @@
 export const uiStrings = {
   en: {
     // Header
-    'nav.about': 'About',
-    'nav.services': 'Services',
+'nav.services': 'Services',
     'nav.contact': 'Contact',
     'nav.news': 'News',
+    'nav.schedule': 'Schedule a Consultation',
 
     // Home
     'home.technologies': 'Technologies',
@@ -85,10 +85,10 @@ export const uiStrings = {
   },
   fr: {
     // Header
-    'nav.about': 'À propos',
-    'nav.services': 'Services',
+'nav.services': 'Services',
     'nav.contact': 'Contact',
     'nav.news': 'Nouvelles',
+    'nav.schedule': 'Planifier une consultation',
 
     // Home
     'home.technologies': 'Technologies',

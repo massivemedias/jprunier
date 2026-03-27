@@ -5,13 +5,22 @@ import { Code, Compass, LayoutDashboard, Wrench, ChevronDown, ChevronUp, Shield,
 import Hero from '../components/Hero';
 import { useContent, useT } from '../context/LanguageContext';
 import './Home.css';
+import './About.css';
 
 const base = import.meta.env.BASE_URL;
+
+/* Helper: convert **bold** markers to <strong> */
+function renderBold(text) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+  );
+}
 
 export default function Home() {
   const { content } = useContent();
   const t = useT();
-  const { hero, home, services, sectors } = content;
+  const { hero, home, services, sectors, about } = content;
   const [expandedAccordion, setExpandedAccordion] = useState(0);
 
   const containerVariants = {
@@ -71,7 +80,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. TECHNOLOGIES WE INTEGRATE — Conveyor belt carousel */}
+      {/* 3. ABOUT US */}
+      <section className="section about-fullwidth">
+        <div className="container">
+          <motion.div
+            className="about-two-col"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+          >
+            <motion.div className="about-col" variants={itemVariants}>
+              <h2 className="about-heading">{t('about.who_we_are')}</h2>
+              {(about.intro_left || about.intro).split('\n\n').map((p, i) => (
+                <p key={i}>{renderBold(p)}</p>
+              ))}
+            </motion.div>
+            <motion.div className="about-col" variants={itemVariants}>
+              {(about.intro_right || about.mission).split('\n\n').map((p, i) => (
+                <p key={i}>{renderBold(p)}</p>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. COMPANY VALUES */}
+      <section
+        className="section values-fullwidth"
+        style={{ backgroundImage: `url(${base}images/photos/about-bg.webp)` }}
+      >
+        <div className="values-fullwidth-overlay"></div>
+        <div className="container values-fullwidth-content">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+          >
+            <motion.h2 className="values-heading" variants={itemVariants}>
+              {t('about.core_values')}
+            </motion.h2>
+            <motion.div className="values-divider" variants={itemVariants} />
+            <motion.div className="values-grid-flat" variants={containerVariants}>
+              {about.values.map((value, index) => (
+                <motion.div key={index} className="value-item" variants={itemVariants}>
+                  <h3>{value.title}</h3>
+                  <p>{value.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 5. TECHNOLOGIES WE INTEGRATE — Conveyor belt carousel */}
       <section className="section-light partners-section-light">
         <div className="container">
           <motion.h2

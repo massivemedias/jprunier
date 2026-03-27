@@ -55,14 +55,6 @@ export default function Header() {
           </Link>
 
           <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
-            <Link
-              to="/about"
-              className={`nav-link ${isActive('/about') ? 'nav-active' : ''}`}
-              onClick={closeMobileMenu}
-            >
-              {t('nav.about')}
-            </Link>
-
             {/* Services dropdown */}
             <div
               className={`nav-dropdown ${isServicesActive ? 'nav-active' : ''}`}
@@ -148,7 +140,7 @@ export default function Header() {
             </div>
 
             <Link to="/contact" className="header-cta" onClick={closeMobileMenu}>
-              {t('nav.contact')}
+              {t('nav.schedule')}
             </Link>
           </div>
 
