@@ -49,7 +49,7 @@ export default function Header() {
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="container">
         <div className="header-content">
-          <Link to="/" className="logo" onClick={closeMobileMenu}>
+          <Link to="/" className="logo" onClick={() => { closeMobileMenu(); window.scrollTo(0, 0); }}>
             <span className="logo-text">JPrunier</span>
             <span className="logo-subtitle">AI-AV</span>
           </Link>
@@ -97,14 +97,6 @@ export default function Header() {
               onClick={closeMobileMenu}
             >
               {t('nav.news')}
-            </Link>
-
-            <Link
-              to="/contact"
-              className={`nav-link ${isActive('/contact') ? 'nav-active' : ''}`}
-              onClick={closeMobileMenu}
-            >
-              {t('nav.contact')}
             </Link>
 
             {/* Mobile-only: CTA + lang toggle */}
