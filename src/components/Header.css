@@ -294,7 +294,6 @@
 
 .header-cta:hover {
   background: #6344d9;
-  box-shadow: 0 4px 20px rgba(116, 86, 241, 0.4);
   transform: translateY(-1px);
 }
 
