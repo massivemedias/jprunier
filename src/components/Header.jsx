@@ -99,11 +99,16 @@ export default function Header() {
               {t('nav.news')}
             </Link>
 
-            {/* Mobile-only: contact + lang inside menu */}
+            <Link
+              to="/contact"
+              className={`nav-link ${isActive('/contact') ? 'nav-active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              {t('nav.contact')}
+            </Link>
+
+            {/* Mobile-only: lang toggle */}
             <div className="mobile-nav-extras">
-              <Link to="/contact" className="nav-link" onClick={closeMobileMenu}>
-                {t('nav.contact')}
-              </Link>
               <div className="mobile-controls">
                 <div className="lang-pill">
                   <button
