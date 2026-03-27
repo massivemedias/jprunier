@@ -107,8 +107,11 @@ export default function Header() {
               {t('nav.contact')}
             </Link>
 
-            {/* Mobile-only: lang toggle */}
+            {/* Mobile-only: CTA + lang toggle */}
             <div className="mobile-nav-extras">
+              <Link to="/contact" className="mobile-cta" onClick={closeMobileMenu}>
+                {t('nav.schedule')}
+              </Link>
               <div className="mobile-controls">
                 <div className="lang-pill">
                   <button
