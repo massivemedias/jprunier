@@ -247,13 +247,25 @@
         },
         "ai_bridge_section": {
           "title": "Passerelle IA – AV",
-          "tagline": "Architectures audiovisuelles connectées, conçues pour la performance, l'évolutivité et l'excellence de l'expérience utilisateur.",
-          "description": "JPrunier fait le pont entre l'intelligence artificielle et l'audiovisuel. Notre expertise en développement logiciel, réseaux AV-TI, intégration de protocoles et standardisation multi-constructeurs nous permet de livrer des solutions où le matériel AV et les logiciels IA fonctionnent comme un tout.",
-          "capabilities": [
-            "Conception et développement d'applications AV-IA sur mesure",
-            "Analyse technique et validation d'architectures",
-            "Surveillance et diagnostic de systèmes existants",
-            "Standardisation de systèmes multi-constructeurs"
+          "subtitle": "JPrunier fait le pont entre l'intelligence artificielle et l'audiovisuel",
+          "description": "Nous concevons des environnements connectés où données, systèmes de contrôle et couches logicielles intelligentes opèrent comme un écosystème unifié, permettant automatisation, adaptabilité et expérience utilisateur améliorée à travers des déploiements AV complexes.\n\nDes flux de contrôle intelligents aux comportements système enrichis par l'IA, notre approche transforme les systèmes AV traditionnels en plateformes réactives et évolutives.",
+          "features": [
+            {
+              "title": "Développement d'applications AV–IA sur mesure",
+              "description": "Conception et développement d'applications logicielles intégrant les systèmes AV aux capacités IA, permettant contrôle avancé, automatisation et interactions pilotées par les données."
+            },
+            {
+              "title": "Standardisation multi-systèmes",
+              "description": "Normalisation d'environnements AV multi-marques pour permettre un comportement cohérent, l'interopérabilité et une intégration IA évolutive."
+            },
+            {
+              "title": "Intégration de l'apprentissage automatique",
+              "description": "Intégration de modèles d'apprentissage automatique pour enrichir le comportement système, les capacités prédictives et l'efficacité opérationnelle."
+            },
+            {
+              "title": "Intégration chatbot piloté par l'IA",
+              "description": "Implémentation d'interfaces conversationnelles pour le contrôle, la surveillance et l'interaction utilisateur des systèmes."
+            }
           ]
         },
         "interfaces_gallery": {
@@ -333,9 +345,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Télécharger la brochure JPrunier",
-          "description": "Obtenez la brochure complète des services corporatifs de JPrunier.",
-          "file_url": "/docs/JPrunierInc_FR.V4.pdf",
+          "title": "Brochure CSP",
+          "description": "Travailler avec un CSP garantit la meilleure expérience Crestron possible.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Télécharger"
         },
         "warranty_section": {
@@ -390,9 +402,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Télécharger la brochure JPrunier",
-          "description": "Obtenez la brochure complète des services corporatifs de JPrunier.",
-          "file_url": "/docs/JPrunierInc_FR.V4.pdf",
+          "title": "Brochure CSP",
+          "description": "Travailler avec un CSP garantit la meilleure expérience Crestron possible.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Télécharger"
         },
         "warranty_section": {
@@ -450,9 +462,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Télécharger la brochure JPrunier",
-          "description": "Obtenez la brochure complète des services corporatifs de JPrunier.",
-          "file_url": "/docs/JPrunierInc_FR.V4.pdf",
+          "title": "Brochure CSP",
+          "description": "Travailler avec un CSP garantit la meilleure expérience Crestron possible.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Télécharger"
         },
         "warranty_section": {
@@ -542,9 +554,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Télécharger la brochure JPrunier",
-          "description": "Obtenez la brochure complète des services corporatifs de JPrunier.",
-          "file_url": "/docs/JPrunierInc_FR.V4.pdf",
+          "title": "Brochure CSP",
+          "description": "Travailler avec un CSP garantit la meilleure expérience Crestron possible.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Télécharger"
         },
         "warranty_section": {

@@ -247,13 +247,25 @@
         },
         "ai_bridge_section": {
           "title": "AI – AV Bridge",
-          "tagline": "Connected audiovisual architectures designed for performance, scalability, and excellence in user experience.",
-          "description": "JPrunier bridges artificial intelligence and audiovisual technology. Our expertise in software development, AV-IT networking, protocol integration and multi-brand system standardization enables us to deliver solutions where AV hardware and AI software work as one.",
-          "capabilities": [
-            "Custom AV-AI application design and development",
-            "Technical analysis and architectural validation",
-            "Monitoring and diagnostics of existing systems",
-            "Multi-brand system standardization"
+          "subtitle": "JPrunier bridges artificial intelligence and audiovisual technology",
+          "description": "We design connected environments where data, control systems, and intelligent software layers operate as a unified ecosystem, enabling automation, adaptability, and enhanced user experience across complex AV deployments.\n\nFrom intelligent control workflows to AI-enhanced system behavior, our approach transforms traditional AV systems into responsive and evolving platforms.",
+          "features": [
+            {
+              "title": "Custom AV–AI Application Development",
+              "description": "Design and development of software applications integrating AV systems with AI capabilities, enabling advanced control, automation, and data-driven interactions."
+            },
+            {
+              "title": "Multi-System Standardization",
+              "description": "Normalization of multi-brand AV environments to enable consistent behavior, interoperability, and scalable AI integration."
+            },
+            {
+              "title": "Machine Learning Integration",
+              "description": "Integration of machine learning models to enhance system behavior, predictive capabilities, and operational efficiency."
+            },
+            {
+              "title": "AI-Driven Chatbot Integration",
+              "description": "Implementation of conversational interfaces for system control, monitoring, and user interaction."
+            }
           ]
         },
         "interfaces_gallery": {
@@ -333,9 +345,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Download the JPrunier brochure",
-          "description": "Get the complete JPrunier corporate services brochure.",
-          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "title": "CSP Brochure",
+          "description": "Working with a CSP helps ensure the best possible Crestron experience.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Download"
         },
         "warranty_section": {
@@ -390,9 +402,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Download the JPrunier brochure",
-          "description": "Get the complete JPrunier corporate services brochure.",
-          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "title": "CSP Brochure",
+          "description": "Working with a CSP helps ensure the best possible Crestron experience.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Download"
         },
         "warranty_section": {
@@ -450,9 +462,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Download the JPrunier brochure",
-          "description": "Get the complete JPrunier corporate services brochure.",
-          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "title": "CSP Brochure",
+          "description": "Working with a CSP helps ensure the best possible Crestron experience.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Download"
         },
         "warranty_section": {
@@ -542,9 +554,9 @@
           ]
         },
         "brochure_download": {
-          "title": "Download the JPrunier brochure",
-          "description": "Get the complete JPrunier corporate services brochure.",
-          "file_url": "/docs/JPrunierInc_EN.V4.pdf",
+          "title": "CSP Brochure",
+          "description": "Working with a CSP helps ensure the best possible Crestron experience.",
+          "file_url": "https://www.crestron.com/getmedia/23412be2-bec3-4a5e-a9aa-d5c4aa607521/pb_CSP_Brochure",
           "button_text": "Download"
         },
         "warranty_section": {

@@ -232,6 +232,36 @@ export default function Services() {
         </div>
       </section>
 
+      {/* ===== BROCHURE (CSP — moved here, right after Crestron Specialist) ===== */}
+      {services.main_services[0]?.brochure_download && (
+        <section className="section service-brochure">
+          <div className="container">
+            <motion.div className="brochure-card" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <motion.div className="brochure-content" variants={itemVariants}>
+                <Download size={28} className="section-icon" />
+                <div>
+                  <h3>{services.main_services[0].brochure_download.title}</h3>
+                  <p>{services.main_services[0].brochure_download.description}</p>
+                </div>
+              </motion.div>
+              <motion.a
+                href={
+                  services.main_services[0].brochure_download.file_url.startsWith('http')
+                    ? services.main_services[0].brochure_download.file_url
+                    : `${base}${services.main_services[0].brochure_download.file_url.replace(/^\//, '')}`
+                }
+                className="btn btn-primary brochure-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={itemVariants}
+              >
+                <Download size={16} /> {services.main_services[0].brochure_download.button_text}
+              </motion.a>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* ===== AI-AV BRIDGE (shared) ===== */}
       <section
         id="ai-bridge"
@@ -241,20 +271,32 @@ export default function Services() {
         <div className="container">
           <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.h2 variants={itemVariants}>{t('services.ai_bridge')}</motion.h2>
-            <motion.p className="ai-bridge-tagline" variants={itemVariants}>
-              {services.main_services[0]?.ai_bridge_section?.tagline}
-            </motion.p>
-            <motion.p className="section-description" variants={itemVariants}>
-              {services.main_services[0]?.ai_bridge_section?.description}
-            </motion.p>
-            <motion.div className="ai-bridge-capabilities" variants={itemVariants}>
-              {services.main_services[0]?.ai_bridge_section?.capabilities.map((cap, i) => (
-                <div key={i} className="ai-bridge-capability">
-                  <CheckCircle size={16} className="feature-check" />
-                  <span>{cap}</span>
-                </div>
+            {services.main_services[0]?.ai_bridge_section?.subtitle && (
+              <motion.p className="service-detail-subtitle" variants={itemVariants}>
+                {services.main_services[0].ai_bridge_section.subtitle}
+              </motion.p>
+            )}
+            <motion.div className="ai-bridge-description" variants={itemVariants}>
+              {(services.main_services[0]?.ai_bridge_section?.description || '').split('\n\n').map((p, i, arr) => (
+                <p key={i}>{p}</p>
               ))}
             </motion.div>
+            {services.main_services[0]?.ai_bridge_section?.features && (
+              <div className="service-features">
+                <h3>{t('services.what_we_offer')}</h3>
+                <div className="features-list">
+                  {services.main_services[0].ai_bridge_section.features.map((feature, i) => (
+                    <motion.div key={i} className="feature-item" variants={itemVariants}>
+                      <CheckCircle size={18} className="feature-check" />
+                      <div>
+                        <strong>{feature.title}</strong>
+                        <p>{feature.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
@@ -306,32 +348,6 @@ export default function Services() {
                   </div>
                 ))}
               </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      )}
-
-      {/* ===== BROCHURE ===== */}
-      {services.main_services[0]?.brochure_download && (
-        <section className="section service-brochure">
-          <div className="container">
-            <motion.div className="brochure-card" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <motion.div className="brochure-content" variants={itemVariants}>
-                <Download size={28} className="section-icon" />
-                <div>
-                  <h3>{services.main_services[0].brochure_download.title}</h3>
-                  <p>{services.main_services[0].brochure_download.description}</p>
-                </div>
-              </motion.div>
-              <motion.a
-                href={`${base}${services.main_services[0].brochure_download.file_url.replace(/^\//, '')}`}
-                className="btn btn-primary brochure-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={itemVariants}
-              >
-                <Download size={16} /> {services.main_services[0].brochure_download.button_text}
-              </motion.a>
             </motion.div>
           </div>
         </section>
