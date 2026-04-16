@@ -274,73 +274,73 @@
           "items": [
             {
               "src": "/images/interfaces/jp_00.webp",
-              "alt": "Welcome screen",
-              "caption": "Welcome Screen"
+              "alt": "Residential Welcome Screen",
+              "caption": "Residential Welcome Screen"
             },
             {
               "src": "/images/interfaces/jp_01.webp",
-              "alt": "Lighting and audio panel",
-              "caption": "Lighting & Audio Control"
+              "alt": "Advanced Lighting Control with Scene Saving and Multi-Language Label Customization",
+              "caption": "Advanced Lighting Control with Scene Saving and Multi-Language Label Customization"
             },
             {
               "src": "/images/interfaces/jp_02.webp",
-              "alt": "Conference panel",
-              "caption": "Conference Interface"
+              "alt": "HVAC Control with Event Monitoring (Hilo by Hydro-Québec Integration)",
+              "caption": "HVAC Control with Event Monitoring (Hilo by Hydro-Québec Integration)"
             },
             {
               "src": "/images/interfaces/blx_02.webp",
-              "alt": "Multimedia interface",
-              "caption": "Multimedia Selection"
+              "alt": "Simplified Menu Interface on 5\" Wall Keypad",
+              "caption": "Simplified Menu Interface on 5\" Wall Keypad"
             },
             {
               "src": "/images/interfaces/blx_01.webp",
-              "alt": "Selection panel",
-              "caption": "Source Selection"
+              "alt": "Multi-Room Audio Control via 5\" Wall Keypad",
+              "caption": "Multi-Room Audio Control via 5\" Wall Keypad"
             },
             {
               "src": "/images/interfaces/udm_01.webp",
-              "alt": "Combined room layout",
-              "caption": "Combined Room Layout"
+              "alt": "Flexible Multi-Purpose Room Control",
+              "caption": "Flexible Multi-Purpose Room Control"
             },
             {
               "src": "/images/interfaces/w_01.webp",
-              "alt": "Audio mixer panel",
-              "caption": "Audio Mixer"
+              "alt": "Multi-Room Audio Control for Public Areas (Hospitality Environment)",
+              "caption": "Multi-Room Audio Control for Public Areas (Hospitality Environment)"
             },
             {
               "src": "/images/interfaces/agc_01.webp",
-              "alt": "AGC control panel",
-              "caption": "Camera Control"
+              "alt": "Unified Communication Interface for Multi-Purpose Rooms",
+              "caption": "Unified Communication Interface for Multi-Purpose Rooms"
             },
             {
               "src": "/images/interfaces/cl_01.webp",
-              "alt": "Room layout",
-              "caption": "Room Layout View"
+              "alt": "Conference Room Interface with Dynamic Room Combining",
+              "caption": "Conference Room Interface with Dynamic Room Combining"
             },
             {
               "src": "/images/interfaces/bdf_01.webp",
-              "alt": "BDF main view",
-              "caption": "Power & Status Monitoring"
+              "alt": "Power Monitoring and System Control",
+              "caption": "Power Monitoring and System Control"
             },
             {
               "src": "/images/interfaces/bdf_02.webp",
-              "alt": "BDF DSP view",
-              "caption": "DSP Channels"
+              "alt": "Equipment Monitoring and Diagnostics",
+              "caption": "Equipment Monitoring and Diagnostics"
             },
             {
               "src": "/images/interfaces/bdf_03.webp",
-              "alt": "BDF presets",
-              "caption": "Presets & Scenes"
+              "alt": "Advanced Settings with Custom Mode Saving",
+              "caption": "Advanced Settings with Custom Mode Saving"
             },
             {
               "src": "/images/interfaces/bdf_04.webp",
-              "alt": "BDF interface",
-              "caption": "Mode Selection"
+              "alt": "Crestron NDI Routing Application",
+              "caption": "Crestron NDI Routing Application"
             },
             {
               "src": "/images/interfaces/bdf_05.webp",
-              "alt": "BDF settings",
-              "caption": "Settings & Configuration"
+              "alt": "KVM System Demonstration",
+              "caption": "KVM System Demonstration"
             }
           ]
         },
@@ -533,23 +533,23 @@
           "items": [
             {
               "src": "/images/interfaces/jp_02.webp",
-              "alt": "Conference panel",
-              "caption": "Conference Interface"
+              "alt": "HVAC Control with Event Monitoring (Hilo by Hydro-Québec Integration)",
+              "caption": "HVAC Control with Event Monitoring (Hilo by Hydro-Québec Integration)"
             },
             {
               "src": "/images/interfaces/jp_01.webp",
-              "alt": "Lighting and audio panel",
-              "caption": "Lighting & Audio"
+              "alt": "Advanced Lighting Control with Scene Saving and Multi-Language Label Customization",
+              "caption": "Advanced Lighting Control with Scene Saving and Multi-Language Label Customization"
             },
             {
               "src": "/images/interfaces/blx_02.webp",
-              "alt": "Multimedia interface",
-              "caption": "Multimedia Selection"
+              "alt": "Simplified Menu Interface on 5\" Wall Keypad",
+              "caption": "Simplified Menu Interface on 5\" Wall Keypad"
             },
             {
               "src": "/images/interfaces/udm_01.webp",
-              "alt": "Combined room layout",
-              "caption": "Combined Room Layout"
+              "alt": "Flexible Multi-Purpose Room Control",
+              "caption": "Flexible Multi-Purpose Room Control"
             }
           ]
         },

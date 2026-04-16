@@ -274,73 +274,73 @@
           "items": [
             {
               "src": "/images/interfaces/jp_00.webp",
-              "alt": "Écran d'accueil",
-              "caption": "Écran d'accueil"
+              "alt": "Écran d'accueil résidentiel",
+              "caption": "Écran d'accueil résidentiel"
             },
             {
               "src": "/images/interfaces/jp_01.webp",
-              "alt": "Panneau éclairage et audio",
-              "caption": "Contrôle éclairage et audio"
+              "alt": "Contrôle d'éclairage avancé avec sauvegarde de scènes et étiquettes multilingues",
+              "caption": "Contrôle d'éclairage avancé avec sauvegarde de scènes et étiquettes multilingues"
             },
             {
               "src": "/images/interfaces/jp_02.webp",
-              "alt": "Panneau de conférence",
-              "caption": "Interface de conférence"
+              "alt": "Contrôle CVC avec surveillance d'événements (Intégration Hilo par Hydro-Québec)",
+              "caption": "Contrôle CVC avec surveillance d'événements (Intégration Hilo par Hydro-Québec)"
             },
             {
               "src": "/images/interfaces/blx_02.webp",
-              "alt": "Interface multimédia",
-              "caption": "Sélection multimédia"
+              "alt": "Interface menu simplifiée sur clavier mural 5\"",
+              "caption": "Interface menu simplifiée sur clavier mural 5\""
             },
             {
               "src": "/images/interfaces/blx_01.webp",
-              "alt": "Panneau de sélection",
-              "caption": "Sélection des sources"
+              "alt": "Contrôle audio multi-pièces via clavier mural 5\"",
+              "caption": "Contrôle audio multi-pièces via clavier mural 5\""
             },
             {
               "src": "/images/interfaces/udm_01.webp",
-              "alt": "Plan de salle combinée",
-              "caption": "Plan de salle combinée"
+              "alt": "Contrôle de salle polyvalente flexible",
+              "caption": "Contrôle de salle polyvalente flexible"
             },
             {
               "src": "/images/interfaces/w_01.webp",
-              "alt": "Console audio",
-              "caption": "Mixeur audio"
+              "alt": "Contrôle audio multi-pièces pour espaces publics (environnement hôtelier)",
+              "caption": "Contrôle audio multi-pièces pour espaces publics (environnement hôtelier)"
             },
             {
               "src": "/images/interfaces/agc_01.webp",
-              "alt": "Contrôle AGC",
-              "caption": "Contrôle caméra"
+              "alt": "Interface de communication unifiée pour salles polyvalentes",
+              "caption": "Interface de communication unifiée pour salles polyvalentes"
             },
             {
               "src": "/images/interfaces/cl_01.webp",
-              "alt": "Plan de salle",
-              "caption": "Vue de salle"
+              "alt": "Interface de salle de conférence avec combinaison dynamique",
+              "caption": "Interface de salle de conférence avec combinaison dynamique"
             },
             {
               "src": "/images/interfaces/bdf_01.webp",
-              "alt": "BDF vue principale",
-              "caption": "Surveillance puissance et statut"
+              "alt": "Surveillance de l'alimentation et contrôle système",
+              "caption": "Surveillance de l'alimentation et contrôle système"
             },
             {
               "src": "/images/interfaces/bdf_02.webp",
-              "alt": "BDF vue DSP",
-              "caption": "Canaux DSP"
+              "alt": "Surveillance et diagnostic des équipements",
+              "caption": "Surveillance et diagnostic des équipements"
             },
             {
               "src": "/images/interfaces/bdf_03.webp",
-              "alt": "BDF préréglages",
-              "caption": "Préréglages et scènes"
+              "alt": "Paramètres avancés avec sauvegarde de modes personnalisés",
+              "caption": "Paramètres avancés avec sauvegarde de modes personnalisés"
             },
             {
               "src": "/images/interfaces/bdf_04.webp",
-              "alt": "BDF interface",
-              "caption": "Sélection de mode"
+              "alt": "Application de routage Crestron NDI",
+              "caption": "Application de routage Crestron NDI"
             },
             {
               "src": "/images/interfaces/bdf_05.webp",
-              "alt": "BDF paramètres",
-              "caption": "Paramètres et configuration"
+              "alt": "Démonstration de système KVM",
+              "caption": "Démonstration de système KVM"
             }
           ]
         },
@@ -533,23 +533,23 @@
           "items": [
             {
               "src": "/images/interfaces/jp_02.webp",
-              "alt": "Panneau de conférence",
-              "caption": "Interface de conférence"
+              "alt": "Contrôle CVC avec surveillance d'événements (Intégration Hilo par Hydro-Québec)",
+              "caption": "Contrôle CVC avec surveillance d'événements (Intégration Hilo par Hydro-Québec)"
             },
             {
               "src": "/images/interfaces/jp_01.webp",
-              "alt": "Panneau éclairage et audio",
-              "caption": "Éclairage et audio"
+              "alt": "Contrôle d'éclairage avancé avec sauvegarde de scènes et étiquettes multilingues",
+              "caption": "Contrôle d'éclairage avancé avec sauvegarde de scènes et étiquettes multilingues"
             },
             {
               "src": "/images/interfaces/blx_02.webp",
-              "alt": "Interface multimédia",
-              "caption": "Sélection multimédia"
+              "alt": "Interface menu simplifiée sur clavier mural 5\"",
+              "caption": "Interface menu simplifiée sur clavier mural 5\""
             },
             {
               "src": "/images/interfaces/udm_01.webp",
-              "alt": "Plan de salle combinée",
-              "caption": "Plan de salle combinée"
+              "alt": "Contrôle de salle polyvalente flexible",
+              "caption": "Contrôle de salle polyvalente flexible"
             }
           ]
         },
