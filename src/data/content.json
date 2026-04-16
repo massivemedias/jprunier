@@ -203,15 +203,11 @@
           },
           {
             "title": "AI Integration Modules",
-            "description": "Development of drivers, plugins, and middleware connecting AV systems to AI platforms such as OpenAI."
+            "description": "Development of drivers, plugins, and middleware connecting AV systems to AI platforms like OpenAI, Azure Cognitive Services, and custom ML models."
           },
           {
             "title": "User Interfaces",
             "description": "Intuitive touch panels, responsive web interfaces, and mobile control applications designed for seamless user experience."
-          },
-          {
-            "title": "AI Integration Modules",
-            "description": "Development of plugins and drivers connecting AV systems to AI platforms like OpenAI, Azure Cognitive Services, and custom ML models."
           },
           {
             "title": "Cloud & DevOps for AV Systems",

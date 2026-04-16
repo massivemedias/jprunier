@@ -203,15 +203,11 @@
           },
           {
             "title": "Modules d'intégration IA",
-            "description": "Développement de pilotes, plugins et middleware connectant les systèmes AV aux plateformes IA comme OpenAI."
+            "description": "Développement de pilotes, plugins et middleware connectant les systèmes AV aux plateformes IA comme OpenAI, Azure Cognitive Services et modèles ML personnalisés."
           },
           {
             "title": "Interfaces utilisateur",
             "description": "Panneaux tactiles intuitifs, interfaces web responsives et applications de contrôle mobile conçues pour une expérience utilisateur fluide."
-          },
-          {
-            "title": "Modules d'intégration IA",
-            "description": "Développement de plugins et pilotes connectant les systèmes AV aux plateformes IA comme OpenAI, Azure Cognitive Services et modèles ML personnalisés."
           },
           {
             "title": "Cloud & DevOps pour systèmes AV",
