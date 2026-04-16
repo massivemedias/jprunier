@@ -360,17 +360,6 @@ export default function Services() {
         </section>
       )}
 
-      {/* ===== CTA ===== */}
-      <section className="section services-cta-section">
-        <div className="container text-center">
-          <h2>{t('services.need_help')}</h2>
-          <p>{t('services.cta_text')}</p>
-          <Link to="/contact" className="btn btn-primary">
-            <Mail size={16} /> {t('nav.contact')}
-          </Link>
-        </div>
-      </section>
-
       <ImageLightbox
         isOpen={lightbox.open}
         images={lightbox.images}
