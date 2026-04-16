@@ -8,15 +8,15 @@
       "montreal": {
         "city": "Montréal",
         "country": "Canada",
-        "address": "1055 Rue Lucien-L'Allier, QC H3G 0E7",
-        "phone": "+1 438 823-2048",
+        "address": "1055 Rue Lucien-L'Allier, Suite #1049, QC H3G 0E7",
+        "phone": "+1 514 447-3809",
         "email": "info@jprunier.com"
       },
       "paris": {
         "city": "Paris",
         "country": "France",
         "address": "10 Rue de Penthièvre, 75008",
-        "phone": "+1 438 823-2048",
+        "phone": "+33 1 89 48 06 62",
         "email": "info@jprunier.com"
       }
     },

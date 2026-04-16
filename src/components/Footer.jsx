@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useContent, useT } from '../context/LanguageContext';
 import './Footer.css';
@@ -9,26 +9,9 @@ export default function Footer() {
   const { content } = useContent();
   const t = useT();
   const { company } = content;
-  const location = useLocation();
-  const isHome = location.pathname === '/';
 
   return (
     <>
-      {/* CTA section — only on non-home pages */}
-      {!isHome && (
-        <section className="footer-cta-section">
-          <div className="container">
-            <div className="footer-cta-content">
-              <h2>{content.home.cta_section.title}</h2>
-              <p>{content.home.cta_section.subtitle}</p>
-              <Link to="/contact" className="btn btn-primary">
-                {content.home.cta_section.button}
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
       <footer className="footer">
         <div className="container">
           {/* Single row layout */}
