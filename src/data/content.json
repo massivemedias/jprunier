@@ -355,24 +355,16 @@
         "title": "Consulting",
         "description": "Our consulting services support engineering firms, technology architects, audiovisual consultants and system integrators in the design, optimization and standardization of complex technology environments.",
         "icon": "Compass",
-        "page_title": "AV-IT-AI Consulting",
-        "long_description": "JPrunier's consulting practice bridges the gap between audiovisual engineering, IT infrastructure, and artificial intelligence. We work alongside architecture firms, engineering consultancies, and enterprise IT teams to design technology ecosystems that are future-ready. Whether you're planning a new headquarters, upgrading a campus, or exploring AI-enhanced collaboration spaces, our consultants bring deep technical knowledge and industry experience to every engagement.",
+        "page_title": "Consulting",
+        "long_description": "JPrunier provides consulting services at the intersection of audiovisual engineering, IT infrastructure, and artificial intelligence.\n\nOur approach is grounded in real-world implementation experience. We work alongside architects, engineering firms, consultants, and enterprise IT teams to define, structure, and validate technology ecosystems built for performance, scalability, and long-term evolution.\n\nWhether designing new environments or transforming existing infrastructures, we ensure every system is aligned with operational, technical, and user experience objectives.",
         "features": [
           {
             "title": "Technology Assessment",
-            "description": "Comprehensive evaluation of existing AV and IT infrastructure with recommendations for modernization and optimization."
+            "description": "Comprehensive evaluation of existing AV and IT infrastructures with recommendations for modernization, optimization, and future scalability."
           },
           {
-            "title": "System Design & Architecture",
-            "description": "Detailed technical designs for conference rooms, auditoriums, command centers, and smart building environments."
-          },
-          {
-            "title": "Vendor Selection Support",
-            "description": "Impartial guidance on technology selection, helping you choose the right platforms and equipment for your needs."
-          },
-          {
-            "title": "Project Management",
-            "description": "End-to-end project oversight ensuring timelines, budgets, and quality standards are met throughout the integration process."
+            "title": "Technology & Vendor Strategy",
+            "description": "Independent and vendor-neutral guidance to define the most appropriate platforms, standards, and equipment aligned with your operational objectives."
           }
         ],
         "technologies": [
@@ -413,7 +405,8 @@
             "15–30% of resource time dedicated to continuing education",
             "Manufacturer-independent recommendations"
           ]
-        }
+        },
+        "subtitle": "AV, IT & AI Systems Strategy"
       },
       {
         "id": "administration",

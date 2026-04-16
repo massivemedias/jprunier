@@ -352,27 +352,19 @@
       },
       {
         "id": "consulting",
-        "title": "Conseil",
-        "description": "Nos services de conseil accompagnent les firmes d'ingénierie, les architectes technologiques, les consultants audiovisuels et les intégrateurs dans la conception, l'optimisation et la standardisation d'environnements technologiques complexes.",
+        "title": "Consultation",
+        "description": "Nos services de consultation accompagnent les firmes d'ingénierie, les architectes technologiques, les consultants audiovisuels et les intégrateurs dans la conception, l'optimisation et la standardisation d'environnements technologiques complexes.",
         "icon": "Compass",
-        "page_title": "Conseil AV-TI-IA",
-        "long_description": "La pratique de conseil de JPrunier fait le pont entre l'ingénierie audiovisuelle, l'infrastructure TI et l'intelligence artificielle. Nous travaillons aux côtés des firmes d'architecture, des cabinets d'ingénierie et des équipes TI d'entreprise pour concevoir des écosystèmes technologiques prêts pour l'avenir. Que vous planifiiez un nouveau siège social, modernisiez un campus ou exploriez des espaces de collaboration améliorés par l'IA, nos consultants apportent une connaissance technique approfondie et une expérience sectorielle à chaque mandat.",
+        "page_title": "Consultation",
+        "long_description": "JPrunier offre des services de consultation à l'intersection de l'ingénierie audiovisuelle, de l'infrastructure TI et de l'intelligence artificielle.\n\nNotre approche s'appuie sur une expérience concrète de mise en œuvre. Nous travaillons aux côtés des architectes, firmes d'ingénierie, consultants et équipes TI d'entreprise pour définir, structurer et valider des écosystèmes technologiques conçus pour la performance, l'évolutivité et l'évolution à long terme.\n\nQue ce soit pour concevoir de nouveaux environnements ou transformer des infrastructures existantes, nous nous assurons que chaque système est aligné avec les objectifs opérationnels, techniques et d'expérience utilisateur.",
         "features": [
           {
             "title": "Évaluation technologique",
-            "description": "Évaluation complète de l'infrastructure AV et TI existante avec recommandations de modernisation et d'optimisation."
+            "description": "Évaluation complète des infrastructures AV et TI existantes avec recommandations de modernisation, d'optimisation et d'évolutivité future."
           },
           {
-            "title": "Conception et architecture",
-            "description": "Conceptions techniques détaillées pour salles de conférence, auditoriums, centres de commandement et environnements de bâtiments intelligents."
-          },
-          {
-            "title": "Sélection de fournisseurs",
-            "description": "Accompagnement impartial dans le choix des technologies, vous aidant à sélectionner les plateformes et équipements adaptés à vos besoins."
-          },
-          {
-            "title": "Gestion de projet",
-            "description": "Supervision de bout en bout garantissant le respect des échéanciers, budgets et standards de qualité tout au long du processus d'intégration."
+            "title": "Stratégie technologique et fournisseurs",
+            "description": "Conseils indépendants et neutres pour définir les plateformes, standards et équipements les plus appropriés alignés avec vos objectifs opérationnels."
           }
         ],
         "technologies": [
@@ -393,7 +385,7 @@
             "Conception applicative et développement sur mesure (AV-TI-IA)",
             "Analyse technique et validation d'architectures",
             "Surveillance et diagnostic de systèmes existants",
-            "Conseil technologique sur les meilleures pratiques d'intégration",
+            "Consultation technologique sur les meilleures pratiques d'intégration",
             "Encadrement de projets et supervision d'installation"
           ]
         },
@@ -413,7 +405,8 @@
             "15 à 30 % du temps des ressources dédié à la formation continue",
             "Recommandations indépendantes des manufacturiers"
           ]
-        }
+        },
+        "subtitle": "Stratégie systèmes AV, TI & IA"
       },
       {
         "id": "administration",
@@ -484,7 +477,7 @@
         "description": "JPrunier Inc. fournit l'implémentation et la configuration logicielle pour tous les équipements audiovisuels.",
         "icon": "Wrench",
         "page_title": "Intégration AV-IA",
-        "long_description": "JPrunier livre des services d'intégration clé en main qui rassemblent matériel audiovisuel, systèmes de contrôle, réseautage et capacités IA dans des environnements cohérents et fiables. Des salles de conseil aux classes en passant par les centres de commandement à grande échelle, nous gérons le cycle de déploiement complet. Notre méthodologie d'intégration assure que chaque composant fonctionne ensemble harmonieusement, avec une mise en service et une documentation rigoureuses.",
+        "long_description": "JPrunier livre des services d'intégration clé en main qui rassemblent matériel audiovisuel, systèmes de contrôle, réseautage et capacités IA dans des environnements cohérents et fiables. Des salles de consultation aux classes en passant par les centres de commandement à grande échelle, nous gérons le cycle de déploiement complet. Notre méthodologie d'intégration assure que chaque composant fonctionne ensemble harmonieusement, avec une mise en service et une documentation rigoureuses.",
         "features": [
           {
             "title": "Déploiement matériel",
