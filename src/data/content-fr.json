@@ -265,54 +265,74 @@
           "subtitle": "Conception et développement d'interfaces tactiles intuitives, de projets CHTML5 réactifs, de tableaux de bord web et d'applications de contrôle mobile.",
           "items": [
             {
-              "src": "/images/interfaces/mcd-byom.webp",
-              "alt": "Panneau salle BYOM",
-              "caption": "Bring Your Own Meeting"
+              "src": "/images/interfaces/jp_00.webp",
+              "alt": "Écran d'accueil",
+              "caption": "Écran d'accueil"
             },
             {
-              "src": "/images/interfaces/mcd-presentation.webp",
-              "alt": "Panneau mode présentation",
-              "caption": "Mode présentation"
+              "src": "/images/interfaces/jp_01.webp",
+              "alt": "Panneau éclairage et audio",
+              "caption": "Contrôle éclairage et audio"
             },
             {
-              "src": "/images/interfaces/mcd-vc.webp",
-              "alt": "Panneau vidéoconférence",
-              "caption": "Vidéoconférence"
+              "src": "/images/interfaces/jp_02.webp",
+              "alt": "Panneau de conférence",
+              "caption": "Interface de conférence"
             },
             {
-              "src": "/images/interfaces/vc-odc.webp",
-              "alt": "Vidéoconférence ODC",
-              "caption": "Collaboration numérique ouverte"
+              "src": "/images/interfaces/blx_02.webp",
+              "alt": "Interface multimédia",
+              "caption": "Sélection multimédia"
             },
             {
-              "src": "/images/interfaces/screen-01.webp",
-              "alt": "Détail interface de contrôle",
-              "caption": "Détail interface"
+              "src": "/images/interfaces/blx_01.webp",
+              "alt": "Panneau de sélection",
+              "caption": "Sélection des sources"
             },
             {
-              "src": "/images/interfaces/screen-02.webp",
-              "alt": "Détail interface de contrôle",
-              "caption": "Détail interface"
+              "src": "/images/interfaces/udm_01.webp",
+              "alt": "Plan de salle combinée",
+              "caption": "Plan de salle combinée"
             },
             {
-              "src": "/images/interfaces/screen-03.webp",
-              "alt": "Détail interface de contrôle",
-              "caption": "Détail interface"
+              "src": "/images/interfaces/w_01.webp",
+              "alt": "Console audio",
+              "caption": "Mixeur audio"
             },
             {
-              "src": "/images/interfaces/screen-04.webp",
-              "alt": "Détail interface de contrôle",
-              "caption": "Détail interface"
+              "src": "/images/interfaces/agc_01.webp",
+              "alt": "Contrôle AGC",
+              "caption": "Contrôle caméra"
             },
             {
-              "src": "/images/interfaces/screen-05.webp",
-              "alt": "Détail interface de contrôle",
-              "caption": "Détail interface"
+              "src": "/images/interfaces/cl_01.webp",
+              "alt": "Plan de salle",
+              "caption": "Vue de salle"
             },
             {
-              "src": "/images/interfaces/screen-06.webp",
-              "alt": "Détail interface de contrôle",
-              "caption": "Détail interface"
+              "src": "/images/interfaces/bdf_01.webp",
+              "alt": "BDF vue principale",
+              "caption": "Surveillance puissance et statut"
+            },
+            {
+              "src": "/images/interfaces/bdf_02.webp",
+              "alt": "BDF vue DSP",
+              "caption": "Canaux DSP"
+            },
+            {
+              "src": "/images/interfaces/bdf_03.webp",
+              "alt": "BDF préréglages",
+              "caption": "Préréglages et scènes"
+            },
+            {
+              "src": "/images/interfaces/bdf_04.webp",
+              "alt": "BDF interface",
+              "caption": "Sélection de mode"
+            },
+            {
+              "src": "/images/interfaces/bdf_05.webp",
+              "alt": "BDF paramètres",
+              "caption": "Paramètres et configuration"
             }
           ]
         },
@@ -514,24 +534,24 @@
           "subtitle": "Interfaces tactiles personnalisées conçues et programmées par JPrunier",
           "items": [
             {
-              "src": "/images/interfaces/mcd-byom.webp",
-              "alt": "Panneau salle BYOM",
-              "caption": "Bring Your Own Meeting"
+              "src": "/images/interfaces/jp_02.webp",
+              "alt": "Panneau de conférence",
+              "caption": "Interface de conférence"
             },
             {
-              "src": "/images/interfaces/mcd-presentation.webp",
-              "alt": "Panneau mode présentation",
-              "caption": "Mode présentation"
+              "src": "/images/interfaces/jp_01.webp",
+              "alt": "Panneau éclairage et audio",
+              "caption": "Éclairage et audio"
             },
             {
-              "src": "/images/interfaces/mcd-vc.webp",
-              "alt": "Panneau vidéoconférence",
-              "caption": "Vidéoconférence"
+              "src": "/images/interfaces/blx_02.webp",
+              "alt": "Interface multimédia",
+              "caption": "Sélection multimédia"
             },
             {
-              "src": "/images/interfaces/vc-odc.webp",
-              "alt": "Vidéoconférence ODC",
-              "caption": "Collaboration numérique ouverte"
+              "src": "/images/interfaces/udm_01.webp",
+              "alt": "Plan de salle combinée",
+              "caption": "Plan de salle combinée"
             }
           ]
         },

@@ -265,54 +265,74 @@
           "subtitle": "Design and development of intuitive touch panel interfaces, responsive CHTML5 projects, web-based dashboards, and mobile control apps.",
           "items": [
             {
-              "src": "/images/interfaces/mcd-byom.webp",
-              "alt": "BYOM Meeting Room Panel",
-              "caption": "Bring Your Own Meeting"
+              "src": "/images/interfaces/jp_00.webp",
+              "alt": "Welcome screen",
+              "caption": "Welcome Screen"
             },
             {
-              "src": "/images/interfaces/mcd-presentation.webp",
-              "alt": "Presentation Mode Panel",
-              "caption": "Presentation Mode"
+              "src": "/images/interfaces/jp_01.webp",
+              "alt": "Lighting and audio panel",
+              "caption": "Lighting & Audio Control"
             },
             {
-              "src": "/images/interfaces/mcd-vc.webp",
-              "alt": "Video Conference Panel",
-              "caption": "Video Conference"
+              "src": "/images/interfaces/jp_02.webp",
+              "alt": "Conference panel",
+              "caption": "Conference Interface"
             },
             {
-              "src": "/images/interfaces/vc-odc.webp",
-              "alt": "ODC Video Conference",
-              "caption": "Open Digital Collaboration"
+              "src": "/images/interfaces/blx_02.webp",
+              "alt": "Multimedia interface",
+              "caption": "Multimedia Selection"
             },
             {
-              "src": "/images/interfaces/screen-01.webp",
-              "alt": "Control Interface Detail",
-              "caption": "Interface Detail"
+              "src": "/images/interfaces/blx_01.webp",
+              "alt": "Selection panel",
+              "caption": "Source Selection"
             },
             {
-              "src": "/images/interfaces/screen-02.webp",
-              "alt": "Control Interface Detail",
-              "caption": "Interface Detail"
+              "src": "/images/interfaces/udm_01.webp",
+              "alt": "Combined room layout",
+              "caption": "Combined Room Layout"
             },
             {
-              "src": "/images/interfaces/screen-03.webp",
-              "alt": "Control Interface Detail",
-              "caption": "Interface Detail"
+              "src": "/images/interfaces/w_01.webp",
+              "alt": "Audio mixer panel",
+              "caption": "Audio Mixer"
             },
             {
-              "src": "/images/interfaces/screen-04.webp",
-              "alt": "Control Interface Detail",
-              "caption": "Interface Detail"
+              "src": "/images/interfaces/agc_01.webp",
+              "alt": "AGC control panel",
+              "caption": "Camera Control"
             },
             {
-              "src": "/images/interfaces/screen-05.webp",
-              "alt": "Control Interface Detail",
-              "caption": "Interface Detail"
+              "src": "/images/interfaces/cl_01.webp",
+              "alt": "Room layout",
+              "caption": "Room Layout View"
             },
             {
-              "src": "/images/interfaces/screen-06.webp",
-              "alt": "Control Interface Detail",
-              "caption": "Interface Detail"
+              "src": "/images/interfaces/bdf_01.webp",
+              "alt": "BDF main view",
+              "caption": "Power & Status Monitoring"
+            },
+            {
+              "src": "/images/interfaces/bdf_02.webp",
+              "alt": "BDF DSP view",
+              "caption": "DSP Channels"
+            },
+            {
+              "src": "/images/interfaces/bdf_03.webp",
+              "alt": "BDF presets",
+              "caption": "Presets & Scenes"
+            },
+            {
+              "src": "/images/interfaces/bdf_04.webp",
+              "alt": "BDF interface",
+              "caption": "Mode Selection"
+            },
+            {
+              "src": "/images/interfaces/bdf_05.webp",
+              "alt": "BDF settings",
+              "caption": "Settings & Configuration"
             }
           ]
         },
@@ -514,24 +534,24 @@
           "subtitle": "Custom touch panel interfaces designed and programmed by JPrunier",
           "items": [
             {
-              "src": "/images/interfaces/mcd-byom.webp",
-              "alt": "BYOM Meeting Room Panel",
-              "caption": "Bring Your Own Meeting"
+              "src": "/images/interfaces/jp_02.webp",
+              "alt": "Conference panel",
+              "caption": "Conference Interface"
             },
             {
-              "src": "/images/interfaces/mcd-presentation.webp",
-              "alt": "Presentation Mode Panel",
-              "caption": "Presentation Mode"
+              "src": "/images/interfaces/jp_01.webp",
+              "alt": "Lighting and audio panel",
+              "caption": "Lighting & Audio"
             },
             {
-              "src": "/images/interfaces/mcd-vc.webp",
-              "alt": "Video Conference Panel",
-              "caption": "Video Conference"
+              "src": "/images/interfaces/blx_02.webp",
+              "alt": "Multimedia interface",
+              "caption": "Multimedia Selection"
             },
             {
-              "src": "/images/interfaces/vc-odc.webp",
-              "alt": "ODC Video Conference",
-              "caption": "Open Digital Collaboration"
+              "src": "/images/interfaces/udm_01.webp",
+              "alt": "Combined room layout",
+              "caption": "Combined Room Layout"
             }
           ]
         },
