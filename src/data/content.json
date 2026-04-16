@@ -413,24 +413,20 @@
         "title": "Administration",
         "description": "Our administration services ensure the reliability, supervision and performance of audiovisual and network systems.",
         "icon": "LayoutDashboard",
-        "page_title": "System Administration",
-        "long_description": "Keeping AV and IT systems running at peak performance requires constant vigilance and expertise. JPrunier provides comprehensive administration services including remote monitoring, proactive maintenance, firmware management, and incident response. Our team acts as an extension of your IT department, ensuring uptime and reliability across all your audiovisual and network infrastructure.",
+        "page_title": "Administration",
+        "long_description": "Keeping AV and IT systems running at peak performance requires continuous monitoring, technical expertise, and operational discipline.\n\nJPrunier delivers administration services designed to transform audiovisual systems into managed, observable, and resilient infrastructures. Acting as an extension of your IT team, we ensure reliability, performance, and long-term system stability across complex AV and network environments.",
         "features": [
           {
-            "title": "Remote Monitoring & Support",
-            "description": "24/7 monitoring of AV systems with proactive alerts and rapid remote troubleshooting to minimize downtime."
+            "title": "Firmware & Software Lifecycle Management",
+            "description": "Controlled update cycles for control processors, DSPs, network devices, and collaboration platforms, ensuring stability, compatibility, and security."
           },
           {
-            "title": "Firmware & Software Updates",
-            "description": "Scheduled maintenance cycles for control processors, DSPs, network switches, and collaboration platforms."
+            "title": "Network & AV-over-IP Administration",
+            "description": "VLAN configuration, QoS optimization, and security management for AV-over-IP, Dante, and converged network infrastructures."
           },
           {
-            "title": "Network Administration",
-            "description": "VLAN configuration, QoS optimization, and security management for AV-over-IP and Dante networks."
-          },
-          {
-            "title": "Performance Reporting",
-            "description": "Regular reports on system health, usage analytics, and recommendations for capacity planning."
+            "title": "Performance & System Analytics",
+            "description": "Monitoring of system health, usage data, and performance metrics, with actionable insights for optimization and capacity planning."
           }
         ],
         "technologies": [
@@ -469,7 +465,8 @@
             "15–30% of resource time dedicated to continuing education",
             "Manufacturer-independent recommendations"
           ]
-        }
+        },
+        "subtitle": "Managed AV & IT Infrastructure"
       },
       {
         "id": "integration",

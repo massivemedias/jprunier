@@ -413,24 +413,20 @@
         "title": "Administration",
         "description": "Nos services d'administration assurent la fiabilité, la supervision et la performance des systèmes audiovisuels et réseau.",
         "icon": "LayoutDashboard",
-        "page_title": "Administration système",
-        "long_description": "Maintenir les systèmes AV et TI à leur performance optimale exige une vigilance et une expertise constantes. JPrunier offre des services d'administration complets incluant la surveillance à distance, la maintenance proactive, la gestion des micrologiciels et la réponse aux incidents. Notre équipe agit comme une extension de votre département TI, assurant la disponibilité et la fiabilité de l'ensemble de votre infrastructure audiovisuelle et réseau.",
+        "page_title": "Administration",
+        "long_description": "Maintenir les systèmes AV et TI à leur niveau de performance optimal exige une surveillance continue, une expertise technique et une rigueur opérationnelle.\n\nJPrunier offre des services d'administration conçus pour transformer les systèmes audiovisuels en infrastructures gérées, observables et résilientes. Agissant comme une extension de votre équipe TI, nous assurons la fiabilité, la performance et la stabilité à long terme à travers des environnements AV et réseau complexes.",
         "features": [
           {
-            "title": "Surveillance et support à distance",
-            "description": "Surveillance 24/7 des systèmes AV avec alertes proactives et dépannage à distance rapide pour minimiser les temps d'arrêt."
+            "title": "Gestion du cycle de vie firmware et logiciel",
+            "description": "Cycles de mise à jour contrôlés pour processeurs de contrôle, DSP, équipements réseau et plateformes de collaboration, assurant stabilité, compatibilité et sécurité."
           },
           {
-            "title": "Mises à jour logicielles",
-            "description": "Cycles de maintenance planifiés pour processeurs de contrôle, DSP, commutateurs réseau et plateformes de collaboration."
+            "title": "Administration réseau et AV-over-IP",
+            "description": "Configuration VLAN, optimisation QoS et gestion de la sécurité pour AV-over-IP, Dante et infrastructures réseau convergées."
           },
           {
-            "title": "Administration réseau",
-            "description": "Configuration VLAN, optimisation QoS et gestion de la sécurité pour les réseaux AV-sur-IP et Dante."
-          },
-          {
-            "title": "Rapports de performance",
-            "description": "Rapports réguliers sur la santé des systèmes, analytiques d'utilisation et recommandations de planification de capacité."
+            "title": "Performance et analyse système",
+            "description": "Surveillance de la santé des systèmes, données d'utilisation et métriques de performance, avec recommandations exploitables pour l'optimisation et la planification de capacité."
           }
         ],
         "technologies": [
@@ -469,7 +465,8 @@
             "15 à 30 % du temps des ressources dédié à la formation continue",
             "Recommandations indépendantes des manufacturiers"
           ]
-        }
+        },
+        "subtitle": "Infrastructure AV et TI infogérée"
       },
       {
         "id": "integration",
