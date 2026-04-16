@@ -96,7 +96,7 @@ export default function Services() {
       {/* CSP Banner — white background, between submenu and first section */}
       <section className="services-csp-banner">
         <div className="container">
-          <img src={`${base}images/csp-logo.svg`} alt="Crestron Services Provider" className="services-csp-banner-logo" />
+          <img src={`${base}images/csp-logo.webp`} alt="Crestron Services Provider" className="services-csp-banner-logo" />
         </div>
       </section>
 
@@ -220,7 +220,7 @@ export default function Services() {
               </motion.h2>
               {services.crestron_section.show_csp_logo && (
                 <motion.div className="crestron-csp-badge" variants={itemVariants}>
-                  <img src={`${base}images/csp-logo.svg`} alt="Crestron Services Provider" />
+                  <img src={`${base}images/csp-logo.webp`} alt="Crestron Services Provider" />
                 </motion.div>
               )}
             </div>

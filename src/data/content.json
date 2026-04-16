@@ -57,15 +57,15 @@
     "tech_partners": [
       {
         "name": "Microsoft",
-        "logo": "/images/microsoft-bw.png"
+        "logo": "/images/microsoft-bw.webp"
       },
       {
         "name": "Crestron",
-        "logo": "/images/crestron-bw.png"
+        "logo": "/images/crestron-bw.webp"
       },
       {
         "name": "OpenAI",
-        "logo": "/images/openai-bw.png"
+        "logo": "/images/openai-bw.webp"
       },
       {
         "name": "Q-SYS",
@@ -73,31 +73,31 @@
       },
       {
         "name": "Biamp",
-        "logo": "/images/biamp-logo.png"
+        "logo": "/images/biamp-logo.webp"
       },
       {
         "name": "NDI",
-        "logo": "/images/ndi-logo.svg"
+        "logo": "/images/ndi-logo.webp"
       },
       {
         "name": "Dante",
-        "logo": "/images/dante-bw.png"
+        "logo": "/images/dante-bw.webp"
       },
       {
         "name": "Netgear",
-        "logo": "/images/netgear-logo.svg"
+        "logo": "/images/netgear-logo.webp"
       },
       {
         "name": "Shure",
-        "logo": "/images/shure-logo.png"
+        "logo": "/images/shure-logo.webp"
       },
       {
         "name": "Sennheiser",
-        "logo": "/images/sennheiser-logo.svg"
+        "logo": "/images/sennheiser-logo.webp"
       },
       {
         "name": "Yamaha",
-        "logo": "/images/yamaha-logo.svg"
+        "logo": "/images/yamaha-logo.webp"
       }
     ],
     "connecting_items": [

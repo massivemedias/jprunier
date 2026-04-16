@@ -64,7 +64,7 @@ export default function Footer() {
 
             {/* CSP logo */}
             <div className="footer-csp">
-              <img src={`${base}images/csp-logo.svg`} alt="Crestron Services Provider" className="footer-csp-logo" />
+              <img src={`${base}images/csp-logo.webp`} alt="Crestron Services Provider" className="footer-csp-logo" />
             </div>
 
             {/* Social */}
