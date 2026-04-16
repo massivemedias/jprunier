@@ -85,6 +85,37 @@
   margin-bottom: var(--spacing-lg);
 }
 
+/* Crestron header with CSP badge on the right */
+.crestron-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.crestron-header .section-title-left {
+  margin-bottom: 0;
+}
+
+.crestron-csp-badge {
+  background: white;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.crestron-csp-badge img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .crestron-csp-badge img { height: 40px; }
+}
+
 .crestron-description {
   font-size: var(--font-size-lg);
   color: var(--gray-light);

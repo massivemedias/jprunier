@@ -575,17 +575,18 @@
     ],
     "crestron_section": {
       "title": "Crestron Control System Specialist",
-      "description": "We are certified Crestron specialists with deep expertise in Crestron-based control systems.",
+      "description": "As a Crestron Service Provider (CSP), we design and develop advanced, high-performance and scalable control systems for complex and mission-critical environments.",
       "capabilities": [
-        "Crestron DM-MD Systems (Video Matrix Switching)",
-        "Crestron DMPS (Digital Media Presentation Systems)",
-        "Crestron DigitalMedia Fiber Technology",
-        "Crestron AirMedia Wireless Presentation",
-        "Crestron Control System Programming (SIMPL+)",
-        "Crestron Airmedia & DXLink Certification",
+        "NVX",
+        "DMPS, 2-Series, 3-Series, 4-Series, VC-4",
+        "DigitalMedia",
+        "AirMedia Wireless Presentation",
+        "Certified module, custom driver",
+        "CHTML5 responsive interface",
         "Room Booking Integration",
         "Voice Control Integration"
-      ]
+      ],
+      "show_csp_logo": true
     },
     "expertise": {
       "title": "Core Expertise",

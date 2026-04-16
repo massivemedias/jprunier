@@ -214,9 +214,16 @@ export default function Services() {
       >
         <div className="container">
           <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <motion.h2 variants={itemVariants} className="section-title-left">
-              {services.crestron_section.title}
-            </motion.h2>
+            <div className="crestron-header">
+              <motion.h2 variants={itemVariants} className="section-title-left">
+                {services.crestron_section.title}
+              </motion.h2>
+              {services.crestron_section.show_csp_logo && (
+                <motion.div className="crestron-csp-badge" variants={itemVariants}>
+                  <img src={`${base}images/csp-logo.svg`} alt="Crestron Services Provider" />
+                </motion.div>
+              )}
+            </div>
             <motion.p variants={itemVariants} className="crestron-description">
               {services.crestron_section.description}
             </motion.p>
