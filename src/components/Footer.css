@@ -132,6 +132,24 @@
   opacity: 1;
 }
 
+/* CSP Logo */
+.footer-csp {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.footer-csp-logo {
+  height: 36px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.footer-csp-logo:hover {
+  opacity: 1;
+}
+
 /* Social — brand colors */
 .footer-social {
   display: flex;
