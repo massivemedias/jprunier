@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://jprunier.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jprunier.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jprunier.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jprunier.com/" />
+  </url>
+
+  <url>
+    <loc>https://jprunier.com/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jprunier.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jprunier.com/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jprunier.com/services" />
+  </url>
+
+  <url>
+    <loc>https://jprunier.com/news</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jprunier.com/news" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jprunier.com/news" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jprunier.com/news" />
+  </url>
+
+  <url>
+    <loc>https://jprunier.com/contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jprunier.com/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jprunier.com/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jprunier.com/contact" />
+  </url>
+
+</urlset>

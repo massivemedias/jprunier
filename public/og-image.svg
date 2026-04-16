@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1926"/>
+      <stop offset="60%" stop-color="#0f1d2e"/>
+      <stop offset="100%" stop-color="#1a3050"/>
+    </linearGradient>
+    <radialGradient id="violet" cx="85%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#7456f1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7456f1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#violet)"/>
+
+  <!-- Logo block -->
+  <g transform="translate(80, 200)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-weight="900" font-size="120" fill="#ffffff">JPrunier</text>
+    <text x="6" y="50" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="24" fill="#7456f1" letter-spacing="6">AI–AV</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="80" y="380" font-family="Helvetica, Arial, sans-serif" font-weight="500" font-size="38" fill="#ffffff">AI–AV Integration &amp; Software Solutions</text>
+  <text x="80" y="430" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="26" fill="#ffffff" opacity="0.7">Crestron Service Provider · Canada · Europe</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="610" width="1200" height="20" fill="#7456f1"/>
+
+  <!-- Domain -->
+  <text x="80" y="565" font-family="Helvetica, Arial, sans-serif" font-weight="600" font-size="20" fill="#ffffff" opacity="0.6">jprunier.com</text>
+</svg>
