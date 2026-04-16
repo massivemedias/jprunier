@@ -132,22 +132,25 @@
   opacity: 1;
 }
 
-/* CSP Logo */
+/* CSP Logo - intentional white card */
 .footer-csp {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.footer-csp:hover {
+  transform: translateY(-1px);
 }
 
 .footer-csp-logo {
-  height: 36px;
+  height: 26px;
   width: auto;
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
-}
-
-.footer-csp-logo:hover {
-  opacity: 1;
+  display: block;
 }
 
 /* Social — brand colors */
