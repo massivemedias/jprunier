@@ -10,10 +10,27 @@ import { uiStrings } from '../data/ui-strings';
 
 const LanguageContext = createContext();
 
+/* Detect language: explicit choice (localStorage) > browser language > 'en' */
+function detectInitialLanguage() {
+  if (typeof window === 'undefined') return 'en';
+  const stored = localStorage.getItem('jprunier-lang');
+  if (stored === 'en' || stored === 'fr') return stored;
+
+  const candidates = [
+    ...(navigator.languages || []),
+    navigator.language,
+    navigator.userLanguage,
+  ].filter(Boolean);
+
+  for (const lang of candidates) {
+    if (lang.toLowerCase().startsWith('fr')) return 'fr';
+    if (lang.toLowerCase().startsWith('en')) return 'en';
+  }
+  return 'en';
+}
+
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState(() => {
-    return localStorage.getItem('jprunier-lang') || 'en';
-  });
+  const [language, setLanguage] = useState(detectInitialLanguage);
 
   const changeLang = (lang) => {
     setLanguage(lang);
