@@ -4,13 +4,29 @@ import { ChevronUp } from 'lucide-react';
 import './ScrollToTop.css';
 
 export default function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const [visible, setVisible] = useState(false);
 
-  /* Reset scroll on route change */
+  /* On route or hash change: scroll to anchor section if hash present, else top */
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      const id = hash.replace(/^#/, '');
+      // Wait for the page to render the target section
+      const tryScroll = (attempts = 0) => {
+        const el = document.getElementById(id);
+        if (el) {
+          const headerOffset = 90;
+          const top = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        } else if (attempts < 20) {
+          setTimeout(() => tryScroll(attempts + 1), 50);
+        }
+      };
+      tryScroll();
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   /* Show/hide floating button */
   useEffect(() => {
