@@ -190,20 +190,40 @@
         ],
         "features": [
           {
-            "title": "Programmation Crestron",
-            "description": "Programmation SIMPL+, SIMPL# et C# pour processeurs 3-Series et 4-Series, panneaux tactiles et endpoints NVX."
+            "title": "Programmation de contrôle Crestron",
+            "description": "Programmation SIMPL+, SIMPL# et C# pour systèmes de contrôle 3-Series, 4-Series et VC-4."
           },
           {
-            "title": "Interfaces utilisateur personnalisées",
-            "description": "Conception et développement d'interfaces tactiles intuitives, tableaux de bord web et applications de contrôle mobile."
+            "title": "Développement d'applications audiovisuelles personnalisées",
+            "description": "Conception et développement de solutions logicielles AV, des systèmes de contrôle de salle aux plateformes d'entreprise."
+          },
+          {
+            "title": "Programmation audio & DSP",
+            "description": "Programmation et optimisation de systèmes DSP audio (Q-SYS, Biamp, environnements Dante) incluant traitement du signal, routage et réglage système."
+          },
+          {
+            "title": "Modules d'intégration IA",
+            "description": "Développement de pilotes, plugins et middleware connectant les systèmes AV aux plateformes IA comme OpenAI."
+          },
+          {
+            "title": "Interfaces utilisateur",
+            "description": "Panneaux tactiles intuitifs, interfaces web responsives et applications de contrôle mobile conçues pour une expérience utilisateur fluide."
           },
           {
             "title": "Modules d'intégration IA",
             "description": "Développement de plugins et pilotes connectant les systèmes AV aux plateformes IA comme OpenAI, Azure Cognitive Services et modèles ML personnalisés."
           },
           {
-            "title": "Cloud & DevOps",
-            "description": "Pipelines de déploiement Azure, gestion de bases de données et applications de surveillance AV hébergées dans le cloud."
+            "title": "Cloud & DevOps pour systèmes AV",
+            "description": "Pipelines de déploiement, intégration de bases de données et plateformes de surveillance cloud pour infrastructures AV."
+          },
+          {
+            "title": "Standardisation multi-systèmes",
+            "description": "Harmonisation et normalisation de systèmes AV multi-marques pour assurer cohérence, évolutivité et maintenabilité à travers les déploiements."
+          },
+          {
+            "title": "Développement multi-technologies",
+            "description": "Intégration à travers Crestron, Q-SYS, .NET, Python, Linux, technologies web et API REST."
           }
         ],
         "technologies": [

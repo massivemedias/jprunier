@@ -191,19 +191,39 @@
         "features": [
           {
             "title": "Crestron Control Programming",
-            "description": "SIMPL+, SIMPL#, and C# programming for 3-Series and 4-Series processors, touch panels, and NVX endpoints."
+            "description": "SIMPL+, SIMPL#, and C# programming for 3-Series, 4-Series and VC-4 control systems."
           },
           {
-            "title": "Custom User Interfaces",
-            "description": "Design and development of intuitive touch panel interfaces, web-based dashboards, and mobile control apps."
+            "title": "Custom Audiovisual Application Development",
+            "description": "Design and development of AV software solutions, from room control systems to enterprise-wide platforms."
+          },
+          {
+            "title": "Audio & DSP Programming",
+            "description": "Programming and optimization of audio DSP systems (Q-SYS, Biamp, Dante environments) including signal processing, routing, and system tuning."
+          },
+          {
+            "title": "AI Integration Modules",
+            "description": "Development of drivers, plugins, and middleware connecting AV systems to AI platforms such as OpenAI."
+          },
+          {
+            "title": "User Interfaces",
+            "description": "Intuitive touch panels, responsive web interfaces, and mobile control applications designed for seamless user experience."
           },
           {
             "title": "AI Integration Modules",
             "description": "Development of plugins and drivers connecting AV systems to AI platforms like OpenAI, Azure Cognitive Services, and custom ML models."
           },
           {
-            "title": "Cloud & DevOps",
-            "description": "Azure-based deployment pipelines, database management, and cloud-hosted AV monitoring applications."
+            "title": "Cloud & DevOps for AV Systems",
+            "description": "Deployment pipelines, database integration, and cloud-based monitoring platforms for AV infrastructures."
+          },
+          {
+            "title": "Multi-System Standardization",
+            "description": "Harmonization and normalization of multi-brand AV systems to ensure consistency, scalability, and maintainability across deployments."
+          },
+          {
+            "title": "Cross-Technology Development",
+            "description": "Integration across Crestron, Q-SYS, .NET, Python, Linux, Web technologies, and REST APIs."
           }
         ],
         "technologies": [
