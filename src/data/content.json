@@ -527,32 +527,6 @@
             "Firmware and microcode updates"
           ]
         },
-        "interfaces_gallery": {
-          "title": "User Interface Examples",
-          "subtitle": "Custom touch panel interfaces designed and programmed by JPrunier",
-          "items": [
-            {
-              "src": "/images/interfaces/jp_02.webp",
-              "alt": "HVAC Control with Event Monitoring (Hilo by Hydro-Québec Integration)",
-              "caption": "HVAC Control with Event Monitoring (Hilo by Hydro-Québec Integration)"
-            },
-            {
-              "src": "/images/interfaces/jp_01.webp",
-              "alt": "Advanced Lighting Control with Scene Saving and Multi-Language Label Customization",
-              "caption": "Advanced Lighting Control with Scene Saving and Multi-Language Label Customization"
-            },
-            {
-              "src": "/images/interfaces/blx_02.webp",
-              "alt": "Simplified Menu Interface on 5\" Wall Keypad",
-              "caption": "Simplified Menu Interface on 5\" Wall Keypad"
-            },
-            {
-              "src": "/images/interfaces/udm_01.webp",
-              "alt": "Flexible Multi-Purpose Room Control",
-              "caption": "Flexible Multi-Purpose Room Control"
-            }
-          ]
-        },
         "brochure_download": {
           "title": "CSP Brochure",
           "description": "Working with a CSP helps ensure the best possible Crestron experience.",

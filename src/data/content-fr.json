@@ -527,32 +527,6 @@
             "Mise à jour des microprogrammes et firmwares"
           ]
         },
-        "interfaces_gallery": {
-          "title": "Exemples d'interfaces utilisateur",
-          "subtitle": "Interfaces tactiles personnalisées conçues et programmées par JPrunier",
-          "items": [
-            {
-              "src": "/images/interfaces/jp_02.webp",
-              "alt": "Contrôle CVC avec surveillance d'événements (Intégration Hilo par Hydro-Québec)",
-              "caption": "Contrôle CVC avec surveillance d'événements (Intégration Hilo par Hydro-Québec)"
-            },
-            {
-              "src": "/images/interfaces/jp_01.webp",
-              "alt": "Contrôle d'éclairage avancé avec sauvegarde de scènes et étiquettes multilingues",
-              "caption": "Contrôle d'éclairage avancé avec sauvegarde de scènes et étiquettes multilingues"
-            },
-            {
-              "src": "/images/interfaces/blx_02.webp",
-              "alt": "Interface menu simplifiée sur clavier mural 5\"",
-              "caption": "Interface menu simplifiée sur clavier mural 5\""
-            },
-            {
-              "src": "/images/interfaces/udm_01.webp",
-              "alt": "Contrôle de salle polyvalente flexible",
-              "caption": "Contrôle de salle polyvalente flexible"
-            }
-          ]
-        },
         "brochure_download": {
           "title": "Brochure CSP",
           "description": "Travailler avec un CSP garantit la meilleure expérience Crestron possible.",
