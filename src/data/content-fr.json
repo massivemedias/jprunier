@@ -473,24 +473,24 @@
         "title": "Intégration",
         "description": "JPrunier Inc. fournit l'implémentation et la configuration logicielle pour tous les équipements audiovisuels.",
         "icon": "Wrench",
-        "page_title": "Intégration AV-IA",
-        "long_description": "JPrunier livre des services d'intégration clé en main qui rassemblent matériel audiovisuel, systèmes de contrôle, réseautage et capacités IA dans des environnements cohérents et fiables. Des salles de consultation aux classes en passant par les centres de commandement à grande échelle, nous gérons le cycle de déploiement complet. Notre méthodologie d'intégration assure que chaque composant fonctionne ensemble harmonieusement, avec une mise en service et une documentation rigoureuses.",
+        "page_title": "Intégration",
+        "long_description": "JPrunier offre des services d'intégration axés sur le déploiement de systèmes audiovisuels et de contrôle conçus sur mesure, où matériel, logiciels et infrastructures réseau opèrent comme un environnement unifié.\n\nNotre méthodologie d'intégration assure que chaque composant fonctionne harmonieusement avec les autres, avec une mise en service et une documentation rigoureuses.",
         "features": [
           {
-            "title": "Déploiement matériel",
-            "description": "Installation et configuration professionnelles d'écrans, projecteurs, caméras, microphones, haut-parleurs et systèmes de contrôle."
+            "title": "Déploiement et configuration de systèmes",
+            "description": "Déploiement et configuration d'équipements audiovisuels, plateformes de contrôle et appareils connectés au réseau, en parfait alignement avec l'architecture système et les spécifications de conception."
           },
           {
-            "title": "Réseaux AV-sur-IP",
-            "description": "Conception et déploiement de réseaux Dante, AES67 et vidéo-sur-IP NVX pour une distribution flexible et évolutive."
+            "title": "Systèmes médias AV-over-IP et réseautés",
+            "description": "Conception et déploiement d'infrastructures Dante, AES67 et NVX pour une distribution média flexible, évolutive et haute performance."
           },
           {
-            "title": "Salles de collaboration",
-            "description": "Déploiement complet de Microsoft Teams Rooms, Zoom Rooms et appareils Cisco Webex avec audio et vidéo optimisés."
+            "title": "Environnements de collaboration unifiés",
+            "description": "Déploiement de Microsoft Teams Rooms, Zoom Rooms et Cisco Webex, optimisés pour la cohérence audio, vidéo et l'expérience utilisateur."
           },
           {
-            "title": "Mise en service et formation",
-            "description": "Tests rigoureux, documentation et formation des utilisateurs pour assurer une transition fluide et une satisfaction durable."
+            "title": "Mise en service et validation système",
+            "description": "Tests, validation et documentation complets pour garantir l'intégrité, la performance et la préparation opérationnelle des systèmes."
           }
         ],
         "technologies": [
@@ -557,7 +557,8 @@
             "15 à 30 % du temps des ressources dédié à la formation continue",
             "Recommandations indépendantes des manufacturiers"
           ]
-        }
+        },
+        "subtitle": "Déploiement de systèmes AV, TI et IA"
       }
     ],
     "crestron_section": {

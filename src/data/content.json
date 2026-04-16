@@ -473,24 +473,24 @@
         "title": "Integration",
         "description": "JPrunier Inc. provides software implementation and configuration for all audiovisual equipment.",
         "icon": "Wrench",
-        "page_title": "AV-AI Integration",
-        "long_description": "JPrunier delivers turnkey integration services that bring together audiovisual hardware, control systems, networking, and AI capabilities into cohesive, reliable environments. From boardrooms and classrooms to large-scale command centers, we handle the complete deployment lifecycle. Our integration methodology ensures every component works together seamlessly, with thorough commissioning and documentation.",
+        "page_title": "Integration",
+        "long_description": "JPrunier delivers integration services focused on the deployment of engineered audiovisual and control systems, where hardware, software, and network infrastructures operate as a unified environment.\n\nOur integration methodology ensures every component works together seamlessly, with thorough commissioning and documentation.",
         "features": [
           {
-            "title": "Hardware Deployment",
-            "description": "Professional installation and configuration of displays, projectors, cameras, microphones, speakers, and control systems."
+            "title": "Systems Deployment & Configuration",
+            "description": "Deployment and configuration of audiovisual equipment, control platforms, and network-connected devices, ensuring full alignment with system architecture and design specifications."
           },
           {
-            "title": "AV-over-IP Networks",
-            "description": "Design and deployment of Dante, AES67, and NVX video-over-IP networks for flexible, scalable distribution."
+            "title": "AV-over-IP & Networked Media Systems",
+            "description": "Design and deployment of Dante, AES67, and NVX infrastructures for flexible, scalable, and high-performance media distribution."
           },
           {
-            "title": "Collaboration Room Setup",
-            "description": "Complete deployment of Microsoft Teams Rooms, Zoom Rooms, and Cisco Webex devices with optimized audio and video."
+            "title": "Unified Collaboration Environments",
+            "description": "Deployment of Microsoft Teams Rooms, Zoom Rooms, and Cisco Webex systems, optimized for audio, video, and user experience consistency."
           },
           {
-            "title": "Commissioning & Training",
-            "description": "Rigorous testing, documentation, and end-user training to ensure smooth handoff and long-term satisfaction."
+            "title": "Commissioning & System Validation",
+            "description": "Comprehensive testing, validation, and documentation to ensure system integrity, performance, and operational readiness."
           }
         ],
         "technologies": [
@@ -557,7 +557,8 @@
             "15–30% of resource time dedicated to continuing education",
             "Manufacturer-independent recommendations"
           ]
-        }
+        },
+        "subtitle": "AV, IT & AI Systems Deployment"
       }
     ],
     "crestron_section": {
