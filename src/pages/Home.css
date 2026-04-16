@@ -84,6 +84,13 @@
   transition: filter var(--transition-base);
 }
 
+/* SVG brand glyphs lack intrinsic dimensions - force size explicitly */
+.partner-logo-img-dark[src$=".svg"] {
+  height: 38px;
+  width: 38px;
+  max-height: 38px;
+}
+
 .partner-logo-light:hover .partner-logo-img-dark {
   filter: grayscale(0%);
 }
