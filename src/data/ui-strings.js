@@ -47,6 +47,8 @@ export const uiStrings = {
     'contact.locations': 'Our Locations',
     'contact.map_coming': 'Interactive maps coming soon',
     'contact.success': 'Thank you for your message! We will be in touch soon.',
+    'contact.sending': 'Sending…',
+    'contact.error': 'Something went wrong. Please email us directly at info@jprunier.com.',
 
     // News
     'news.stay_updated': 'Stay Updated',
@@ -131,6 +133,8 @@ export const uiStrings = {
     'contact.locations': 'Nos emplacements',
     'contact.map_coming': 'Cartes interactives à venir',
     'contact.success': 'Merci pour votre message ! Nous vous contacterons bientôt.',
+    'contact.sending': 'Envoi en cours…',
+    'contact.error': 'Une erreur s\'est produite. Écrivez-nous directement à info@jprunier.com.',
 
     // News
     'news.stay_updated': 'Restez informé',

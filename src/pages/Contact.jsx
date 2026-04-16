@@ -17,18 +17,43 @@ export default function Contact() {
     phone: '',
     company: '',
     message: '',
+    _honey: '', // honeypot - bots fill this, humans leave empty
   });
+  const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
-    alert(t('contact.success'));
+
+    // Honeypot check - bots fill this field, real users don't
+    if (formData._honey) return;
+
+    setStatus('sending');
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/info@jprunier.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+          _subject: `New contact from ${formData.name} — jprunier.com`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+      if (!res.ok) throw new Error('submit failed');
+      setFormData({ name: '', email: '', phone: '', company: '', message: '', _honey: '' });
+      setStatus('success');
+    } catch (err) {
+      setStatus('error');
+    }
   };
 
   const containerVariants = {
@@ -114,9 +139,36 @@ export default function Contact() {
                     onChange={handleChange} required placeholder={t('contact.message_placeholder')} rows="6" />
                 </div>
 
-                <button type="submit" className="btn btn-primary contact-submit-btn">
-                  {t('contact.submit')}
+                {/* Honeypot - hidden from humans, tempting for bots */}
+                <input
+                  type="text"
+                  name="_honey"
+                  value={formData._honey}
+                  onChange={handleChange}
+                  tabIndex="-1"
+                  autoComplete="off"
+                  style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+                  aria-hidden="true"
+                />
+
+                <button
+                  type="submit"
+                  className="btn btn-primary contact-submit-btn"
+                  disabled={status === 'sending'}
+                >
+                  {status === 'sending' ? t('contact.sending') : t('contact.submit')}
                 </button>
+
+                {status === 'success' && (
+                  <p className="contact-form-message contact-form-success" role="status">
+                    {t('contact.success')}
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p className="contact-form-message contact-form-error" role="alert">
+                    {t('contact.error')}
+                  </p>
+                )}
               </form>
             </motion.div>
 
