@@ -56,6 +56,7 @@ export default function Services() {
     ...services.main_services.map((s) => ({ id: s.id, label: s.title, icon: s.icon })),
     { id: 'crestron', label: services.crestron_section.title },
     { id: 'ai-bridge', label: t('services.ai_bridge') },
+    { id: 'certifications', label: services.certifications_section?.title || t('services.certifications') },
   ];
 
   return (
@@ -92,6 +93,13 @@ export default function Services() {
         </div>
       </nav>
 
+      {/* CSP Banner — white background, between submenu and first section */}
+      <section className="services-csp-banner">
+        <div className="container">
+          <img src={`${base}images/csp-logo.svg`} alt="Crestron Services Provider" className="services-csp-banner-logo" />
+        </div>
+      </section>
+
       {/* ===== INDIVIDUAL SERVICE SECTIONS ===== */}
       {services.main_services.map((service, svcIndex) => {
         const IconComp = iconMap[service.icon];
@@ -118,7 +126,12 @@ export default function Services() {
                       {IconComp && <div className="service-detail-icon"><IconComp size={32} /></div>}
                       <h2>{service.page_title || service.title}</h2>
                     </div>
-                    <p className="service-detail-desc">{service.long_description || service.details}</p>
+                    {service.subtitle && (
+                      <p className="service-detail-subtitle">{service.subtitle}</p>
+                    )}
+                    <p className="service-detail-desc">{(service.long_description || service.details).split('\n\n').map((p, i, arr) => (
+                      <span key={i}>{p}{i < arr.length - 1 && <><br /><br /></>}</span>
+                    ))}</p>
 
                     {service.features && (
                       <div className="service-features">
@@ -163,54 +176,6 @@ export default function Services() {
                 </motion.div>
               </div>
             </section>
-
-            {/* Extended Programming Services (programming only) */}
-            {service.extended_programming && (
-              <section className="section service-extended-programming">
-                <div className="container">
-                  <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                    <motion.h2 variants={itemVariants}>{service.extended_programming.title}</motion.h2>
-                    <motion.div className="extended-services-list" variants={itemVariants}>
-                      {service.extended_programming.items.map((item, i) => (
-                        <div key={i} className="extended-service-item">
-                          <CheckCircle size={16} className="feature-check" />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </motion.div>
-                    <motion.p className="extended-languages" variants={itemVariants}>
-                      {service.extended_programming.languages}
-                    </motion.p>
-                  </motion.div>
-                </div>
-              </section>
-            )}
-
-            {/* Certifications */}
-            {service.certifications_section && (
-              <section className="section service-certifications">
-                <div className="container">
-                  <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                    <motion.div className="certifications-header" variants={itemVariants}>
-                      <Award size={28} className="section-icon" />
-                      <h2>{service.certifications_section.title}</h2>
-                    </motion.div>
-                    <motion.p className="section-description" variants={itemVariants}>
-                      {service.certifications_section.subtitle}
-                    </motion.p>
-                    <motion.div className="certifications-grid" variants={itemVariants}>
-                      {service.certifications_section.badges.map((badge, i) => (
-                        <div key={i} className="certification-badge">
-                          <img src={`${base}${badge.src.replace(/^\//, '')}`} alt={badge.name} loading="lazy" />
-                          <span className="badge-name">{badge.name}</span>
-                          <span className="badge-issuer">{badge.issuer}</span>
-                        </div>
-                      ))}
-                    </motion.div>
-                  </motion.div>
-                </div>
-              </section>
-            )}
 
             {/* Interfaces Gallery */}
             {service.interfaces_gallery && (
@@ -293,6 +258,36 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
+
+      {/* ===== GLOBAL CERTIFICATIONS ===== */}
+      {services.certifications_section && (
+        <section
+          id="certifications"
+          ref={(el) => (sectionRefs.current['certifications'] = el)}
+          className="section service-certifications"
+        >
+          <div className="container">
+            <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <motion.div className="certifications-header" variants={itemVariants}>
+                <Award size={28} className="section-icon" />
+                <h2>{services.certifications_section.title}</h2>
+              </motion.div>
+              <motion.p className="section-description" variants={itemVariants}>
+                {services.certifications_section.subtitle}
+              </motion.p>
+              <motion.div className="certifications-grid" variants={itemVariants}>
+                {services.certifications_section.badges.map((badge, i) => (
+                  <div key={i} className="certification-badge">
+                    <img src={`${base}${badge.src.replace(/^\//, '')}`} alt={badge.name} loading="lazy" />
+                    <span className="badge-name">{badge.name}</span>
+                    <span className="badge-issuer">{badge.issuer}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* ===== WARRANTY ===== */}
       {services.main_services[0]?.warranty_section && (

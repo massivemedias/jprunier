@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" preserveAspectRatio="xMidYMid meet">
   <!-- CSP letters in italic gray -->
-  <text x="0" y="78" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="92" fill="#7A7B7E" font-style="italic" letter-spacing="-4">CSP</text>
+  <text x="0" y="78" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="88" fill="#7A7B7E" font-style="italic" letter-spacing="-2">CSP</text>
   <!-- Right column text -->
-  <text x="160" y="32" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#7A7B7E" letter-spacing="1">CRESTRON</text>
-  <text x="160" y="60" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#00AEEF" letter-spacing="1">SERVICES</text>
-  <text x="160" y="88" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#00AEEF" letter-spacing="1">PROVIDER</text>
+  <text x="200" y="32" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#7A7B7E" letter-spacing="1">CRESTRON</text>
+  <text x="200" y="60" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#00AEEF" letter-spacing="1">SERVICES</text>
+  <text x="200" y="88" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#00AEEF" letter-spacing="1">PROVIDER</text>
 </svg>

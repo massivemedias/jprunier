@@ -55,18 +55,50 @@
       "subtitle": "Specialized technical resources on demand for software development, AV integration, and intelligent system deployment."
     },
     "tech_partners": [
-      { "name": "Microsoft", "logo": "/images/microsoft-bw.png" },
-      { "name": "Crestron", "logo": "/images/crestron-bw.png" },
-      { "name": "OpenAI", "logo": "/images/openai-bw.png" },
-      { "name": "Q-SYS", "logo": "/images/qsys-logo.png" },
-      { "name": "Biamp", "logo": "/images/biamp-logo.png" },
-      { "name": "NDI", "logo": "/images/ndi-logo.svg" },
-
-      { "name": "Dante", "logo": "/images/dante-bw.png" },
-      { "name": "Netgear", "logo": "/images/netgear-logo.svg" },
-      { "name": "Shure", "logo": "/images/shure-logo.png" },
-      { "name": "Sennheiser", "logo": "/images/sennheiser-logo.svg" },
-      { "name": "Yamaha", "logo": "/images/yamaha-logo.svg" }
+      {
+        "name": "Microsoft",
+        "logo": "/images/microsoft-bw.png"
+      },
+      {
+        "name": "Crestron",
+        "logo": "/images/crestron-bw.png"
+      },
+      {
+        "name": "OpenAI",
+        "logo": "/images/openai-bw.png"
+      },
+      {
+        "name": "Q-SYS",
+        "logo": "/images/qsys-logo.png"
+      },
+      {
+        "name": "Biamp",
+        "logo": "/images/biamp-logo.png"
+      },
+      {
+        "name": "NDI",
+        "logo": "/images/ndi-logo.svg"
+      },
+      {
+        "name": "Dante",
+        "logo": "/images/dante-bw.png"
+      },
+      {
+        "name": "Netgear",
+        "logo": "/images/netgear-logo.svg"
+      },
+      {
+        "name": "Shure",
+        "logo": "/images/shure-logo.png"
+      },
+      {
+        "name": "Sennheiser",
+        "logo": "/images/sennheiser-logo.svg"
+      },
+      {
+        "name": "Yamaha",
+        "logo": "/images/yamaha-logo.svg"
+      }
     ],
     "connecting_items": [
       {
@@ -141,10 +173,11 @@
       {
         "id": "programming",
         "title": "Programming",
+        "subtitle": "Control Systems, Software & Intelligent AV Engineering",
         "description": "Our programming services focus on the design and development of reliable, scalable and high-performance control and software solutions for AV and AI environments.",
         "icon": "Code",
-        "page_title": "AV & AI Programming",
-        "long_description": "JPrunier develops custom firmware, control system applications, and AI-driven software for the audiovisual industry. As a Crestron Service Provider (CSP) with Master Platinum certification, we deliver robust solutions spanning from room control interfaces to cloud-connected AV management platforms. Our programming team works across Crestron SIMPL+, C#, Python, and modern web technologies to create seamless integrations between AV hardware and intelligent software layers.",
+        "page_title": "Programming",
+        "long_description": "JPrunier designs and develops advanced control systems and software architectures for complex audiovisual environments.\n\nWe engineer scalable, secure, and interoperable solutions where AV hardware, IT infrastructure, and intelligent software layers operate as a unified system.",
         "bullets_left": [
           "Crestron Service Provider (CSP)",
           "Core Expertise",
@@ -195,21 +228,6 @@
             "Lighting Control",
             "Environmental Management"
           ]
-        },
-        "extended_programming": {
-          "title": "Complete Programming Services",
-          "items": [
-            "Development and maintenance of Crestron applications",
-            "DSP programming (Q-SYS, Biamp, and others)",
-            "Q-SYS control, Lua scripting, and plug-in development",
-            "Python modules for Crestron and Q-SYS",
-            "Multi-system standardization and normalization",
-            "Cross-technology development (Crestron, Q-SYS, .NET, Linux, Python, Web, Cloud, Azure, REST APIs)",
-            "Custom audiovisual application development",
-            "User interface programming, including responsive interfaces",
-            "NDI control interface development"
-          ],
-          "languages": "SIMPL, SIMPL+, SIMPL#, .NET, OpenAI, CHTML5, Python, Q-SYS Lua scripting, Q-SYS plugin, Dante, AWS, Azure"
         },
         "ai_bridge_section": {
           "title": "AI – AV Bridge",
@@ -278,32 +296,6 @@
             }
           ]
         },
-        "certifications_section": {
-          "title": "Certifications",
-          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
-          "badges": [
-            {
-              "src": "/images/certifications/crestron-cmpg.webp",
-              "name": "Crestron Masters Certified Programmer - Platinum",
-              "issuer": "Crestron"
-            },
-            {
-              "src": "/images/certifications/qsys-level_2.webp",
-              "name": "Q-SYS Level 2",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-control_201.webp",
-              "name": "Q-SYS Control 201",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
-              "name": "Q-SYS Reflect Enterprise Manager",
-              "issuer": "QSC"
-            }
-          ]
-        },
         "brochure_download": {
           "title": "Download the JPrunier brochure",
           "description": "Get the complete JPrunier corporate services brochure.",
@@ -369,32 +361,6 @@
             "Project oversight and installation supervision"
           ]
         },
-        "certifications_section": {
-          "title": "Certifications",
-          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
-          "badges": [
-            {
-              "src": "/images/certifications/crestron-cmpg.webp",
-              "name": "Crestron Master Platinum Gold",
-              "issuer": "Crestron"
-            },
-            {
-              "src": "/images/certifications/qsys-control_201.webp",
-              "name": "Q-SYS Control 201",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-level_2.webp",
-              "name": "Q-SYS Level 2",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
-              "name": "Q-SYS Reflect Enterprise Manager",
-              "issuer": "QSC"
-            }
-          ]
-        },
         "brochure_download": {
           "title": "Download the JPrunier brochure",
           "description": "Get the complete JPrunier corporate services brochure.",
@@ -456,32 +422,6 @@
             "Dante audio configuration, optimization and monitoring",
             "XiO Cloud and Crestron Fusion integration and development",
             "Microsoft Azure environment management and supervision"
-          ]
-        },
-        "certifications_section": {
-          "title": "Certifications",
-          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
-          "badges": [
-            {
-              "src": "/images/certifications/crestron-cmpg.webp",
-              "name": "Crestron Master Platinum Gold",
-              "issuer": "Crestron"
-            },
-            {
-              "src": "/images/certifications/qsys-control_201.webp",
-              "name": "Q-SYS Control 201",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-level_2.webp",
-              "name": "Q-SYS Level 2",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
-              "name": "Q-SYS Reflect Enterprise Manager",
-              "issuer": "QSC"
-            }
           ]
         },
         "brochure_download": {
@@ -575,32 +515,6 @@
             }
           ]
         },
-        "certifications_section": {
-          "title": "Certifications",
-          "subtitle": "Industry-recognized certifications ensuring quality and expertise",
-          "badges": [
-            {
-              "src": "/images/certifications/crestron-cmpg.webp",
-              "name": "Crestron Master Platinum Gold",
-              "issuer": "Crestron"
-            },
-            {
-              "src": "/images/certifications/qsys-control_201.webp",
-              "name": "Q-SYS Control 201",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-level_2.webp",
-              "name": "Q-SYS Level 2",
-              "issuer": "QSC"
-            },
-            {
-              "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
-              "name": "Q-SYS Reflect Enterprise Manager",
-              "issuer": "QSC"
-            }
-          ]
-        },
         "brochure_download": {
           "title": "Download the JPrunier brochure",
           "description": "Get the complete JPrunier corporate services brochure.",
@@ -672,6 +586,42 @@
             "Cisco Webex",
             "Google Meet"
           ]
+        }
+      ]
+    },
+    "certifications_section": {
+      "title": "Certifications",
+      "subtitle": "Industry-recognized certifications ensuring quality and expertise",
+      "badges": [
+        {
+          "src": "/images/certifications/crestron-platinum.webp",
+          "name": "Crestron Masters Certified Programmer - Platinum",
+          "issuer": "Crestron"
+        },
+        {
+          "src": "/images/certifications/dante-cert-level-3.webp",
+          "name": "Dante Certified Level 3",
+          "issuer": "Audinate"
+        },
+        {
+          "src": "/images/certifications/ndi-basics.webp",
+          "name": "NDI Basics Certification",
+          "issuer": "NDI"
+        },
+        {
+          "src": "/images/certifications/qsys-level_2.webp",
+          "name": "Q-SYS Level 2",
+          "issuer": "QSC"
+        },
+        {
+          "src": "/images/certifications/qsys-control_201.webp",
+          "name": "Q-SYS Control 201",
+          "issuer": "QSC"
+        },
+        {
+          "src": "/images/certifications/qsys-reflect_enterprise_manager.webp",
+          "name": "Q-SYS Reflect Enterprise Manager",
+          "issuer": "QSC"
         }
       ]
     }

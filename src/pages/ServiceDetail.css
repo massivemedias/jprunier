@@ -56,11 +56,42 @@
   font-size: var(--font-size-2xl);
 }
 
+.service-detail-subtitle {
+  color: var(--accent-violet);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: -1rem 0 var(--spacing-lg);
+}
+
 .service-detail-desc {
   color: var(--gray-medium);
   font-size: var(--font-size-base);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--spacing-2xl);
+}
+
+/* CSP Banner — between submenu and first service section */
+.services-csp-banner {
+  background: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.services-csp-banner-logo {
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .services-csp-banner {
+    padding: 1.5rem 1rem;
+  }
+  .services-csp-banner-logo {
+    height: 56px;
+  }
 }
 
 /* Features */
@@ -473,8 +504,11 @@
 
 .certification-badge img {
   width: 120px;
-  height: auto;
+  height: 120px;
   object-fit: contain;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 12px;
 }
 
 .badge-name {
