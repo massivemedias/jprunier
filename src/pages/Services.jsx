@@ -19,7 +19,7 @@ export default function Services() {
   const t = useT();
   const { hero, services } = content;
   const [activeSection, setActiveSection] = useState('');
-  const [lightbox, setLightbox] = useState({ open: false, src: '', alt: '' });
+  const [lightbox, setLightbox] = useState({ open: false, images: [], index: 0 });
   const sectionRefs = useRef({});
 
   const containerVariants = {
@@ -191,7 +191,7 @@ export default function Services() {
                         <div
                           key={i}
                           className="interface-card"
-                          onClick={() => setLightbox({ open: true, src: item.src, alt: item.alt })}
+                          onClick={() => setLightbox({ open: true, images: service.interfaces_gallery.items, index: i })}
                         >
                           <img src={`${base}${item.src.replace(/^\//, '')}`} alt={item.alt} loading="lazy" />
                           <div className="interface-caption">{item.caption}</div>
@@ -350,9 +350,11 @@ export default function Services() {
 
       <ImageLightbox
         isOpen={lightbox.open}
-        imageSrc={lightbox.src}
-        imageAlt={lightbox.alt}
-        onClose={() => setLightbox({ open: false, src: '', alt: '' })}
+        images={lightbox.images}
+        currentIndex={lightbox.index}
+        onClose={() => setLightbox({ open: false, images: [], index: 0 })}
+        onPrev={() => setLightbox((s) => ({ ...s, index: (s.index - 1 + s.images.length) % s.images.length }))}
+        onNext={() => setLightbox((s) => ({ ...s, index: (s.index + 1) % s.images.length }))}
       />
     </>
   );
