@@ -8,10 +8,9 @@
   min-height: 400px;
 }
 
-/* Hide Elfsight Free-plan badge on the News feed.
-   The badge link is a direct child of WidgetBackground__Content, and so are
-   the post cards (through deeper nesting). So DO NOT touch the parent — we
-   target the links themselves only. The cards stay visible. */
+/* Safety net: keep the badge-hide rules even though Jerome's widget is now on
+   Basic (paid, no branding). If the widget ever falls back to a free tier or
+   the upsell pill re-appears, these rules still catch it. Harmless on paid. */
 .news-feed a[href*="linkedin-feed-widget"],
 .news-feed a[href*="/apps/linkedin-feed/pricing"] {
   display: none !important;

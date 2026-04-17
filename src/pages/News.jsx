@@ -7,8 +7,10 @@ import './News.css';
 const base = import.meta.env.BASE_URL;
 
 // Elfsight LinkedIn Feed widget — auto-syncs with JPrunier's LinkedIn company page.
-// Free plan; the Elfsight badge at the bottom is expected.
-const ELFSIGHT_WIDGET_ID = '47ca587a-8c0c-4753-8dee-30cd78a1be4c';
+// Owned by Jerome's Elfsight account on the Basic plan (paid), so no branding
+// badge and higher post quota. Do not swap back to the 47ca587a-* widget,
+// which belonged to Mike's free-tier account.
+const ELFSIGHT_WIDGET_ID = 'cabe9108-a761-4e5c-983a-b2de01d3b8dd';
 
 const LinkedInIcon = ({ size = 20, className = '' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
