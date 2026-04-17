@@ -2,6 +2,12 @@
   background-color: var(--background);
 }
 
+/* Elfsight LinkedIn Feed container — give the widget enough vertical space
+   while it loads so the page doesn't jump once the feed renders. */
+.news-feed {
+  min-height: 400px;
+}
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

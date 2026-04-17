@@ -1,10 +1,14 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, ExternalLink } from 'lucide-react';
 import Hero from '../components/Hero';
-import { useContent, useT, useLanguage } from '../context/LanguageContext';
+import { useContent, useT } from '../context/LanguageContext';
 import './News.css';
 
 const base = import.meta.env.BASE_URL;
+
+// Elfsight LinkedIn Feed widget — auto-syncs with JPrunier's LinkedIn company page.
+// Free plan; the Elfsight badge at the bottom is expected.
+const ELFSIGHT_WIDGET_ID = '47ca587a-8c0c-4753-8dee-30cd78a1be4c';
 
 const LinkedInIcon = ({ size = 20, className = '' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -13,32 +17,20 @@ const LinkedInIcon = ({ size = 20, className = '' }) => (
 );
 
 export default function News() {
-  const { content, news } = useContent();
+  const { content } = useContent();
   const t = useT();
-  const { language } = useLanguage();
   const { hero } = content;
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-  };
-
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
+  // Load the Elfsight platform.js only when this page is mounted so the script
+  // doesn't ship on other routes. Safe to call multiple times — the script
+  // self-deduplicates by checking `window.eapps`.
+  useEffect(() => {
+    if (document.querySelector('script[src*="elfsightcdn.com/platform.js"]')) return;
+    const s = document.createElement('script');
+    s.src = 'https://elfsightcdn.com/platform.js';
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
 
   return (
     <>
@@ -53,38 +45,14 @@ export default function News() {
       <section className="section news-section">
         <div className="container">
           <motion.div
-            className="news-grid"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            className="news-feed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            {news.map((article) => (
-              <motion.a
-                key={article.id}
-                href={article.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="news-card"
-                variants={itemVariants}
-                whileHover={{ y: -4 }}
-              >
-                <div className="news-card-header">
-                  <LinkedInIcon size={18} className="news-card-linkedin-badge" />
-                  <span className="news-date">
-                    <Calendar size={13} />
-                    {formatDate(article.date)}
-                  </span>
-                </div>
-                <div className="news-card-body">
-                  <h3>{article.title}</h3>
-                  <p>{article.excerpt}</p>
-                  <span className="news-read-linkedin">
-                    {t('news.read_on_linkedin')} <ExternalLink size={13} />
-                  </span>
-                </div>
-              </motion.a>
-            ))}
+            {/* Elfsight widget — renders once platform.js loads and the div is in view */}
+            <div className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`} data-elfsight-app-lazy />
           </motion.div>
         </div>
       </section>
