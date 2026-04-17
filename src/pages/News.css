@@ -8,12 +8,16 @@
   min-height: 400px;
 }
 
-/* Hide Elfsight Free-plan "Powered by" badge on the News feed. Targets any
-   direct-ancestor container of the elfsight.com attribution link inside the
-   .news-feed wrapper — scoped so we never hide branding outside this page. */
-.news-feed .es-widget-background-container:has(a[href*="elfsight.com"]),
-.news-feed [class*="WidgetBackground"]:has(a[href*="elfsight.com"]),
-.news-feed a[href*="elfsight.com"][target="_blank"] {
+/* Hide Elfsight Free-plan badge on the News feed.
+   The previous broad selectors (class*="WidgetBackground") also matched the
+   widget's root wrapper and nuked the feed. Now we only target:
+   - the actual badge link (href → /linkedin-feed-widget/)
+   - its immediate parent container, so we don't leave an empty strip
+   - the owner-only "Extend Limit" upsell pill (visible only to Mike, but
+     harmless to hide for everyone just in case) */
+.news-feed a[href*="linkedin-feed-widget"],
+.news-feed *:has(> a[href*="linkedin-feed-widget"]),
+.news-feed a[href*="/apps/linkedin-feed/pricing"] {
   display: none !important;
 }
 
