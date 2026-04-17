@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useMemo } from 'react';
+import { createContext, useContext, useEffect, useState, useMemo } from 'react';
 
 import contentEn from '../data/content.json';
 import contentFr from '../data/content-fr.json';
@@ -7,6 +7,7 @@ import testimonialsFr from '../data/testimonials-fr.json';
 import newsEn from '../data/news.json';
 import newsFr from '../data/news-fr.json';
 import { uiStrings } from '../data/ui-strings';
+import { fetchLiveContent, applyOverrides } from '../lib/sanity';
 
 const LanguageContext = createContext();
 
@@ -31,6 +32,20 @@ function detectInitialLanguage() {
 
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(detectInitialLanguage);
+  // Sanity overrides — null until the first fetch resolves. Rendering the
+  // page with the baked JSON first avoids a loading flash; the Sanity values
+  // swap in once the fetch completes (usually <300ms from the CDN).
+  const [overrides, setOverrides] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchLiveContent().then((data) => {
+      if (!cancelled && data) setOverrides(data);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const changeLang = (lang) => {
     setLanguage(lang);
@@ -40,7 +55,8 @@ export function LanguageProvider({ children }) {
   const value = useMemo(() => ({
     language,
     setLanguage: changeLang,
-  }), [language]);
+    overrides,
+  }), [language, overrides]);
 
   return (
     <LanguageContext.Provider value={value}>
@@ -54,12 +70,16 @@ export function useLanguage() {
 }
 
 export function useContent() {
-  const { language } = useLanguage();
-  return useMemo(() => ({
-    content: language === 'fr' ? contentFr : contentEn,
-    testimonials: language === 'fr' ? testimonialsFr : testimonialsEn,
-    news: language === 'fr' ? newsFr : newsEn,
-  }), [language]);
+  const { language, overrides } = useLanguage();
+  return useMemo(() => {
+    const baseContent = language === 'fr' ? contentFr : contentEn;
+    const content = applyOverrides(baseContent, overrides, language);
+    return {
+      content,
+      testimonials: language === 'fr' ? testimonialsFr : testimonialsEn,
+      news: language === 'fr' ? newsFr : newsEn,
+    };
+  }, [language, overrides]);
 }
 
 export function useT() {
