@@ -9,14 +9,10 @@
 }
 
 /* Hide Elfsight Free-plan badge on the News feed.
-   The previous broad selectors (class*="WidgetBackground") also matched the
-   widget's root wrapper and nuked the feed. Now we only target:
-   - the actual badge link (href → /linkedin-feed-widget/)
-   - its immediate parent container, so we don't leave an empty strip
-   - the owner-only "Extend Limit" upsell pill (visible only to Mike, but
-     harmless to hide for everyone just in case) */
+   The badge link is a direct child of WidgetBackground__Content, and so are
+   the post cards (through deeper nesting). So DO NOT touch the parent — we
+   target the links themselves only. The cards stay visible. */
 .news-feed a[href*="linkedin-feed-widget"],
-.news-feed *:has(> a[href*="linkedin-feed-widget"]),
 .news-feed a[href*="/apps/linkedin-feed/pricing"] {
   display: none !important;
 }
