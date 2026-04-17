@@ -46,7 +46,7 @@ export default function ServiceDetail() {
       <Hero
         title={service.title}
         subtitle={service.description}
-        backgroundImage={`${base}images/bg-ai-generated.png`}
+        backgroundImage={service.image_url || `${base}images/bg-ai-generated.png`}
         centered={true}
         compact={true}
       />

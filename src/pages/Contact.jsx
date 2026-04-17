@@ -88,7 +88,7 @@ export default function Contact() {
       <Hero
         title={hero.contact.title}
         subtitle={hero.contact.subtitle}
-        backgroundImage={`${base}images/bg-variante.png`}
+        backgroundImage={hero.contact.backgroundImage || `${base}images/bg-variante.png`}
         centered={true}
         compact={true}
       />

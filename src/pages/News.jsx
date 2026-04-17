@@ -45,7 +45,7 @@ export default function News() {
       <Hero
         title={hero.news.title}
         subtitle={hero.news.subtitle}
-        backgroundImage={`${base}images/bg-bubbles.png`}
+        backgroundImage={hero.news.backgroundImage || `${base}images/bg-bubbles.png`}
         centered={true}
         compact={true}
       />

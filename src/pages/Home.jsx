@@ -57,7 +57,7 @@ export default function Home() {
       <Hero
         title={hero.home.title}
         subtitle={hero.home.subtitle}
-        backgroundImage={`${base}images/bg-bubbles.png`}
+        backgroundImage={hero.home.backgroundImage || `${base}images/bg-bubbles.png`}
         ctaPrimary={t('nav.contact')}
         ctaPrimaryLink="/contact"
         ctaPrimaryIcon="mail"

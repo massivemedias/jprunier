@@ -64,7 +64,7 @@ export default function Services() {
       <Hero
         title={hero.services.title}
         subtitle={hero.services.subtitle}
-        backgroundImage={`${base}images/bg-ai-generated.png`}
+        backgroundImage={hero.services.backgroundImage || `${base}images/bg-ai-generated.png`}
         centered={true}
         compact={true}
       />
