@@ -72,14 +72,16 @@ export default function Contact() {
       label: t('contact.montreal_office'),
       data: company.offices.montreal,
       accent: 'accent-violet',
-      mapQuery: '1055 Rue Lucien-L\'Allier, Suite 1049, Montreal, QC H3G 0E7, Canada',
+      // Derive the map query from the live address so Jerome's edits in Sanity
+      // update both the card AND the Google Maps pin at the same time.
+      mapQuery: `${company.offices.montreal.address}, ${company.offices.montreal.city}, ${company.offices.montreal.country}`,
     },
     {
       key: 'paris',
       label: t('contact.paris_office'),
       data: company.offices.paris,
       accent: 'accent-blue',
-      mapQuery: '10 Rue de Penthievre, 75008 Paris, France',
+      mapQuery: `${company.offices.paris.address}, ${company.offices.paris.city}, ${company.offices.paris.country}`,
     },
   ];
 

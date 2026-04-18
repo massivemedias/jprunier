@@ -69,6 +69,12 @@ const CONTENT_QUERY = `{
     description,
     longDescription,
     image{ asset->{url}, hotspot, crop }
+  },
+  "companyInfo": *[_type == "companyInfo" && _id == "companyInfo"][0]{
+    montreal{ address, phone, email },
+    paris{ address, phone, email },
+    linkedin,
+    generalEmail
   }
 }`
 
@@ -94,7 +100,12 @@ export function applyOverrides(baseContent, overrides, language) {
   const pick = (field) => field?.[language] ?? field?.en
 
   // Shallow-clone the branches we mutate so React sees new refs and re-renders
-  const next = { ...baseContent, hero: { ...baseContent.hero }, services: { ...baseContent.services } }
+  const next = {
+    ...baseContent,
+    hero: { ...baseContent.hero },
+    services: { ...baseContent.services },
+    company: { ...baseContent.company, offices: { ...baseContent.company.offices }, social: { ...baseContent.company.social } },
+  }
 
   // Hero — only overwrite title/subtitle + optional bg image for the 4 pages we expose
   const heroPages = ['home', 'services', 'contact', 'news']
@@ -163,6 +174,29 @@ export function applyOverrides(baseContent, overrides, language) {
         },
       }
       next.services.main_services = ms
+    }
+  }
+
+  // Company info (contact) — merge into content.company.offices + content.company.social
+  if (overrides.companyInfo) {
+    const ci = overrides.companyInfo
+    const offices = ['montreal', 'paris']
+    for (const key of offices) {
+      const src = ci[key]
+      if (!src) continue
+      next.company.offices[key] = {
+        ...baseContent.company.offices[key],
+        ...(src.address ? { address: src.address } : {}),
+        ...(src.phone ? { phone: src.phone } : {}),
+        ...(src.email ? { email: src.email } : {}),
+      }
+    }
+    if (ci.linkedin || ci.generalEmail) {
+      next.company.social = {
+        ...baseContent.company.social,
+        ...(ci.linkedin ? { linkedin: ci.linkedin } : {}),
+        ...(ci.generalEmail ? { email: ci.generalEmail } : {}),
+      }
     }
   }
 
