@@ -76,7 +76,7 @@
 }
 
 .partner-logo-img-dark {
-  max-height: 28px;
+  max-height: 52px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);
@@ -84,11 +84,12 @@
   transition: filter var(--transition-base);
 }
 
-/* SVG brand glyphs lack intrinsic dimensions - force size explicitly */
+/* SVG brand glyphs lack intrinsic dimensions - force size explicitly.
+   (Only kicks in for the baked /images/*.svg fallback; Sanity serves WebP.) */
 .partner-logo-img-dark[src$=".svg"] {
-  height: 38px;
-  width: 38px;
-  max-height: 38px;
+  height: 52px;
+  width: 52px;
+  max-height: 52px;
 }
 
 .partner-logo-light:hover .partner-logo-img-dark {
