@@ -76,7 +76,7 @@
 }
 
 .partner-logo-img-dark {
-  max-height: 52px;
+  max-height: 44px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);
@@ -87,9 +87,9 @@
 /* SVG brand glyphs lack intrinsic dimensions - force size explicitly.
    (Only kicks in for the baked /images/*.svg fallback; Sanity serves WebP.) */
 .partner-logo-img-dark[src$=".svg"] {
-  height: 52px;
-  width: 52px;
-  max-height: 52px;
+  height: 44px;
+  width: 44px;
+  max-height: 44px;
 }
 
 .partner-logo-light:hover .partner-logo-img-dark {
