@@ -75,6 +75,22 @@ const CONTENT_QUERY = `{
     paris{ address, phone, email },
     linkedin,
     generalEmail
+  },
+  "partners": *[_type == "partner"] | order(order asc){
+    name,
+    order,
+    logo{ asset->{url}, hotspot, crop }
+  },
+  "certifications": *[_type == "certification"] | order(order asc){
+    name,
+    issuer,
+    order,
+    image{ asset->{url}, hotspot, crop }
+  },
+  "gallery": *[_type == "interfaceImage"] | order(order asc){
+    caption,
+    order,
+    image{ asset->{url}, hotspot, crop }
   }
 }`
 
@@ -171,6 +187,52 @@ export function applyOverrides(baseContent, overrides, language) {
             ? { button_text: pick(overrides.brochure.buttonText) }
             : {}),
           ...(preferredUrl ? { file_url: preferredUrl } : {}),
+        },
+      }
+      next.services.main_services = ms
+    }
+  }
+
+  // Partners — fully replace tech_partners array when Sanity has at least one
+  if (overrides.partners?.length) {
+    next.home = {
+      ...baseContent.home,
+      tech_partners: overrides.partners.map((p) => ({
+        name: p.name,
+        logo: urlForImage(p.logo)?.width(400).quality(85).format('webp').url() || '',
+      })),
+    }
+  }
+
+  // Certifications — replace badges array; keep title/subtitle from baked content
+  if (overrides.certifications?.length) {
+    next.services.certifications_section = {
+      ...(baseContent.services.certifications_section || {}),
+      badges: overrides.certifications.map((c) => ({
+        src: urlForImage(c.image)?.width(600).quality(85).format('webp').url() || '',
+        name: pick(c.name),
+        issuer: c.issuer,
+      })),
+    }
+  }
+
+  // Gallery — patch into main_services[0].interfaces_gallery.items
+  if (overrides.gallery?.length && next.services.main_services) {
+    const ms = [...next.services.main_services]
+    const first = ms[0]
+    if (first) {
+      ms[0] = {
+        ...first,
+        interfaces_gallery: {
+          ...(first.interfaces_gallery || {}),
+          items: overrides.gallery.map((g) => {
+            const caption = pick(g.caption)
+            return {
+              src: urlForImage(g.image)?.width(1400).quality(85).format('webp').url() || '',
+              alt: caption,
+              caption,
+            }
+          }),
         },
       }
       next.services.main_services = ms

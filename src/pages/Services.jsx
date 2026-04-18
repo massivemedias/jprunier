@@ -193,7 +193,7 @@ export default function Services() {
                           className="interface-card"
                           onClick={() => setLightbox({ open: true, images: service.interfaces_gallery.items, index: i })}
                         >
-                          <img src={`${base}${item.src.replace(/^\//, '')}`} alt={item.alt} loading="lazy" />
+                          <img src={/^https?:\/\//.test(item.src) ? item.src : `${base}${item.src.replace(/^\//, '')}`} alt={item.alt} loading="lazy" />
                           <div className="interface-caption">{item.caption}</div>
                         </div>
                       ))}
@@ -327,7 +327,7 @@ export default function Services() {
               <motion.div className="certifications-grid" variants={itemVariants}>
                 {services.certifications_section.badges.map((badge, i) => (
                   <div key={i} className="certification-badge">
-                    <img src={`${base}${badge.src.replace(/^\//, '')}`} alt={badge.name} loading="lazy" />
+                    <img src={/^https?:\/\//.test(badge.src) ? badge.src : `${base}${badge.src.replace(/^\//, '')}`} alt={badge.name} loading="lazy" />
                     <span className="badge-name">{badge.name}</span>
                     <span className="badge-issuer">{badge.issuer}</span>
                   </div>

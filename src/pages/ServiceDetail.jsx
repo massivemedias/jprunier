@@ -233,7 +233,7 @@ export default function ServiceDetail() {
                     onClick={() => setLightbox({ open: true, src: item.src, alt: item.alt })}
                   >
                     <img
-                      src={`${base}${item.src.replace(/^\//, '')}`}
+                      src={/^https?:\/\//.test(item.src) ? item.src : `${base}${item.src.replace(/^\//, '')}`}
                       alt={item.alt}
                       loading="lazy"
                     />
@@ -267,7 +267,7 @@ export default function ServiceDetail() {
                 {service.certifications_section.badges.map((badge, i) => (
                   <div key={i} className="certification-badge">
                     <img
-                      src={`${base}${badge.src.replace(/^\//, '')}`}
+                      src={/^https?:\/\//.test(badge.src) ? badge.src : `${base}${badge.src.replace(/^\//, '')}`}
                       alt={badge.name}
                       loading="lazy"
                     />

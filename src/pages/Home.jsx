@@ -150,7 +150,7 @@ export default function Home() {
               {/* Duplicate logos for infinite scroll effect */}
               {[...home.tech_partners, ...home.tech_partners].map((partner, index) => (
                 <div key={index} className="partner-logo-light">
-                  <img src={`${base}${partner.logo.replace(/^\//, '')}`} alt={partner.name} className="partner-logo-img-dark" />
+                  <img src={/^https?:\/\//.test(partner.logo) ? partner.logo : `${base}${partner.logo.replace(/^\//, '')}`} alt={partner.name} className="partner-logo-img-dark" />
                 </div>
               ))}
             </div>
