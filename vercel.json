@@ -1,4 +1,46 @@
 {
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/home/", "destination": "/", "permanent": true },
+    { "source": "/contact/", "destination": "/contact", "permanent": true },
+    { "source": "/news/", "destination": "/news", "permanent": true },
+    { "source": "/services/", "destination": "/services", "permanent": true },
+
+    { "source": "/service-integrateur", "destination": "/services", "permanent": true },
+    { "source": "/service-integrateur/", "destination": "/services", "permanent": true },
+    { "source": "/microsoft-graph-api-crestron", "destination": "/services", "permanent": true },
+    { "source": "/microsoft-graph-api-crestron/", "destination": "/services", "permanent": true },
+    { "source": "/mgcrestron-en", "destination": "/services", "permanent": true },
+    { "source": "/mgcrestron-en/", "destination": "/services", "permanent": true },
+
+    { "source": "/en", "destination": "/", "permanent": true },
+    { "source": "/en/", "destination": "/", "permanent": true },
+    { "source": "/en/:path*", "destination": "/", "permanent": true },
+    { "source": "/en_ca", "destination": "/", "permanent": true },
+    { "source": "/en_ca/", "destination": "/", "permanent": true },
+    { "source": "/en_ca/:path*", "destination": "/", "permanent": true },
+    { "source": "/fr_ca", "destination": "/", "permanent": true },
+    { "source": "/fr_ca/", "destination": "/", "permanent": true },
+    { "source": "/fr_ca/:path*", "destination": "/", "permanent": true },
+    { "source": "/de", "destination": "/", "permanent": true },
+    { "source": "/de/", "destination": "/", "permanent": true },
+    { "source": "/de/:path*", "destination": "/", "permanent": true },
+    { "source": "/en-us", "destination": "/news", "permanent": true },
+    { "source": "/en-us/", "destination": "/news", "permanent": true },
+    { "source": "/en-us/news", "destination": "/news", "permanent": true },
+    { "source": "/en-us/news/", "destination": "/news", "permanent": true },
+    { "source": "/en-us/:path*", "destination": "/", "permanent": true },
+
+    { "source": "/wp-content/:path*", "destination": "/", "permanent": true },
+    { "source": "/wp-admin", "destination": "/", "permanent": true },
+    { "source": "/wp-admin/:path*", "destination": "/", "permanent": true },
+    { "source": "/wp-json/:path*", "destination": "/", "permanent": true },
+    { "source": "/wp-login.php", "destination": "/", "permanent": true },
+    { "source": "/wp-config.php", "destination": "/", "permanent": true },
+    { "source": "/xmlrpc.php", "destination": "/", "permanent": true },
+
+    { "source": "/ct_content_block/:path*", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!api/|_next/|.*\\..*).*)", "destination": "/index.html" }
   ],
